@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-#### Professional Summary
+I attained my Ph.D. degree in Electrical and Computer Engineering from the National University of Singapore, Singapore in 2018. I also have B.Sc. and M.Sc. degrees in Computer Engineering from Al-Balqa' Applied University, Amman, Jordan, and the Jordan University of Science and Technology, Irbid, Jordan, respectively. I am currently a Senior Scientist in Cryptography at Duality Technologies Inc, New Jersey, United States, conducting research on Privacy-Preserving Technologies, Trustworthy Machine Learning, Cryptographic Engineering and Hardware Acceleration. 
+
+### Professional Summary
 
 18+ years of experience in Research, Teaching and Application Development in various domains such as telecommunication, networking, database, cybersecurity, and artificial intelligence.
 
@@ -22,8 +24,5 @@ redirect_from:
 
 - **3+** years experience in software development for mobile telecommunications technologies such as GSM networks, USSD, SS7, CAMEL and SIGTRAN.
 
-#### Biography
-I attained my Ph.D. degree in Electrical and Computer Engineering from the National University of Singapore, Singapore in 2018. I also have B.Sc. and M.Sc. degrees in Computer Engineering from Al-Balqa' Applied University, Amman, Jordan, and the Jordan University of Science and Technology, Irbid, Jordan, respectively. I am currently a Senior Scientist in Cryptography at Duality Technologies Inc, New Jersey, United States, conducting research on Privacy-Preserving Technologies, Trustworthy Machine Learning, Cryptographic Engineering and Hardware Acceleration. 
-
-#### Research Interests
+### Research Interests
 My research interests include but are not limited to Applied Cryptography, Post-Quantum Cryptography, Privacy-Preserving Technologies, Trustworthy Machine Learning, Machine Learning for Cybersecurity, Combinatorial Optimization, Evolutionary Algorithms, Parallel Processing and High-Performance Computing.
