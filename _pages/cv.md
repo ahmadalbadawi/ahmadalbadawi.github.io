@@ -81,7 +81,7 @@ Work experience
 
 &nbsp;
 
-* **2008-2011: Sr. Telecommunications Engineer **
+* **2008-2011: Sr. Telecommunications Engineer**
   * [Globitel](https://www.globitel.com/), Amman, Jordan
   * Duties included: 
     * Development of Intelligent Traffic Steering (ITS). ITS is a roaming traffic redirection system in GSM mobile networks. GSM network operators establish roaming service agreements with each other such that low charging rates (from operator perspective) are incurred by the service provider in the visited country. ITS is a solution that encourages/forces roaming subscribers to register on preferred operators.
@@ -261,7 +261,7 @@ Structures
 Leadership / Awards / Honors
 ======
 * 02/2020, RIE2020 Advanced Manufacturing and Engineering (AME) (Award A19E3b0099). 9.9 million SGD
-* 2018-Present: Reviewer for several IEEE Journals: IEEE-TIFS, IEEE-TETC, IEEE-ACCESS
+* 2018-Present, Reviewer for several IEEE Journals: IEEE-TIFS, IEEE-TETC, IEEE-ACCESS
 * 10/2021, Invited talk: Privacy-Preserving Computing, at Cyber Wales Cluster Webinar in the Middle East, UAE
 * 07/2020, Invited talk: Trustless Computing on Encrypted data, NCR, Singapore
 * 08/2017, Outstanding Technical Oral Presentation award at the 2017 ECE GSS, NUS
