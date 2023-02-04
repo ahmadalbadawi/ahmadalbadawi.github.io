@@ -207,42 +207,7 @@ Selected Publications
 - **Ahmad Al Badawi**, Bharadwaj Veeravalli, Chan Fook Mun, Khin Mi Mi Aung. High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA. IACR CHES 2018, Amsterdam.
 
 For a complete list fo my publication, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
-   
-Teaching
-======
-
-**Fall 2021**
-  - SEC390 Information Security Management
-
-**Spring 2022**
-  - SEC490 Project in SSDEC Management
-  -	HLS430 Data Analytics for Cybersecurity
-
-**Summer 2022**
-  -	HLS430 Data Analytics for Cybersecurity
-
-**Fall 2012**
-  - 500101-2 Introduction to Computer Science
-  - 502153-3 Introduction to OS and Matlab
-
-**Spring 2013**
-  - 500101-2 Introduction to Computer Science
-  - 502153-3 Introduction to OS and Matlab
-
-**Fall 2013**
-  - 500101-2 Introduction to Computer Science
-  - 501221-3 Computer Programming (C++)
-  - 502153-3 Introduction to OS and Matlab
-
-**Spring 2014**
-  - 500101-2 Introduction to Computer Science
-  - 501444-3 Introduction to Algorithms and Data
-Structures
-
-**Fall 2014**
-  - 500101-2 Introduction to Computer Science
-  - 501411-3 Compilers for Computer Languages
-  
+ 
 Leadership / Awards / Honors
 ======
 * 02/2020, RIE2020 Advanced Manufacturing and Engineering (AME) (Award A19E3b0099). 9.9 million SGD
