@@ -1,12 +1,10 @@
 ---
 layout: archive
-title: "Publications"
+title: "Selected Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-Selected Publications
-======
 - **Ahmad Al Badawi**, A., Chen, L. & Vig, S. Fast homomorphic SVM inference on encrypted data. Neural Comput & Applic (2022). https://doi.org/10.1007/s00521-022-07202-8
 - **Ahmad Al Badawi**, et al.,"Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters" in IEEE Transactions on Parallel & Distributed Systems, vol. , no. 01, pp. 1-1, 5555. doi: 10.1109/TPDS.2020.3021238
 - **Ahmad Al Badawi**, L. Hoang, C. F. Mun, K. Laine and K. M. M. Aung, "PrivFT: Private and Fast Text Classification With Homomorphic Encryption," in IEEE Access, vol. 8, pp. 226544-226556, 2020, doi: 10.1109/ACCESS.2020.3045465
