@@ -2,7 +2,7 @@
 title: "Lecturer at Taif University"
 collection: teaching
 type: "Undergraduate courses"
-permalink: /teaching/2011-lecturer-tu
+permalink: /teaching/2011-lecturer-tu-teaching-1
 venue: "Taif University, College of Computers and Information Technology"
 date: 2011
 location: "Taif, Saudi Arabia"

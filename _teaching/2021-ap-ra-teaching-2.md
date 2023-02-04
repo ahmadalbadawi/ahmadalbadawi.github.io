@@ -2,7 +2,7 @@
 title: "Assistant Professor at Rabdan Academy"
 collection: teaching
 type: "Undergraduate courses"
-permalink: /teaching/2021-ap-ra
+permalink: /teaching/2021-ap-ra-teaching-2
 venue: "Rabdan Academy, Faculty of Resilience"
 date: 2021
 location: "Abu Dhabi, United Arab Emirates "
