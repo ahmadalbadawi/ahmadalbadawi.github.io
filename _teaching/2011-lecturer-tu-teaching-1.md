@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate courses"
 permalink: /teaching/2011-lecturer-tu-teaching-1
 venue: "Taif University, College of Computers and Information Technology"
-date: 2011
+date: 2011-01-01
 location: "Taif, Saudi Arabia"
 ---
 
