@@ -85,9 +85,9 @@ author:
   bio              : "Senior Scientist in Cryptography"
   location         : "Hoboken, New Jersey"
   employer         :
-  pubmed           : ""
+  #pubmed           : ""
   googlescholar    : "https://scholar.google.com.sg/citations?hl=en&user=-EhCfyEAAAAJ"
-  email            :  "ahmad (at) u (dot) nus (dot) edu"
+  email            :  "ahmad@u.nus.edu"
   researchgate     :  "https://www.researchgate.net/profile/Ahmad-Al-Badawi"
   uri              :
   bitbucket        :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/caesaretos"
+  github           : "caesaretos"
   google_plus      :
   keybase          :
   instagram        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  #twitter          : ""
   vine             :
   weibo            :
   xing             :
