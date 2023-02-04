@@ -207,26 +207,7 @@ Selected Publications
 - **Ahmad Al Badawi**, Bharadwaj Veeravalli, Chan Fook Mun, Khin Mi Mi Aung. High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA. IACR CHES 2018, Amsterdam.
 
 For a complete list fo my publication, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
-  
-Talks
-======
-- **Nov 2022, OpenFHE: Open-Source Fully Homomorphic Encryption Library** 
-  
-  Venue: WAHC 2022 – 10th Workshop on Encrypted Computing & Applied Homomorphic Cryptography, [url](https://seafile.cloud.uni-hannover.de/f/8aca9e85f2ff46789b48/?dl=1)
-
-- **Oct 2021, Privacy-Preserving Computing**
-
-  Venue: Cyber Wales Cluster Webinar in the Middle East, UAE, [url](https://cyberwales.net/events/?event=mena-webinar-october-2021)
-
-- **July 2020, Trustless Computing on Encrypted data**
-  
-  Venue: National Cybersecurity Research and Development (NCR) Program, Singapore
-
-- **Sept 2018, High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA**
-  
-  Venue: Conference on Cryptographic Hardware and Embedded Systems, The Netherlands, [url](https://www.youtube.com/watch?v=TTil6rWG4vc&ab_channel=TheIACR)
-
-  
+   
 Teaching
 ======
 
