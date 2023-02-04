@@ -16,4 +16,4 @@ author_profile: true
 - **Ahmad Al Badawi**, Jack Bates, Flavio Bergamaschi, David Bruce Cousins, Saroja Erabelli, Nicholas Genise, Shai Halevi et al. "OpenFHE: Open-source fully homomorphic encryption library." In Proceedings of the 10th Workshop on Encrypted Computing & Applied Homomorphic Cryptography, pp. 53-63. 2022.
 - **Ahmad Al Badawi**, Bharadwaj Veeravalli, Chan Fook Mun, Khin Mi Mi Aung. High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA. IACR CHES 2018, Amsterdam.
 
-For a complete list fo my publication, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
+For a comprehensive list fo my publications, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
