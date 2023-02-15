@@ -23,6 +23,14 @@ author_profile: true
 
 - **Ahmad Al Badawi**, Jack Bates, Flavio Bergamaschi, David Bruce Cousins, Saroja Erabelli, Nicholas Genise, Shai Halevi et al. "OpenFHE: Open-source fully homomorphic encryption library." In Proceedings of the 10th Workshop on Encrypted Computing & Applied Homomorphic Cryptography, pp. 53-63. 2022. [URL](https://doi.org/10.1145/3560827.3563379)
 
-- Jin, Chao, **Ahmad Al Badawi**, J. B. Unnikrishnan, Chan Fook Mun, James M. Brown, J. Peter Campbell, Michael Chiang, Jayashree Kalpathy-Cramer, Vijay Ramaseshan Chandrasekhar, and Pavitra Krishnaswamy. "CareNets: Efficient homomorphic CNN for high resolution images." In NeurIPS Workshop on Privacy in Machine Learning (PriML). 2019. [URL](https://priml-workshop.github.io/priml2019/papers/PriML2019_paper_28.pdf)
+- Jin, Chao, **Ahmad Al Badawi**, J. B. Unnikrishnan, Chan Fook Mun, James M. Brown, J. Peter Campbell, Michael Chiang, Jayashree Kalpathy-Cramer, Vijay Ramaseshan Chandrasekhar, and Pavitra Krishnaswamy. "CareNets: Efficient homomorphic CNN for high resolution images." In NeurIPS Workshop on Privacy in Machine Learning (PriML). 2019. [URL](https://priml-workshop.github.io/priml2019/papers/PriML2019_paper_28.pdf)  
 
 For a comprehensive list fo my publications, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
+
+# Patents
+
+- **Al Badawi, Ahmad**, and Khin Mi Mi Aung. "Homomorphic encryption using discrete Galois transforms." U.S. Patent No. 11368280. 21 Jun. 2022.
+
+- Yang Hong, Kang Dee Meng, **Ahmad Al Badawi**, Khin Mi Mi Aung , Single Cycle Initiation Interval Pipeline Hardware Architecture of DGT and iDGT. Filed to IP Office of Singapore on 30 Oct 2020.
+
+- **Ahmad Al Badawi**, Khin Mi Mi Aung. MULTIPLICATION METHODS, NON-TRANSITORY COMPUTER-READABLE MEDIA, AND MULTIPLICATION DEVICES. PCT/SG2018/050366, 2018, US20220085970A1. [URL](https://patents.google.com/patent/US20220085970A1/en)
