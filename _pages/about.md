@@ -14,7 +14,7 @@ I attained my Ph.D. degree in Electrical and Computer Engineering from the Natio
 
 **18+** years of experience in Research, Teaching and Application Development in various domains such as telecommunication, networking, database, cybersecurity, and artificial intelligence.
 
-- **9+** years of experience in research in Hardware Cryptography, Lattice-based Cryptography, Privacy-Preserving Technologies such as Fully Homomorphic Encryption, Secure Multi-party Computing, and Trustworthy Machine Learning.
+- **9+** years of experience in research in Hardware Cryptography, Post-Quantum Cryptography, Privacy-Preserving Technologies such as Fully Homomorphic Encryption, Secure Multi-party Computing, and Trustworthy Machine Learning.
 
 - **2+** years of experience in research in multi-processor task scheduling and optimization algorithms using evolutionary algorithms and particle swarm optimization.
 
