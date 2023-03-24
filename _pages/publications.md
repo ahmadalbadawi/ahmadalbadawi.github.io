@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-- **Ahmad Al Badawi**, A., Chen, L. & Vig, S. Fast homomorphic SVM inference on encrypted data. Neural Comput & Applic (2022). [URL](https://doi.org/10.1007/s00521-022-07202-8)
+- **Ahmad Al Badawi**, Chen, L. & Vig, S. Fast homomorphic SVM inference on encrypted data. Neural Comput & Applic (2022). [URL](https://doi.org/10.1007/s00521-022-07202-8)
 
 - **Ahmad Al Badawi**, et al.,"Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters" in IEEE Transactions on Parallel & Distributed Systems, vol. , no. 01, pp. 1-1, 5555. doi: 10.1109/TPDS.2020.3021238. [URL](https://doi.org/10.1109/TPDS.2020.3021238)
 
