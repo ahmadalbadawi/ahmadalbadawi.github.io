@@ -48,7 +48,7 @@ Principle Investigator for a multi-year, multi-million dollar research and devel
 
 Apr 2021 – Jun 2024  
 DPRIVE - Data Protection in Virtual Environments – 15 Million USD. TREBUCHET Team  
-Co-Principle Investigator for a multi-year, multi-million dollar DARPA-funded research and development effort to build a HE chip for homomorphic machine and deep learning applications via ASIC technology. I am mainly responsible for:
+Associate Principle Investigator for a multi-year, multi-million dollar DARPA-funded research and development effort to build a HE chip for homomorphic machine and deep learning applications via ASIC technology. I am mainly responsible for:
 1. designing novel cryptographic capabilities of HE to support machine and deep learning applications such as logistic regression training, CNN inference and training, 
 2. developing initial prototypes of the said cryptographic capabilities
 3. coordination and knowledge transferal between the software and hardware subgroups in the TREBUCHET team, and 
