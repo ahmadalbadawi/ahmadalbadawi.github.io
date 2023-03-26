@@ -14,7 +14,7 @@ I am Jordanian born, and have been on a journey of my own, making me a citizen o
 
 ## Professional Summary
 
-**18+** years of experience in Research, Teaching and Application Development in various domains such as telecommunication, networking, database, cybersecurity, and artificial intelligence.
+I have over **18** years of experience in Research, Teaching, and Application Development in various domains, including telecommunications, networking, databases, cybersecurity, and artificial intelligence. I am a proficient researcher in various domains and technologies, and I have a proven track record of success in conducting, developing and delivering high-quality research outputs and solutions.
 
 - **9+** years of experience in research in Hardware Cryptography, Post-Quantum Cryptography, Privacy-Preserving Technologies such as Fully Homomorphic Encryption, Secure Multi-party Computing, and Trustworthy Machine Learning.
 
