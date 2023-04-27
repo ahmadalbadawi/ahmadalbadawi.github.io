@@ -21,7 +21,7 @@ Work experience
 ======
 * **2022-Now: Senior Scientist in Cryptography**
   * [Duality Technologies](https://dualitytech.com/), Hoboken, New Jersey, US
-  * Duties included: 
+  * Duties include: 
     * Conducting cutting-edge research to push the current state of the art in cryptographic secure computing to new statures. Of main interest are privacy-enhancing technologies such as fully homomorphic encryption, secure multi-party computing, differential privacy, federated learning, threshold encryption, and many other techniques.
     * Developing novel solutions that empower secure data sharing and collaborative computing on sensitive data among not-necessarily trustful parties ensuring compliance with most of data protection regulation acts around the world.
     * Contributing to OpenFHE, a state-of-the-art open-source library for homomorphic encryption and secure multi-party computing. 
