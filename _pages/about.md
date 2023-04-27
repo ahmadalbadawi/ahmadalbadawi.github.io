@@ -10,7 +10,7 @@ redirect_from:
 
 I attained my Ph.D. degree in Electrical and Computer Engineering from the National University of Singapore, Singapore in 2018. I also have B.Sc. and M.Sc. degrees in Computer Engineering from Al-Balqa' Applied University, Amman, Jordan, and the Jordan University of Science and Technology, Irbid, Jordan, respectively. I am currently a Senior Scientist in Cryptography at Duality Technologies Inc, New Jersey, United States, conducting research on Privacy-Preserving Technologies, Trustworthy Machine Learning, Cryptographic Engineering and Hardware Acceleration. 
 
-I am Jordanian born, and have been on a journey of my own, making me a citizen of the world! I worked in Jordan, Saudi Arabia, Singapore, the United Arab Emirates, and the United States. My thirst for travel and new experiences that involve taking risks and learning about new cultures is insatiable. Always looking forward to what's coming next!
+I was born in Jordan and have embarked on a personal journey that has transformed me into a global citizen. Throughout my experiences, I have worked in various fields and industries, allowing me to gain diverse perspectives and broaden my horizons. I have worked in Jordan, Saudi Arabia, Singapore, the United Arab Emirates, and the United States. My thirst for travel and new experiences that involve taking risks and learning about new cultures is insatiable. Always looking forward to what's coming next!
 
 ## Professional Summary
 
