@@ -29,7 +29,7 @@ Work experience
     * Co-PI of DARPA’s (DPRIVE) for hardware acceleration of fully homomorphic encryption via ASICs.
     * Leading Duality’s partnering efforts with hardware providers for OpenFHE acceleration.
     * Building state-of-the-art SW/HW infrastructure for private machine learning with FHE in OpenFHE (SW) and ASIC-accelerated low-level FHE operations (HW).
-    * Building performance models to predict the execution latency of Fully Homomorphic Encryption (FHE) workloads for performance estimation.
+    * Building performance models to predict the execution latency of computational workloads for performance estimation.
 
 &nbsp;
 
