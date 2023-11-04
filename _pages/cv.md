@@ -17,6 +17,8 @@ Education
 * **B.Sc.** in Computer Engineering, [Al-Balqa Applied University](https://www.bau.edu.jo/index.aspx), 2007
   * Capstone project: Wireless Control System Using Speech Recognition and Smart-phone
 
+&nbsp;
+
 Work experience
 ======
 * **2022-Now: Senior Scientist in Cryptography**
@@ -113,6 +115,17 @@ Work experience
   * Duties included: 
     * Internship program towards the partial fulfillment of Bachelor of Science in Computer Engineering degree
     * Worked in the IT department on different technical tasks related to networking and system administration.
+
+&nbsp;
+
+EDITORIAL & REVIEW ACTIVITY 
+======
+* Program/Organizing Committee Member
+  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023.
+* Reviewer for Scholarly Journals
+  * IEEE Transactions on Information Forensics & Security; Journal of Cryptography; IEEE Transactions on Computers; IEEE Access; IEEE Transactions on Parallel and Distributed Systems; AEUE - International Journal of Electronics and Communications; Neural Computing and Applications; International Journal of Information Security; IEEE Transactions on Emerging Topics in Computing; Artificial Intelligence Review; Journal of Intelligent Information Systems;  
+
+&nbsp;
 
 Leadership / Awards / Honors
 ======
