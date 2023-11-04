@@ -8,7 +8,7 @@ date: 2011-01-01
 location: "Taif, Saudi Arabia"
 ---
 
-I taught the following courses when I held the position of lecturer at the College of Computers and Information Technology, Taif University, Taif, Saudi Arabia over the period 2011 to 2014.  
+As a lecturer at the College of Computers and Information Technology, Taif University, Taif, Saudi Arabia, from 2011 to 2014, I taught the following courses:  
 
 **Fall 2012**
   - 500101-2 Introduction to Computer Science
