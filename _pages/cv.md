@@ -129,8 +129,8 @@ EDITORIAL & REVIEW ACTIVITY
 
 Leadership / Awards / Honors
 ======
+* 09/2023, Honorary token from Sabancı University for instructing at the enCRYPTON Summer School
 * 02/2020, RIE2020 Advanced Manufacturing and Engineering (AME) (Award A19E3b0099). 9.9 million SGD
-* 2018-Present, Reviewer for several IEEE Journals: IEEE-TIFS, IEEE-TETC, IEEE-ACCESS
 * 10/2021, Invited talk: Privacy-Preserving Computing, at Cyber Wales Cluster Webinar in the Middle East, UAE
 * 07/2020, Invited talk: Trustless Computing on Encrypted data, NCR, Singapore
 * 08/2017, Outstanding Technical Oral Presentation award at the 2017 ECE GSS, NUS
