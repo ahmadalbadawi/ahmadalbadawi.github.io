@@ -33,11 +33,15 @@ Work experience
     * Building state-of-the-art SW/HW infrastructure for private machine learning with FHE in OpenFHE (SW) and ASIC-accelerated low-level FHE operations (HW).
     * Building performance models to predict the execution latency of computational workloads for performance estimation.  
 
+<br>
+
 * **2021-2022: Assistant Professor**
   * [Rabdan Academy](https://ra.ac.ae/), Homeland Security Department, Abu Dhabi, UAE
   * Duties included: 
     * Teaching a wide range of cybersecurity courses.
     * Conducting research on Post-Quantum Cryptography,Privacy-Enhancing Technologies, Cryptographic Engineering and Machine learning for cybersecurity.  
+
+<br>
 
 * **2018-2021: Scientist II**
   * [A*STAR – Institute for Infocomm Research](https://www.a-star.edu.sg/i2r), Cybersecurity Department, One North, Singapore
@@ -59,6 +63,8 @@ Work experience
       *	Offer consultation, advice, and/or solutions to Dept/Div/Prog members on specific technical issues;
       * Assist Dept/Div/Prog members in identifying resources required to resolve the technical issues  
 
+<br>
+
 * **2015-2018: Research Scholar & Ph.D. Candidate**
   * A*STAR – Data Storage Institute, One North, 138634, Singapore
   * Duties included: 
@@ -70,12 +76,16 @@ Work experience
     * I scaled my BFV GPU crypto-processor to target multi-GPU clusters providing near linear speedup scalability with the increased number of GPUs.
     * I wrote my Ph.D. thesis on [PRACTICAL POST-QUANTUM CRYPTOGRAPHY & FULLY HOMOMORPHIC ENCRYPTION ON GRAPHICS PROCESSORS: DESIGN & PERFORMANCE EVALUATION](https://scholarbank.nus.edu.sg/handle/10635/152822?mode=full).  
 
+<br>
+
 * **2011-2014: Lecturer**
   * [Taif University](https://www.tu.edu.sa/En/), College of Computers and Information Technology, Taif, Saudi Arabia
   * Duties included: 
     * Teaching undergraduate computer engineering courses.
     * Responsible for the design, development, and maintenance of the CIT website.
     * Involved in ABET accreditation and preparation of Assessment Course Files.  
+
+<br>
 
 * **2008-2011: Sr. Telecommunications Engineer**
   * [Globitel](https://www.globitel.com/), Amman, Jordan
@@ -91,10 +101,14 @@ Work experience
     * Redesigned applications’ data model to support multiple platforms, resulting in greater efficiency, versatility and interoperability.
     * Redesigned applications’ business logic for shared-memory/NUMA platforms.  
 
+<br>
+
 * **2008-2008: Teaching Assistant**
   * [Jordan University of Science and Technology](https://www.just.edu.jo/Pages/Default.aspx), Department of Computer Engineering, Irbid, Jordan
   * Duties included: 
     * Co-taught undergraduate level courses for the undergraduate Computer Engineering program.  
+
+<br>
 
 * **2007-2007: Intern - Support Engineer**
   * [Cairo-Amman Bank](https://www.cab.jo/for-me), IT Department, Amman, Jordan
