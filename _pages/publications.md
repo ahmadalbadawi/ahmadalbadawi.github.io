@@ -5,6 +5,12 @@ permalink: /publications/
 author_profile: true
 ---
 
+- Ravit Geva, Alexander Gusev, Yuriy Polyakov, Lior Liram, Oded Rosolio, Andreea Alexandru, Nicholas Genise, Marcelo Blatt, Zohar Duchin, Barliz Waissengrin, Dan Mirelman, Felix Bukstein, Deborah T. Blumenthal, Ido Wolf, Sharon Pelles, Tali Schaffer, Lee A. Lavi, Daniele Micciancio, Vinod Vaikuntanathan, **Ahmad Al Badawi** and Shafi Goldwasser. Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption. Accepted, Proceedings of the National Academy of Sciences (PNAS) 2023.
+
+- Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K. and Pedram, M., 2023. RPU: The Ring Processing Unit. In2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS) 2023 Apr 23 (pp. 272-282). IEEE.
+
+- **Al Badawi, A.**, & Polyakov, Y. (2023). Demystifying bootstrapping in fully homomorphic encryption. Cryptology ePrint Archive.
+
 - **Ahmad Al Badawi**, Chen, L. & Vig, S. Fast homomorphic SVM inference on encrypted data. Neural Comput & Applic (2022). [URL](https://doi.org/10.1007/s00521-022-07202-8)
 
 - **Ahmad Al Badawi**, et al.,"Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters" in IEEE Transactions on Parallel & Distributed Systems, vol. , no. 01, pp. 1-1, 5555. doi: 10.1109/TPDS.2020.3021238. [URL](https://doi.org/10.1109/TPDS.2020.3021238)
