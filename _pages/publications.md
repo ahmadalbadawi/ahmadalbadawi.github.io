@@ -5,6 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
+- Al Nuaimi, Taraf, Salama Al Zaabi, Mansor Alyilieli, Mohd AlMaskari, Salim Alblooshi, Fahad Alhabsi, Mohd Faizal Bin Yusof, and **Ahmad Al Badawi**. "A comparative evaluation of intrusion detection systems on the edge-IIoT-2022 dataset." Intelligent Systems with Applications 20 (2023). [URL](https://www.sciencedirect.com/science/article/pii/S2667305323001230)
+
 - Ravit Geva, Alexander Gusev, Yuriy Polyakov, Lior Liram, Oded Rosolio, Andreea Alexandru, Nicholas Genise, Marcelo Blatt, Zohar Duchin, Barliz Waissengrin, Dan Mirelman, Felix Bukstein, Deborah T. Blumenthal, Ido Wolf, Sharon Pelles, Tali Schaffer, Lee A. Lavi, Daniele Micciancio, Vinod Vaikuntanathan, **Ahmad Al Badawi** and Shafi Goldwasser. Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption. Accepted, Proceedings of the National Academy of Sciences (PNAS) 2023. [URL](https://www.pnas.org/doi/10.1073/pnas.2304415120)
 
 - Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K. and Pedram, M., 2023. RPU: The Ring Processing Unit. In2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS) 2023 Apr 23 (pp. 272-282). IEEE. [URL](https://www.computer.org/csdl/proceedings-article/ispass/2023/973900a272/1OddHf0wgmc)

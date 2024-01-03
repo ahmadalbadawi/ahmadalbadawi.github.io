@@ -9,19 +9,18 @@ author_profile: true
 
 The main three themes of my research career are: 
 1. Applied Cryptography 
-2. Machine/Deep Learning and 
+2. Machine/Deep Learning
 3. Hardware Acceleration
 
 Specific research interests include but are not limited to: 
-1. Applied Cryptography, 
-2. Post-Quantum Cryptography, 
-3. Privacy-Preserving Technologies, 
-4. Trustworthy Machine Learning, 
-5. Machine Learning for Cybersecurity, 
-6. Combinatorial Optimization, 
-7. Evolutionary Algorithms, 
-8. Parallel Processing and High-Performance Computing. 
-9. Computer Systems Performance Modelling (Simulation, Queueing Networks and many others) 
+1. Parallel Processing and High-Performance Computing
+2. Privacy-Preserving Technologies
+3. Trustworthy Machine Learning
+4. Machine Learning for Cybersecurity
+5. Digital Signal Processing
+6. Computer Systems Performance Modelling (Simulation, Queueing Networks and many others)
+7. Combinatorial Optimization
+8. Evolutionary Algorithms
 
 ## Grants and Contract Awards
 
