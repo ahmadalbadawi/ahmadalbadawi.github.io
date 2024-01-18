@@ -9,7 +9,7 @@ author_profile: true
 
 - Ravit Geva, Alexander Gusev, Yuriy Polyakov, Lior Liram, Oded Rosolio, Andreea Alexandru, Nicholas Genise, Marcelo Blatt, Zohar Duchin, Barliz Waissengrin, Dan Mirelman, Felix Bukstein, Deborah T. Blumenthal, Ido Wolf, Sharon Pelles, Tali Schaffer, Lee A. Lavi, Daniele Micciancio, Vinod Vaikuntanathan, **Ahmad Al Badawi** and Shafi Goldwasser. Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption. Accepted, Proceedings of the National Academy of Sciences (PNAS) 2023. [URL](https://www.pnas.org/doi/10.1073/pnas.2304415120)
 
-- Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K. and Pedram, M., 2023. RPU: The Ring Processing Unit. In2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS) 2023 Apr 23 (pp. 272-282). IEEE. [URL](https://www.computer.org/csdl/proceedings-article/ispass/2023/973900a272/1OddHf0wgmc)
+- Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K. and Pedram, M., 2023. "RPU: The Ring Processing Unit". In2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS) 2023 Apr 23 (pp. 272-282). IEEE. [URL](https://www.computer.org/csdl/proceedings-article/ispass/2023/973900a272/1OddHf0wgmc)
 
 - **Al Badawi, A.**, & Polyakov, Y. (2023). Demystifying bootstrapping in fully homomorphic encryption. Cryptology ePrint Archive. [URL](https://eprint.iacr.org/2023/149.pdf)
 
@@ -18,6 +18,12 @@ author_profile: true
 - **Ahmad Al Badawi**, et al.,"Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters" in IEEE Transactions on Parallel & Distributed Systems, vol. , no. 01, pp. 1-1, 5555. doi: 10.1109/TPDS.2020.3021238. [URL](https://doi.org/10.1109/TPDS.2020.3021238)
 
 - **Ahmad Al Badawi**, L. Hoang, C. F. Mun, K. Laine and K. M. M. Aung, "PrivFT: Private and Fast Text Classification With Homomorphic Encryption," in IEEE Access, vol. 8, pp. 226544-226556, 2020, doi: 10.1109/ACCESS.2020.3045465. [URL](https://doi.org/10.1109/ACCESS.2020.3045465)
+
+- Paul, Jestine, Meenatchi Sundaram Muthu Selva Annamalai, William Ming, **Ahmad Al Badawi**, Bharadwaj Veeravalli, and Khin Mi Mi Aung. "Privacy-preserving collective learning with homomorphic encryption." IEEE Access 9 (2021): 132084-132096. [URL](https://ieeexplore.ieee.org/abstract/document/9543673)
+
+- Abu Al-Haija, Q. and **Ahmad Al Badawi**, "High-performance intrusion detection system for networked UAVs via deep learning. Neural Computing and Applications" 34(13), pp.10885-10900, 2022. [URL](https://link.springer.com/article/10.1007/s00521-022-07015-9)
+
+- Abu Al‐Haija, Qasem, **Ahmad Al Badawi**, and Giridhar Reddy Bojja. "Boost‐Defence for resilient IoT networks: A head‐to‐toe approach." Expert Systems 39, no. 10 (2022): e12934. [URL](https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.12934)
 
 - **Ahmad Al Badawi**, et al. "Implementation and performance evaluation of RNS variants of the BFV homomorphic encryption scheme." IEEE Transactions on Emerging Topics in Computing (2019), DOI: 10.1109/TETC.2019.2902799. [URL](https://doi.org/10.1109/TETC.2019.2902799)
 
