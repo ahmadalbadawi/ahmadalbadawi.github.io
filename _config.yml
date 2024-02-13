@@ -311,4 +311,4 @@ compress_html:
     envs: development
 
 exclude:
-  - "/404.md"
+  - "/_pages/404.md"
