@@ -42,7 +42,7 @@ author_profile: true
 For a comprehensive list fo my publications, check my [Google Scholar](https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&hl=en).
 
 # Patents
-- Hong Yang, Dee Meng Kang, **Ahmad Al Badawi**, Khin Mi Mi Aung. "DEVICE FOR PROCESSING HOMOMORPHICALLY ENCRYPTED DATA". U.S. Patent Application 18/254,132. 01 Feb 2024.
+- Hong Yang, Dee Meng Kang, **Ahmad Al Badawi**, Khin Mi Mi Aung. "DEVICE FOR PROCESSING HOMOMORPHICALLY ENCRYPTED DATA". U.S. Patent Application 18/254,132. 01 Feb 2024. [URL](https://www.freepatentsonline.com/y2024/0039694.html)
 
 - **Al Badawi, Ahmad**, and Khin Mi Mi Aung. "Homomorphic encryption using discrete Galois transforms." U.S. Patent No. 11368280. 21 Jun. 2022. [URL](https://patents.google.com/patent/US11368280B2/en)
 
