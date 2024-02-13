@@ -46,6 +46,6 @@ For a comprehensive list fo my publications, check my [Google Scholar](https://s
 
 - **Al Badawi, Ahmad**, and Khin Mi Mi Aung. "Homomorphic encryption using discrete Galois transforms." U.S. Patent No. 11368280. 21 Jun. 2022. [URL](https://patents.google.com/patent/US11368280B2/en)
 
-- Yang Hong, Kang Dee Meng, **Ahmad Al Badawi**, Khin Mi Mi Aung , Single Cycle Initiation Interval Pipeline Hardware Architecture of DGT and iDGT. Filed to IP Office of Singapore on 30 Oct 2020.
+<!-- - Yang Hong, Kang Dee Meng, **Ahmad Al Badawi**, Khin Mi Mi Aung , Single Cycle Initiation Interval Pipeline Hardware Architecture of DGT and iDGT. Filed to IP Office of Singapore on 30 Oct 2020. -->
 
 - **Ahmad Al Badawi**, Khin Mi Mi Aung. MULTIPLICATION METHODS, NON-TRANSITORY COMPUTER-READABLE MEDIA, AND MULTIPLICATION DEVICES. PCT/SG2018/050366, 2018, US20220085970A1. [URL](https://patents.google.com/patent/US20220085970A1/en)
