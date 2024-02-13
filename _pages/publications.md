@@ -43,9 +43,9 @@ For a comprehensive list fo my publications, check my [Google Scholar](https://s
 
 # Patents
 
-- Hong Yang, Dee Meng Kang, **Ahmad Al Badawi**, Khin Mi Mi Aung. "DEVICE FOR PROCESSING HOMOMORPHICALLY ENCRYPTED DATA". U.S. Patent Application 18/254,132. 01 Feb 2024.
+- Hong Yang, Dee Meng Kang, **Ahmad Al Badawi**, Khin Mi Mi Aung. "DEVICE FOR PROCESSING HOMOMORPHICALLY ENCRYPTED DATA". U.S. Patent Application 18/254,132. 01 Feb 2024. [URL](https://www.freepatentsonline.com/y2024/0039694.html)
 
-- **Al Badawi, Ahmad**, and Khin Mi Mi Aung. "Homomorphic encryption using discrete Galois transforms." U.S. Patent No. 11368280. 21 Jun. 2022.
+- **Al Badawi, Ahmad**, and Khin Mi Mi Aung. "Homomorphic encryption using discrete Galois transforms." U.S. Patent No. 11368280. 21 Jun. 2022. [URL](https://patents.google.com/patent/US11368280B2/en)
 
 - Yang Hong, Kang Dee Meng, **Ahmad Al Badawi**, Khin Mi Mi Aung , Single Cycle Initiation Interval Pipeline Hardware Architecture of DGT and iDGT. Filed to IP Office of Singapore on 30 Oct 2020.
 
