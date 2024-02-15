@@ -6,8 +6,11 @@ author_profile: true
 ---
 
 Ahmad Al Badawi, Ph.D.
+
 Senior Scientist - Applied Cryptography
+
 Duality Technologies
+
 email: ahmad (at) u (dot) nus (dot) edu
 
 [LinkedIn](https://www.linkedin.com/in/ahmad-al-badawi/)
