@@ -12,7 +12,7 @@ Welcome to my website! I am a dedicated researcher and a specialist in applied c
 
 My ultimate goal is to contribute to a more secure and resilient world. Whether it's through exploring the theoretical underpinnings of security or crafting practical solutions, my passion lies in utilizing my knowledge and skills to make a positive impact. By applying cutting-edge techniques and technologies, I strive to solve real-world problems and deliver value across diverse domains.
 
-On this website, you can find more information about my research interests, projects, publications, and achievements. If you have any questions or comments, or you are interested in working with me, please feel free to contact me.
+On this website, you can find more information about my research interests, projects, publications, and achievements. If you have any questions or comments, or you are interested in working with me, please feel free to [contact](https://ahmadalbadawi.github.io/contact/) me.
 
 ## Professional Summary
 
