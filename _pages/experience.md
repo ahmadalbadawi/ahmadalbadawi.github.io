@@ -1,27 +1,14 @@
 ---
 layout: archive
-# permalink: /cv/
+permalink: /experience/
 author_profile: true
 redirect_from:
-  - /resume
+  - /experience
 ---
 
 {% include base_path %}
 
-Education
-======
-* **Ph.D.** in Electrical & Computer Engineering, [National University of Singapore](https://www.nus.edu.sg/), 2018
-  * Thesis: [Practical Post-Quantum Cryptography & Fully Homomorphic Encryption on Graphics Processors: Design & Performance Evaluation](https://scholarbank.nus.edu.sg/handle/10635/152822)
-* **M.Sc.** in Computer Engineering, [Jordan University of Science and Technology](https://www.just.edu.jo/Pages/Default.aspx), 2010
-  * Thesis: [Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization](https://services.just.edu.jo/Portal_NewPortfolio/Abstract/14313.html)
-* **B.Sc.** in Computer Engineering, [Al-Balqa Applied University](https://www.bau.edu.jo/index.aspx), 2007
-  * Capstone project: Wireless Control System Using Speech Recognition and Smart-phone
-
-&nbsp;
-
-Work experience
-======
-* **2022-Now: Senior Scientist in Applied Cryptography**
+**2022-Now: Senior Scientist in Applied Cryptography**
   * [Duality Technologies](https://dualitytech.com/), Hoboken, New Jersey, US
     * Conducting cutting-edge research to push the current state of the art in cryptographic secure computing to new statures. Of main interest are privacy-enhancing technologies such as fully homomorphic encryption, secure multi-party computing, differential privacy, federated learning, threshold encryption, and many other techniques.
     * Developing novel solutions that empower secure data sharing and collaborative computing on sensitive data among not-necessarily trustful parties ensuring compliance with most of data protection regulation acts around the world.
@@ -34,14 +21,14 @@ Work experience
 
 <br>
 
-* **2021-2022: Assistant Professor**
+**2021-2022: Assistant Professor**
   * [Rabdan Academy](https://ra.ac.ae/), Homeland Security Department, Abu Dhabi, UAE
     * Teaching a wide range of cybersecurity courses.
     * Conducting research on Post-Quantum Cryptography,Privacy-Enhancing Technologies, Cryptographic Engineering and Machine learning for cybersecurity.  
 
 <br>
 
-* **2018-2021: Scientist II**
+**2018-2021: Scientist II**
   * [A*STAR – Institute for Infocomm Research](https://www.a-star.edu.sg/i2r), Cybersecurity Department, One North, Singapore
     * Headed the completion of more than 10 research projects of values ranging between 100K to 3.3M Singapore dollar.
     * Conducting research in cutting-edge technologies for trust-worthy and privacy-preserving Machine/Deep Learning applications.
@@ -62,7 +49,7 @@ Work experience
 
 <br>
 
-* **2015-2018: Research Scholar & Ph.D. Candidate**
+**2015-2018: Research Scholar & Ph.D. Candidate**
   * A*STAR – Data Storage Institute, One North, 138634, Singapore
     * Granted the Singapore International Graduate Award (SINGA) offered by Agency of Science, Technology and Research (A*STAR) to pursue PhD study in NUS in collaboration with Data Storage Institute (DSI).
     * Worked on hardware accelerating of Post-Quantum Cryptography and Homomorphic Encryption.
@@ -74,7 +61,7 @@ Work experience
 
 <br>
 
-* **2011-2014: Lecturer**
+**2011-2014: Lecturer**
   * [Taif University](https://www.tu.edu.sa/En/), College of Computers and Information Technology, Taif, Saudi Arabia
     * Teaching undergraduate computer engineering courses.
     * Responsible for the design, development, and maintenance of the CIT website.
@@ -82,7 +69,7 @@ Work experience
 
 <br>
 
-* **2008-2011: Sr. Telecommunications Engineer**
+**2008-2011: Sr. Telecommunications Engineer**
   * [Globitel](https://www.globitel.com/), Amman, Jordan
     * Development of Intelligent Traffic Steering (ITS). ITS is a roaming traffic redirection system in GSM mobile networks. GSM network operators establish roaming service agreements with each other such that low charging rates (from operator perspective) are incurred by the service provider in the visited country. ITS is a solution that encourages/forces roaming subscribers to register on preferred operators.
     <br />**Technologies used**: GSM, SS7, Dialogic Telephony Cards, C++, Oracle.
@@ -97,38 +84,13 @@ Work experience
 
 <br>
 
-* **2008-2008: Teaching Assistant**
+**2008-2008: Teaching Assistant**
   * [Jordan University of Science and Technology](https://www.just.edu.jo/Pages/Default.aspx), Department of Computer Engineering, Irbid, Jordan
     * Co-taught undergraduate level courses for the undergraduate Computer Engineering program.  
 
 <br>
 
-* **2007-2007: Intern - Support Engineer**
+**2007-2007: Intern - Support Engineer**
   * [Cairo-Amman Bank](https://www.cab.jo/for-me), IT Department, Amman, Jordan
     * Internship program towards the partial fulfillment of Bachelor of Science in Computer Engineering degree
     * Worked in the IT department on different technical tasks related to networking and system administration.
-
-&nbsp;
-
-EDITORIAL & REVIEW ACTIVITY 
-======
-* Program/Organizing Committee Member
-  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023.
-* Reviewer for Scholarly Journals
-  * IEEE Transactions on Information Forensics & Security; Journal of Cryptography; IEEE Transactions on Computers; IEEE Access; IEEE Transactions on Parallel and Distributed Systems; AEU - International Journal of Electronics and Communications; Journal of Medical Internet Research (JMIR); Neural Computing and Applications; International Journal of Information Security; IEEE Transactions on Emerging Topics in Computing; Artificial Intelligence Review; Journal of Intelligent Information Systems;  
-
-&nbsp;
-
-Leadership / Awards / Honors
-======
-* 09/2023, **Honorary Token from Sabancı University**. Selected as one of the instructors for the enCRYPTON Summer School on cryptography and security.
-* 06/2022, **Rabdan Academy Recognition for Distinguished Researchers**, for making significant research contributions to the fields of safety, security, defence, emergency and crisis management, Rabdan Academy, Abu Dhabi, UAE.
-* 05/2022, **Invited Speaker**: Fully Homomorphic Encryption on GPUs: Design, Implementation & Performance Evaluation, NVIDIA, USA.
-* 02/2020, **RIE2020 Advanced Manufacturing and Engineering (AME)** (Award A19E3b0099). Awarded a grant of 9.9 million SGD for a project on privacy-preserving computing.
-* 10/2021, **Invited Speaker**: Privacy-Preserving Computing, at Cyber Wales Cluster Webinar in the Middle East, UAE.
-* 07/2020, **Invited Speaker**: Trustless Computing on Encrypted data, NCR, Singapore.
-* 08/2017, **Outstanding Technical Oral Presentation award**, the 2017 ECE GSS, National University of Signapore. Recognized for delivering an excellent presentation at the ECE Graduate Student Symposium.
-* 12/2015, **Student Travel Grant Award**. Awarded a travel grant to attend and present a paper at the Annual Computer Security Applications Conference (ACSAC) in California, USA.
-* 01/2015, **Singapore International Graduate Award (SINGA)** PhD Scholarship, A*STAR. Awarded a full scholarship to pursue a PhD in computer science at NUS.
-* 12/2014, **Honorary Shield from Taif University**. Honored for training and leading the robotics team in the Student Talents Club.
-* 08/2010, **Thank you letter** from Globitel. Appreciated for demonstrating accountability, initiative, and result orientation in a software development projects.

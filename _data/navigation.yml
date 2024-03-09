@@ -11,7 +11,13 @@ main:
 
   - title: "Teaching"
     url: /teaching/
-    
+
+  - title: "Experience"
+    url: /experience/    
+
+  - title: "Service"
+    url: /service/
+
   - title: "Code"
     url: /code/
 
