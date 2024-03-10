@@ -1,6 +1,6 @@
 ---
 layout: archive
-# permalink: /cv/
+permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
@@ -36,29 +36,29 @@ Work experience
 
 * **2021-2022: Assistant Professor**
   * [Rabdan Academy](https://ra.ac.ae/), Homeland Security Department, Abu Dhabi, UAE
-    * Teaching a wide range of cybersecurity courses.
-    * Conducting research on Post-Quantum Cryptography,Privacy-Enhancing Technologies, Cryptographic Engineering and Machine learning for cybersecurity.  
+    * Taught a wide range of cybersecurity courses.
+    * Conducted research on Post-Quantum Cryptography,Privacy-Enhancing Technologies, Cryptographic Engineering and Machine learning for cybersecurity.  
 
 <br>
 
 * **2018-2021: Scientist II**
   * [A*STAR – Institute for Infocomm Research](https://www.a-star.edu.sg/i2r), Cybersecurity Department, One North, Singapore
     * Headed the completion of more than 10 research projects of values ranging between 100K to 3.3M Singapore dollar.
-    * Conducting research in cutting-edge technologies for trust-worthy and privacy-preserving Machine/Deep Learning applications.
-    * Implementation of lattice-based cryptosystems. I was focused on high-performance implementations (AVX2, AVX-512, GPUs and FPGAs) of post-quantum lattice-based cryptosystems such as LAC, NTTRU, and Kyber, and Fully Homomorphic Encryption (FHE) schemes such as BFV, BGV, CKKS and TFHE.
-    *	Developing engagements with potential customers by conducting applied research to develop prototypes and pilots of innovative solutions of customer-defined problems.
-    * Applying Fully Homomorphic Encryption (FHE) to solve real-world problems:
+    * Conducted research in cutting-edge technologies for trust-worthy and privacy-preserving Machine/Deep Learning applications.
+    * Implementation of lattice-based cryptosystems. Focused on high-performance implementations (AVX2, AVX-512, GPUs and FPGAs) of post-quantum lattice-based cryptosystems such as LAC, NTTRU, and Kyber, and Fully Homomorphic Encryption (FHE) schemes such as BFV, BGV, CKKS and TFHE.
+    *	Developed engagements with potential customers by conducting applied research to develop prototypes and pilots of innovative solutions of customer-defined problems.
+    * Applyed Fully Homomorphic Encryption (FHE) to solve real-world problems:
       * Homomorphic CNNs: developing a privacy-preserving image classifier that performs inference (prediction) of CNNs on encrypted images from MNIST, CIFAR-10 and diabetic retinopathy medical images. Implemented on CPU (using SEAL) and GPU (using A*FHE).
       * PrivFT (private fasttext): developing a privacy-preserving NLP text classifier based on the bag-of-words model using FHE. PrivFT can perform both training and prediction on encrypted text. Implemented on CPU (using SEAL) and GPU (using A*FHE).
       * GI-FHE: developing privacy-preserving genotype imputation models that impute the missing genotypes of encrypted DNA sequences using FHE. Implemented on CPU (using SEAL).
       * AML-FHE: developing a privacy-preserving anti-money laundry system that predicts illicit encrypted transactions using FHE. Implemented on CPU (using SEAL).
       * CASHE: developing a privacy-preserving spacecraft conjunction analysis tool using FHE. CASHE can predict the collision probability of flying objects using encrypted orbital information. Implemented on CPU (using SEAL).
-    * Apply machine learning for Cybersecurity. Developing Intrusion Detection Systems using predictive models (SVM, Logistic Regression, and CNNs).
-    * Writing research grants, project proposals, IPs and research articles.
-    * Overseeing a team of scientists, engineers, and PhD students to develop FPGA-accelerated fully homomorphic encryption.
-    * Technical Expert for the I2R Technical Expert Panel:
-      *	Offer consultation, advice, and/or solutions to Dept/Div/Prog members on specific technical issues;
-      * Assist Dept/Div/Prog members in identifying resources required to resolve the technical issues  
+    * Applyed machine learning for Cybersecurity. Developing Intrusion Detection Systems using predictive models (SVM, Logistic Regression, and CNNs).
+    * Authored research grants, project proposals, IPs and research articles.
+    * Supervised a team of scientists, engineers, and PhD students to develop FPGA-accelerated fully homomorphic encryption.
+    * Served as Technical Expert for the I2R Technical Expert Panel:
+      *	Offering consultation, advice, and/or solutions to Dept/Div/Prog members on specific technical issues;
+      * Assisting Dept/Div/Prog members in identifying resources required to resolve the technical issues  
 
 <br>
 
@@ -107,15 +107,6 @@ Work experience
   * [Cairo-Amman Bank](https://www.cab.jo/for-me), IT Department, Amman, Jordan
     * Internship program towards the partial fulfillment of Bachelor of Science in Computer Engineering degree
     * Worked in the IT department on different technical tasks related to networking and system administration.
-
-&nbsp;
-
-EDITORIAL & REVIEW ACTIVITY 
-======
-* Program/Organizing Committee Member
-  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023.
-* Reviewer for Scholarly Journals
-  * IEEE Transactions on Information Forensics & Security; Journal of Cryptography; IEEE Transactions on Computers; IEEE Access; IEEE Transactions on Parallel and Distributed Systems; AEU - International Journal of Electronics and Communications; Journal of Medical Internet Research (JMIR); Neural Computing and Applications; International Journal of Information Security; IEEE Transactions on Emerging Topics in Computing; Artificial Intelligence Review; Journal of Intelligent Information Systems;  
 
 &nbsp;
 
