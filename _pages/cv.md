@@ -76,7 +76,7 @@ Work experience
 
 * **2011-2014: Lecturer**
   * [Taif University](https://www.tu.edu.sa/En/), College of Computers and Information Technology, Taif, Saudi Arabia
-    * Teaching undergraduate computer engineering courses.
+    * Taught undergraduate computer engineering courses.
     * Responsible for the design, development, and maintenance of the CIT website.
     * Involved in ABET accreditation and preparation of Assessment Course Files.  
 
