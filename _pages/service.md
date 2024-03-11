@@ -33,3 +33,5 @@ EDITORIAL & REVIEW ACTIVITY
 
 * Open-source projects
   * Maintainer and core contributor to [OpenFHE](https://github.com/openfheorg/openfhe-development)
+  * OpenFHE [Discourse Forum](https://openfhe.discourse.group/) Contributor (2022 - Present)
+      Actively participating in discussions, providing technical guidance and support to users on learning and using OpenFHE for homomorphic encryption.
