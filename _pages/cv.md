@@ -123,4 +123,4 @@ Leadership / Awards / Honors
 * 01/2015, **Singapore International Graduate Award (SINGA)** PhD Scholarship, by A*STAR. Full scholarship awarded to pursue a PhD in Electrical and Computer Engineering at the National University of Singapore.
 * 12/2014, **Honorary Shield from Taif University**. Honored for training and leading the robotics team in the Student Talents Club.
 * 08/2010, **Thank you letter** from Globitel. Appreciated for demonstrating accountability, initiative, and result orientation in a software development projects.
-* 02/2009, **Scholarship** MSc Scholarship, Jordan University of Science and Technology. Scholarship awarded to pursue MSc in Computer Engineering at the Jordan University of Science and Technology.
+* 02/2009, **MSc Scholarship**, Jordan University of Science and Technology. Scholarship awarded to pursue MSc in Computer Engineering at the Jordan University of Science and Technology.
