@@ -21,10 +21,12 @@ EDITORIAL & REVIEW ACTIVITY
   * IEEE Transactions on Computers
   * IEEE Transactions on Emerging Topics in Computing
   * IEEE Transactions on Parallel and Distributed Systems
+  * IEEE Transactions on Industrial Informatics
   * IEEE Access
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
   * Neural Computing and Applications
+  * Cluster Computing
   * International Journal of Information Security
   * Artificial Intelligence Review
   * Journal of Intelligent Information Systems
