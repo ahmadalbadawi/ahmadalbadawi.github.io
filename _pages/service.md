@@ -23,6 +23,7 @@ EDITORIAL & REVIEW ACTIVITY
   * IEEE Transactions on Parallel and Distributed Systems
   * IEEE Transactions on Industrial Informatics
   * IEEE Access
+  * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
   * Neural Computing and Applications
