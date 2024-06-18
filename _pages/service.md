@@ -24,6 +24,7 @@ EDITORIAL & REVIEW ACTIVITY
   * IEEE Transactions on Industrial Informatics
   * IEEE Access
   * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  * ACM Transactions on Privacy and Security
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
   * Neural Computing and Applications
