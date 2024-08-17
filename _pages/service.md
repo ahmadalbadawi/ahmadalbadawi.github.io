@@ -27,6 +27,7 @@ EDITORIAL & REVIEW ACTIVITY
   * ACM Transactions on Privacy and Security
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
+  * Computer Science Review
   * Neural Computing and Applications
   * Cluster Computing
   * International Journal of Information Security
