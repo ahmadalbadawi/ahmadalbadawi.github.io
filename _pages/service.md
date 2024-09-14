@@ -10,8 +10,9 @@ redirect_from:
 
 EDITORIAL & REVIEW ACTIVITY 
 ======
-* Program/Organizing Committee Member
-  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023.
+* Program/Organizing/Technical Committee Member
+  * 2025 - IVSP’25: 7th International Conference on Image, Video and Signal Processing, Mar 4-6, 2025, Kawasaki, Japan [url](https://ivsp.net/index.html)
+  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023, Nov 26, 2025, Copenhagen Denmark [url](https://homomorphicencryption.org/workshops-wahc23/)
 
 &nbsp;
 
