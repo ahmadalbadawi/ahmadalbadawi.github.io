@@ -22,7 +22,7 @@ Education
 Work experience
 ======
 * **2022-Now: Senior Scientist in Applied Cryptography**
-  * [Duality Technologies](https://dualitytech.com/), Hoboken, New Jersey, US
+  * Duality Technologies, Hoboken, New Jersey, US
     * Conducting cutting-edge research to push the current state of the art in cryptographic secure computing to new statures. Of main interest are privacy-enhancing technologies such as fully homomorphic encryption, secure multi-party computing, differential privacy, federated learning, threshold encryption, and many other techniques.
     * Developing novel solutions that empower secure data sharing and collaborative computing on sensitive data among not-necessarily trustful parties ensuring compliance with most of data protection regulation acts around the world.
     * Contributing to OpenFHE, a state-of-the-art open-source library for homomorphic encryption and secure multi-party computing. 
@@ -35,14 +35,14 @@ Work experience
 <br>
 
 * **2021-2022: Assistant Professor**
-  * [Rabdan Academy](https://ra.ac.ae/), Homeland Security Department, Abu Dhabi, UAE
+  * Rabdan Academy, Homeland Security Department, Abu Dhabi, UAE
     * Taught a wide range of cybersecurity courses.
     * Conducted research on Post-Quantum Cryptography,Privacy-Enhancing Technologies, Cryptographic Engineering and Machine learning for cybersecurity.  
 
 <br>
 
 * **2018-2021: Scientist II**
-  * [A*STAR – Institute for Infocomm Research](https://www.a-star.edu.sg/i2r), Cybersecurity Department, One North, Singapore
+  * A*STAR – Institute for Infocomm Research, Cybersecurity Department, One North, Singapore
     * Headed the completion of more than 10 research projects of values ranging between 100K to 3.3M Singapore dollar.
     * Conducted research in cutting-edge technologies for trust-worthy and privacy-preserving Machine/Deep Learning applications.
     * Implementation of lattice-based cryptosystems. Focused on high-performance implementations (AVX2, AVX-512, GPUs and FPGAs) of post-quantum lattice-based cryptosystems such as LAC, NTTRU, and Kyber, and Fully Homomorphic Encryption (FHE) schemes such as BFV, BGV, CKKS and TFHE.
@@ -75,7 +75,7 @@ Work experience
 <br>
 
 * **2011-2014: Lecturer**
-  * [Taif University](https://www.tu.edu.sa/En/), College of Computers and Information Technology, Taif, Saudi Arabia
+  * Taif University, College of Computers and Information Technology, Taif, Saudi Arabia
     * Taught undergraduate computer engineering courses.
     * Responsible for the design, development, and maintenance of the CIT website.
     * Involved in ABET accreditation and preparation of Assessment Course Files.  
@@ -83,7 +83,7 @@ Work experience
 <br>
 
 * **2008-2011: Sr. Telecommunications Engineer**
-  * [Globitel](https://www.globitel.com/), Amman, Jordan
+  * Globitel, Amman, Jordan
     * Development of Intelligent Traffic Steering (ITS). ITS is a roaming traffic redirection system in GSM mobile networks. GSM network operators establish roaming service agreements with each other such that low charging rates (from operator perspective) are incurred by the service provider in the visited country. ITS is a solution that encourages/forces roaming subscribers to register on preferred operators.
     <br />**Technologies used**: GSM, SS7, Dialogic Telephony Cards, C++, Oracle.
     *	Development of Collect Call. Collect Call is a service that allows the calling party to place a call at the callee’s expense.
@@ -98,13 +98,13 @@ Work experience
 <br>
 
 * **2008-2008: Teaching Assistant**
-  * [Jordan University of Science and Technology](https://www.just.edu.jo/Pages/Default.aspx), Department of Computer Engineering, Irbid, Jordan
+  * Jordan University of Science and Technology, Department of Computer Engineering, Irbid, Jordan
     * Co-taught undergraduate level courses for the undergraduate Computer Engineering program.  
 
 <br>
 
 * **2007-2007: Intern - Support Engineer**
-  * [Cairo-Amman Bank](https://www.cab.jo/for-me), IT Department, Amman, Jordan
+  * Cairo-Amman Bank, IT Department, Amman, Jordan
     * Internship program towards the partial fulfillment of Bachelor of Science in Computer Engineering degree
     * Worked in the IT department on different technical tasks related to networking and system administration.
 
