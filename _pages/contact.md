@@ -5,7 +5,7 @@ permalink: /contact/
 author_profile: true
 ---
 
-Ahmad Al Badawi, Ph.D.
+Ahmad Al Badawi, Ph.D.  
 Email: ahmad (at) u (dot) nus (dot) edu  
 
 [LinkedIn](https://www.linkedin.com/in/ahmad-al-badawi/)  
