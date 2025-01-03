@@ -25,7 +25,7 @@ Specific research interests include but are not limited to:
 ## Grants and Contract Awards
 
 Feb 2020 – Aug 2021  
-RIE2020 Advanced Manufacturing and Engineering (AME) Programmtic Programme  (Award A19E3b0099). 9.9 Million SGD.  
+RIE2020 Advanced Manufacturing and Engineering (AME) Programmatic Programme  (Award A19E3b0099). 9.9 Million SGD.  
 Principle Investigator for a multi-year, multi-million dollar research and development effort funded by the Singaporean government to optimize fully homomorphic encryption (HE) for advanced manufacturing applications such as Design of Experiments. I was responsible of Work Package II – Strengthening HE fundamentals tasked with: 
 1. designing fast algorithms for primitive HE computations, 
 2. extending HE arithmetic set, and 
@@ -47,8 +47,9 @@ Principle Investigator for a multi-year, multi-million dollar research and devel
 
 Apr 2021 – Jun 2024  
 DPRIVE - Data Protection in Virtual Environments – 15 Million USD. TREBUCHET Team  
-Associate Principle Investigator for a multi-year, multi-million dollar DARPA-funded research and development effort to build a HE chip for homomorphic machine and deep learning applications via ASIC technology. I am mainly responsible for:
-1. designing novel cryptographic capabilities of HE to support machine and deep learning applications such as logistic regression training, CNN inference and training, 
-2. developing initial prototypes of the said cryptographic capabilities
-3. coordination and knowledge transferal between the software and hardware subgroups in the TREBUCHET team, and 
-4. developing workload charecterization and performance models on various harware acceleration technogies.
+Co-Principle Investigator for a multi-year, multi-million dollar DARPA-funded research and development effort to build a HE chip for homomorphic machine and deep learning applications via ASIC technology. I am mainly responsible for:
+1. directed software-hardware co-design and optimization strategies as Co-PI and Technical Lead
+2. designing novel cryptographic capabilities of HE to support machine and deep learning applications such as logistic regression training, CNN inference and training, 
+3. developing initial prototypes of the said cryptographic capabilities
+4. coordination and knowledge transferal between the software and hardware subgroups in the TREBUCHET team, and 
+5. developing workload characterization and performance models on various hardware acceleration technologies.

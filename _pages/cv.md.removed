@@ -47,13 +47,13 @@ Work experience
     * Conducted research in cutting-edge technologies for trust-worthy and privacy-preserving Machine/Deep Learning applications.
     * Implementation of lattice-based cryptosystems. Focused on high-performance implementations (AVX2, AVX-512, GPUs and FPGAs) of post-quantum lattice-based cryptosystems such as LAC, NTTRU, and Kyber, and Fully Homomorphic Encryption (FHE) schemes such as BFV, BGV, CKKS and TFHE.
     *	Developed engagements with potential customers by conducting applied research to develop prototypes and pilots of innovative solutions of customer-defined problems.
-    * Applyed Fully Homomorphic Encryption (FHE) to solve real-world problems:
+    * Applied Fully Homomorphic Encryption (FHE) to solve real-world problems:
       * Homomorphic CNNs: developing a privacy-preserving image classifier that performs inference (prediction) of CNNs on encrypted images from MNIST, CIFAR-10 and diabetic retinopathy medical images. Implemented on CPU (using SEAL) and GPU (using A*FHE).
       * PrivFT (private fasttext): developing a privacy-preserving NLP text classifier based on the bag-of-words model using FHE. PrivFT can perform both training and prediction on encrypted text. Implemented on CPU (using SEAL) and GPU (using A*FHE).
       * GI-FHE: developing privacy-preserving genotype imputation models that impute the missing genotypes of encrypted DNA sequences using FHE. Implemented on CPU (using SEAL).
       * AML-FHE: developing a privacy-preserving anti-money laundry system that predicts illicit encrypted transactions using FHE. Implemented on CPU (using SEAL).
       * CASHE: developing a privacy-preserving spacecraft conjunction analysis tool using FHE. CASHE can predict the collision probability of flying objects using encrypted orbital information. Implemented on CPU (using SEAL).
-    * Applyed machine learning for Cybersecurity. Developing Intrusion Detection Systems using predictive models (SVM, Logistic Regression, and CNNs).
+    * Applied machine learning for Cybersecurity. Developing Intrusion Detection Systems using predictive models (SVM, Logistic Regression, and CNNs).
     * Authored research grants, project proposals, IPs and research articles.
     * Supervised a team of scientists, engineers, and PhD students to develop FPGA-accelerated fully homomorphic encryption.
     * Served as Technical Expert for the I2R Technical Expert Panel:
