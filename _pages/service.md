@@ -8,7 +8,7 @@ redirect_from:
 
 {% include base_path %}
 
-EDITORIAL & REVIEW ACTIVITY 
+Academic Editorial and Review Contributions 
 ======
 * Program/Organizing/Technical Committee Member
   * 2025 - IVSP’25: 7th International Conference on Image, Video and Signal Processing, Mar 4-6, 2025, Kawasaki, Japan [url](https://ivsp.net/index.html)
