@@ -13,8 +13,6 @@ author_profile: true
 
 - **Al Badawi, A.**, Yeo, S. L., & Yusof, M. F. B. (2024). A Generalized Number-Theoretic Transform for Efficient Multiplication in Lattice Cryptography. Contemporary Mathematics, 4200-4222. [URL](https://ojs.wiserpub.com/index.php/CM/article/view/4468)
 
-- **Al Badawi, A.** (2024). Private SVM Inference on Encrypted Data. IntechOpen. doi: 10.5772/intechopen.1006690. [URL](https://www.intechopen.com/online-first/1202652)
-
 - Al Nuaimi, Taraf, Salama Al Zaabi, Mansor Alyilieli, Mohd AlMaskari, Salim Alblooshi, Fahad Alhabsi, Mohd Faizal Bin Yusof, and **Ahmad Al Badawi**. "A comparative evaluation of intrusion detection systems on the edge-IIoT-2022 dataset." Intelligent Systems with Applications 20 (2023). [URL](https://www.sciencedirect.com/science/article/pii/S2667305323001230)
 
 - Ravit Geva, Alexander Gusev, Yuriy Polyakov, Lior Liram, Oded Rosolio, Andreea Alexandru, Nicholas Genise, Marcelo Blatt, Zohar Duchin, Barliz Waissengrin, Dan Mirelman, Felix Bukstein, Deborah T. Blumenthal, Ido Wolf, Sharon Pelles, Tali Schaffer, Lee A. Lavi, Daniele Micciancio, Vinod Vaikuntanathan, **Ahmad Al Badawi** and Shafi Goldwasser. Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption. Accepted, Proceedings of the National Academy of Sciences (PNAS) 2023. [URL](https://www.pnas.org/doi/10.1073/pnas.2304415120)
