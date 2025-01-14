@@ -23,11 +23,13 @@ EDITORIAL & REVIEW ACTIVITY
   * IEEE Transactions on Emerging Topics in Computing
   * IEEE Transactions on Parallel and Distributed Systems
   * IEEE Transactions on Industrial Informatics
-  * IEEE Access
+  * IEEE Transactions on Audio, Speech and Language Processing
   * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  * IEEE Access
   * ACM Transactions on Privacy and Security
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
+  * Future Generation Computer Systems
   * Computer Science Review
   * Neural Computing and Applications
   * Cluster Computing

@@ -5,6 +5,16 @@ permalink: /publications/
 author_profile: true
 ---
 
+- Alexandru, A., **Al Badawi, A.**, Micciancio, D., & Polyakov, Y. (2024). Application-aware approximate homomorphic encryption: Configuring fhe for practical use. Cryptology ePrint Archive. [URL](https://eprint.iacr.org/2024/203)
+
+- **Al Badawi, A.**, & Faizal Bin Yusof, M. (2024). Private pathological assessment via machine learning and homomorphic encryption. BioData Mining, 17(1), 33. [URL](https://link.springer.com/article/10.1186/s13040-024-00379-9)
+
+- Mazzone, F., **Badawi, A. A.**, Polyakov, Y., Everts, M., Hahn, F., & Peter, A. (2024). Investigating Privacy Attacks in the Gray-Box Setting to Enhance Collaborative Learning Schemes. arXiv preprint arXiv:2409.17283. [URL](https://arxiv.org/abs/2409.17283)
+
+- **Al Badawi, A.**, Yeo, S. L., & Yusof, M. F. B. (2024). A Generalized Number-Theoretic Transform for Efficient Multiplication in Lattice Cryptography. Contemporary Mathematics, 4200-4222. [URL](https://ojs.wiserpub.com/index.php/CM/article/view/4468)
+
+- **Al Badawi, A.** (2024). Private SVM Inference on Encrypted Data. IntechOpen. doi: 10.5772/intechopen.1006690. [URL](https://www.intechopen.com/online-first/1202652)
+
 - Al Nuaimi, Taraf, Salama Al Zaabi, Mansor Alyilieli, Mohd AlMaskari, Salim Alblooshi, Fahad Alhabsi, Mohd Faizal Bin Yusof, and **Ahmad Al Badawi**. "A comparative evaluation of intrusion detection systems on the edge-IIoT-2022 dataset." Intelligent Systems with Applications 20 (2023). [URL](https://www.sciencedirect.com/science/article/pii/S2667305323001230)
 
 - Ravit Geva, Alexander Gusev, Yuriy Polyakov, Lior Liram, Oded Rosolio, Andreea Alexandru, Nicholas Genise, Marcelo Blatt, Zohar Duchin, Barliz Waissengrin, Dan Mirelman, Felix Bukstein, Deborah T. Blumenthal, Ido Wolf, Sharon Pelles, Tali Schaffer, Lee A. Lavi, Daniele Micciancio, Vinod Vaikuntanathan, **Ahmad Al Badawi** and Shafi Goldwasser. Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption. Accepted, Proceedings of the National Academy of Sciences (PNAS) 2023. [URL](https://www.pnas.org/doi/10.1073/pnas.2304415120)
