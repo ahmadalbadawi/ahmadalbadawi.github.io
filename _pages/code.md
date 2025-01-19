@@ -10,4 +10,4 @@ author_profile: true
 * Actively working on [palisade](https://gitlab.com/palisade/palisade-development) and other related projects such as [OpenFHE](https://github.com/openfheorg/openfhe-development) and [Intel HEXL](https://github.com/openfheorg/openfhe-hexl)
 * Homomorphic encryption with continued fraction [cFHE](https://github.com/heewon-chung/cfhe)
 * Contributed the BFV-BEHZ encryption scheme in the [PALISADE](https://palisade-crypto.org/) Fully Homomorphic Encryption library
-* And this website which is a customized version of the [Academic Pages](https://github.com/academicpages/academicpages.github.io) framework. I forked the project and made it my own by adding unique features and design elements
+* And this [website](https://www.ahmadalbadawi.com) which is a customized version of the [Academic Pages](https://github.com/academicpages/academicpages.github.io) framework. I forked the project and made it my own by adding unique features and design elements
