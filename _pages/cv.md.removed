@@ -21,13 +21,13 @@ Education
 
 Work experience
 ======
-* **2022-Now: Senior Research Scientist & Co-PI, Cryptography**
+* **2022-Now: Senior Research Scientist & PI, Cryptography**
   * Duality Technologies, Hoboken, New Jersey, US
     * Conducting cutting-edge research to push the current state of the art in cryptographic secure computing to new statures. Of main interest are privacy-enhancing technologies such as fully homomorphic encryption, secure multi-party computing, differential privacy, federated learning, threshold encryption, and many other techniques.
     * Developing novel solutions that empower secure data sharing and collaborative computing on sensitive data among not-necessarily trustful parties ensuring compliance with most of data protection regulation acts around the world.
     * Contributing to OpenFHE, a state-of-the-art open-source library for homomorphic encryption and secure multi-party computing. 
     * Hardware acceleration of resource-intensive cryptographic techniques using cutting-edge acceleration technologies such as multi-core CPUs, GPUs, FPGAs and ASICs.
-    * Co-PI of DARPA’s (DPRIVE) for hardware acceleration of fully homomorphic encryption via ASICs.
+    * PI of DARPA’s (DPRIVE) for hardware acceleration of fully homomorphic encryption via ASICs.
     * Leading Duality’s partnering efforts with hardware providers for OpenFHE acceleration.
     * Building state-of-the-art SW/HW infrastructure for private machine learning with FHE in OpenFHE (SW) and ASIC-accelerated low-level FHE operations (HW).
     * Building performance models to predict the execution latency of computational workloads for performance estimation.  

@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Dr. Ahmad Al Badawi"
 title_separator          : "-"
 name                     : &name "Dr. Ahmad Al Badawi"
-description              : &description "Senior Research Scientist & Co-PI, Cryptography"
+description              : &description "Senior Research Scientist & PI, Cryptography"
 url                      : https://ahmadalbadawi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ahmadalbadawi/ahmadalbadawi.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Dr. Ahmad Al Badawi"
   avatar           : "profile.jpg"
-  bio              : "Sr. Research Scientist &<br>Co-PI, Cryptography"
+  bio              : "Sr. Research Scientist &<br>PI, Cryptography"
   location         : "NYC Metropolitan Area, US"
   employer         :
   #pubmed           : ""
