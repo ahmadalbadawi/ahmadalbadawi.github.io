@@ -45,3 +45,9 @@ Academic Editorial and Review Contributions
   * Maintainer and core contributor to [OpenFHE](https://github.com/openfheorg/openfhe-development)
   * OpenFHE [Discourse Forum](https://openfhe.discourse.group/) Contributor (2022 - Present)
       Actively participating in discussions, providing technical guidance and support to users on learning and using OpenFHE for homomorphic encryption.
+
+&nbsp;
+
+* Challenges and Hackathons
+  * Played a key role in the design and preparation of FHERMA FHE challenges: [Ethereum Fraud Detection via SVM
+](https://fherma.io/challenges/66e8180996829cc963805ffb/overview) and [House Price Prediction](https://fherma.io/challenges/676035a7890eef39561cf7c9/overview).
