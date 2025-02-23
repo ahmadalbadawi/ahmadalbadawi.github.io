@@ -19,8 +19,8 @@ Academic Editorial and Review Contributions
 &nbsp;
 
 * Reviewer for Scholarly Journals
-  * IEEE Transactions on Information Forensics & Security
   * Journal of Cryptography
+  * IEEE Transactions on Information Forensics & Security
   * IEEE Transactions on Computers
   * IEEE Transactions on Emerging Topics in Computing
   * IEEE Transactions on Parallel and Distributed Systems
@@ -28,9 +28,11 @@ Academic Editorial and Review Contributions
   * IEEE Transactions on Audio, Speech and Language Processing
   * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
   * IEEE Access
+  * IEEE Transactions on Privacy
   * ACM Transactions on Privacy and Security
   * AEU - International Journal of Electronics and Communications
   * Journal of Medical Internet Research (JMIR)
+  * Information and Software Technology Journal
   * Future Generation Computer Systems
   * Computer Science Review
   * Neural Computing and Applications
