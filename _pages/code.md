@@ -8,6 +8,8 @@ author_profile: true
 * Homomorphic SVM Inference of vector embeddings of images [URL](https://github.com/caesaretos/embed-svm-fhe).
   
 * Private Support Vector Machines with Homomorphic Encryption in [OpenFHE-C++](https://github.com/caesaretos/svm-fhe). For an OpenFHE-Python implementation, check out Bill Buchanan's [example](https://github.com/openfheorg/education/tree/main/openfhe_svm), which is based on my C++ implementation.
+
+* Benchmarking latency of CKKS core operations in [OpenFHE-C++](https://github.com/caesaretos/OpenFHE-Benchmarks).
   
 * Actively working on [palisade](https://gitlab.com/palisade/palisade-development) and other related projects such as [OpenFHE](https://github.com/openfheorg/openfhe-development) and [Intel HEXL](https://github.com/openfheorg/openfhe-hexl).
   
