@@ -13,14 +13,11 @@ The main three themes of my research career are:
 3. Hardware Acceleration
 
 Specific research interests include but are not limited to: 
-1. Parallel Processing and High-Performance Computing
-2. Privacy-Preserving Technologies
+1. Privacy-Preserving Technologies
 3. Trustworthy Machine Learning
-4. Machine Learning for Cybersecurity
-5. Digital Signal Processing
-6. Computer Systems Performance Modelling (Simulation, Queueing Networks and many others)
-7. Combinatorial Optimization
-8. Evolutionary Algorithms
+4. Parallel Processing and High-Performance Computing
+5. Computer Systems Performance Modelling
+6. Machine Learning for Cybersecurity
 
 ## Grants and Contract Awards
 
@@ -45,11 +42,10 @@ Principle Investigator for a multi-year, multi-million dollar research and devel
 
 ## Current Research Activities
 
-Apr 2021 – Jun 2024  
+Apr 2021 – Nov 2025  
 DPRIVE - Data Protection in Virtual Environments – 15 Million USD. TREBUCHET Team  
 Co-Principle Investigator for a multi-year, multi-million dollar DARPA-funded research and development effort to build a HE chip for homomorphic machine and deep learning applications via ASIC technology. I am mainly responsible for:
-1. directed software-hardware co-design and optimization strategies as a Co-PI and Technical Lead
-2. designing novel cryptographic capabilities of HE to support machine and deep learning applications such as logistic regression training, CNN inference and training, 
-3. developing initial prototypes of the said cryptographic capabilities
-4. coordination and knowledge transferal between the software and hardware subgroups in the TREBUCHET team, and 
-5. developing workload characterization and performance models on various hardware acceleration technologies.
+1. developing novel cryptographic capabilities of HE to support machine and deep learning applications such as logistic regression training, CNN inference and training
+2. coordination and knowledge transferal between the software and hardware subgroups in the TREBUCHET team, and 
+3. developing workload characterization and performance models on various hardware acceleration technologies.
+4. serving as a Co-PI and Technical Lead (Sept 2024): directing software-hardware co-design, development, and optimization towards chip tape-out and full system integration
