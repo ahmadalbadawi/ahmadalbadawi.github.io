@@ -21,13 +21,14 @@ Specific research interests include but are not limited to:
 
 ## Grants and Contract Awards
 
-Feb 2020 – Aug 2021  
+Feb 2020 – Aug 2023  
 RIE2020 Advanced Manufacturing and Engineering (AME) Programmatic Programme  (Award A19E3b0099). 9.9 Million SGD.  
-Principle Investigator for a multi-year, multi-million dollar research and development effort funded by the Singaporean government to optimize fully homomorphic encryption (HE) for advanced manufacturing applications such as Design of Experiments. I was responsible of Work Package II – Strengthening HE fundamentals tasked with: 
+Served as a Co-Principle Investigator: I led efforts to optimize fully homomorphic encryption (FHE) for advanced manufacturing applications, including Design of Experiments. I held responsibility for Work Package II – Strengthening HE fundamentals tasked with: 
 1. designing fast algorithms for primitive HE computations, 
 2. extending HE arithmetic set, and 
 3. increasing the usability of HE to ease application development.  
-10 peer-reviewed conference and journal articles, 2 patents, 3 software IPs, and 1 software library were generated from this project.
+
+<!-- 10 peer-reviewed conference and journal articles, 2 patents, 3 software IPs, and 1 software library were generated from this project. -->
 
 <!-- ## Research Products
 
