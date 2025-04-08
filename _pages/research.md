@@ -29,7 +29,7 @@ Principle Investigator for a multi-year, multi-million dollar research and devel
 3. increasing the usability of HE to ease application development.  
 10 peer-reviewed conference and journal articles, 2 patents, 3 software IPs, and 1 software library were generated from this project.
 
-## Research Products
+<!-- ## Research Products
 
 1. GPU acceleration of different fully homomorphic encryption schemes such as BFV and CKKS.
 2. Applying fully homomorphic encryption in creating privacy-preserving machine and deep learning using encrypted data.
@@ -38,7 +38,7 @@ Principle Investigator for a multi-year, multi-million dollar research and devel
 5. GI-FHE: developing privacy-preserving genotype imputation models that impute the missing genotypes of encrypted DNA sequences using FHE. Implemented on CPU (using SEAL).
 6. AML-FHE: developing a privacy-preserving anti-money laundry system that predicts illicit encrypted transactions using FHE. Implemented on CPU (using SEAL).
 7. CASHE: developing a privacy-preserving spacecraft conjunction analysis tool using FHE. CASHE can predict the collision probability of flying objects using encrypted orbital information. Implemented on CPU (using SEAL).
-8. Multi-processor task scheduler via Particle Swarm Optimization. 
+8. Multi-processor task scheduler via Particle Swarm Optimization.  -->
 
 ## Current Research Activities
 
