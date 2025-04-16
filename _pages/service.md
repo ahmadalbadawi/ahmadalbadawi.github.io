@@ -27,6 +27,8 @@ Academic Editorial and Review Contributions
   * IEEE Transactions on Industrial Informatics
   * IEEE Transactions on Audio, Speech and Language Processing
   * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  * IEEE Transactions on Dependable and Secure Computing
+  * IEEE Transactions on Services Computing
   * IEEE Access
   * IEEE Transactions on Privacy
   * ACM Transactions on Privacy and Security
