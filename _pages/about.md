@@ -6,7 +6,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-description: "Official website of Dr. Ahmad Al Badawi, a Senior Scientist in Cryptography. Explore his research in privacy-preserving technologies, hardware acceleration, and trustworthy AI, along with publications and professional background."
+description: "Official website of Dr. Ahmad Al Badawi, a Senior Scientist in Cryptography. Explore his research, along with publications and professional background."
 og_image: "/images/profile.jpg"
 ---
 
