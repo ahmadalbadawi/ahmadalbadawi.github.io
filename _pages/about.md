@@ -7,6 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 description: "Official website of Dr. Ahmad Al Badawi, a Senior Scientist in Cryptography. Explore his research in privacy-preserving technologies, hardware acceleration, and trustworthy AI, along with publications and professional background."
+og_image: "/images/profile.jpg"
 ---
 
 I am a dedicated researcher specializing in applied cryptography and privacy-preserving technologies. These fields develop efficient methods to secure data throughout its entire lifecycle, safeguarding it from unauthorized access and manipulation at rest (when stored), in transit (during communication), and in use (during processing). I have a strong publication record, with numerous papers presented at prestigious journals and conferences. I am also an active member of the academic community, having taught courses, built research teams, and mentored other researchers. Moreover, I have advised deep tech startups on designing, implementing, and deploying secure and privacy-aware solutions. My expertise extends to hardware acceleration, enabling optimized performance and efficiency for complex cryptographic operations.
