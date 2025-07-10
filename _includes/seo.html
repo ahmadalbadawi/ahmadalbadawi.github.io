@@ -81,9 +81,21 @@
   {% if site.og_image %}
   "logo": "{% if site.og_image contains '://' %}{{ site.og_image }}{% else %}{{ site.url | append: site.baseurl | append: site.og_image }}{% endif %}",
   {% endif %}
+
+  {# Start of the fix for sameAs #}
+  {% assign social_urls = "" %}
   {% if site.social %}
-  "sameAs": {{ site.social | jsonify }},
+    {% for item in site.social %}
+      {% if item.url %}
+        {% assign social_urls = social_urls | append: '"' | append: item.url | append: '",' %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
+  {% if social_urls != "" %}
+  "sameAs": [{{ social_urls | remove_last: "," }}],
+  {% endif %}
+  {# End of the fix for sameAs #}
+
   "description": "{{ seo_description }}"
 }
 </script>
