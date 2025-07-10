@@ -28,9 +28,9 @@
 <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ canonical_url }}">
 
-{%- comment -%}
+{% comment %}
   Open Graph image logic: page.header.image > page.og_image > site.og_image
-{%- endcomment -%}
+{% endcomment %}
 {% if page.header.image %}
   <meta property="og:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
 {% elsif page.og_image %}
@@ -49,9 +49,9 @@
 
 <link rel="canonical" href="{{ canonical_url }}">
 
-{%- comment -%}
+{% comment %}
   Twitter Card tags
-{%- endcomment -%}
+{% endcomment %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ seo_title }}">
 <meta name="twitter:description" content="{{ seo_description }}">
@@ -69,9 +69,9 @@
   <meta name="twitter:creator" content="@{{ seo_author.twitter | replace: '@', '' }}">
 {% endif %}
 
-{%- comment -%}
+{% comment %}
   JSON-LD structured data for better search engine context
-{%- endcomment -%}
+{% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -82,7 +82,9 @@
   "logo": "{% if site.og_image contains '://' %}{{ site.og_image }}{% else %}{{ site.url | append: site.baseurl | append: site.og_image }}{% endif %}",
   {% endif %}
 
-  {# Start of the fix for sameAs #}
+  {% comment %}
+    Build the sameAs array from social links in _config.yml
+  {% endcomment %}
   {% assign social_urls = "" %}
   {% if site.social %}
     {% for item in site.social %}
@@ -94,8 +96,6 @@
   {% if social_urls != "" %}
   "sameAs": [{{ social_urls | remove_last: "," }}],
   {% endif %}
-  {# End of the fix for sameAs #}
-
   "description": "{{ seo_description }}"
 }
 </script>
