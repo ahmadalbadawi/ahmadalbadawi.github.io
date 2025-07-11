@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ahmadalbadawi.github.io/sitemap.xml
+Sitemap: https://ahmadalbadawi.com/sitemap.xml
