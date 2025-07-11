@@ -1,16 +1,79 @@
----
-title: "Page Not Found"
-# excerpt: "Page not found. Your pixels are in another canvas."
-sitemap: false
-permalink: /404.html
----
-
-Sorry, but the page you were trying to view does not exist --- perhaps you can try searching for it below.
-
-<script type="text/javascript">
-  var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = '{{ site.url }}'
-</script>
-<script type="text/javascript"
-  src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-</script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .navigation {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .navigation a:hover {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Sorry, but the page you were trying to view does not exist.</p>
+        <p>It looks like you've stumbled upon a page that doesn't exist. Don't worry, it happens to the best of us!</p>
+        <div class="navigation">
+            <p>Perhaps you can try:</p>
+            <a href="/">Go to Homepage</a>
+            <a href="/archive/">View All Posts</a>
+            <a href="/contact/">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>
