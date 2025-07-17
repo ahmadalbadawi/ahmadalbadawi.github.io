@@ -1,11 +1,11 @@
 ---
 permalink: /
-title: "About Me"
+title: "About Dr. Ahmad Al Badawi - Cryptography & Privacy Scientist"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
-description: "Official website of Dr. Ahmad Al Badawi, a Senior Scientist in Cryptography. Explore his research in privacy-preserving technologies, publications, and professional background."
+description: "Official website of Dr. Ahmad Al Badawi, a Sr. Scientist in Cryptography. Explore his research in privacy-preserving technologies and professional background."
 og_image: "/images/profile.jpg"
 ---
 
@@ -15,13 +15,13 @@ My ultimate goal is to contribute to a more secure and resilient digital world. 
 
 Explore this website to learn more about my [research interests](/research/), [projects](/code/), and [publications](/publications/). If you have any questions, comments, or collaboration inquiries, please do not hesitate to [contact](/contact/) me.
 
-## Professional Summary
+## Professional Summary: Dr. Ahmad Al Badawi's Expertise
 
 I earned my Ph.D. in Electrical and Computer Engineering from the National University of Singapore in 2018. I also hold a B.Sc. and M.Sc. in Computer Engineering from Al-Balqa' Applied University and the Jordan University of Science and Technology, respectively. As a Senior Scientist in Cryptography, I conduct research on privacy-preserving technologies, trustworthy machine learning, cryptographic engineering, and hardware acceleration. Over my two-decade career, I have applied my expertise in research, teaching, and application development across telecommunications, networking, databases, cybersecurity, and AI. This diverse skillset allows me to conduct impactful research, deliver practical solutions, and guide successful implementations that lead to tangible outcomes.
 
 **Research and Development Expertise**
 
-- **Cryptography & Privacy**: **10+ years** of research experience in cutting-edge areas such as hardware cryptography, post-quantum cryptography, and privacy-preserving technologies, including fully homomorphic encryption, secure multi-party computation, and trustworthy machine learning.
+- **Cryptography & Privacy-Preserving Technologies**: **10+ years** of research experience in cutting-edge areas such as hardware cryptography, post-quantum cryptography, and privacy-preserving technologies, including fully homomorphic encryption, secure multi-party computation, and trustworthy machine learning.
 
 - **Optimization & Scheduling**: **2+ years** of research experience in multi-processor task scheduling and optimization, with a focus on evolutionary algorithms and particle swarm optimization.
 
