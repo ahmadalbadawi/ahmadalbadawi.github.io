@@ -1,5 +1,6 @@
 ---
 layout: archive
+title: "Service"
 permalink: /service/
 author_profile: true
 redirect_from:
@@ -8,50 +9,47 @@ redirect_from:
 
 {% include base_path %}
 
-Academic Editorial and Review Contributions 
-======
-* Program/Organizing/Technical Committee Member
-  * 2025 - IVSP’25: 7th International Conference on Image, Video and Signal Processing, Mar 4-6, 2025, Kawasaki, Japan [url](https://ivsp.net/index.html)
-  * 2023 - WAHC’23: 11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography at ACM CCS 2023, Nov 26, 2025, Copenhagen Denmark [url](https://homomorphicencryption.org/workshops-wahc23/)
-  * 2021  - ICBIP’21: 6th International Conference on Biomedical Signal and Image Processing, 20th to 22nd August 2021, Suzhou, China [url](https://www.icbip.org/icbip2021.html)
+## Academic Service
 
+### Program & Organizing Committees
+*   **IVSP 2025**: [7th International Conference on Image, Video and Signal Processing](https://ivsp.net/index.html) (Kawasaki, Japan | Mar 2025)
+*   **WAHC 2023**: [11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/workshops-wahc23/) (Copenhagen, Denmark | Nov 2023)
+*   **ICBIP 2021**: [6th International Conference on Biomedical Signal and Image Processing](https://www.icbip.org/icbip2021.html) (Suzhou, China | Aug 2021)
 
-&nbsp;
+### Journal Reviewer
+I have served as a reviewer for numerous scholarly journals, including:
+*   Journal of Cryptography
+*   IEEE Transactions on:
+    *   Information Forensics & Security
+    *   Computers
+    *   Emerging Topics in Computing
+    *   Parallel and Distributed Systems
+    *   Industrial Informatics
+    *   Audio, Speech and Language Processing
+    *   Computer-Aided Design of Integrated Circuits and Systems
+    *   Dependable and Secure Computing
+    *   Services Computing
+    *   Privacy
+*   IEEE Access
+*   ACM Transactions on Privacy and Security
+*   Future Generation Computer Systems
+*   Neural Computing and Applications
+*   Cluster Computing
+*   International Journal of Information Security
+*   Artificial Intelligence Review
+*   Journal of Intelligent Information Systems
+*   And others ...
 
-* Reviewer for Scholarly Journals
-  * Journal of Cryptography
-  * IEEE Transactions on Information Forensics & Security
-  * IEEE Transactions on Computers
-  * IEEE Transactions on Emerging Topics in Computing
-  * IEEE Transactions on Parallel and Distributed Systems
-  * IEEE Transactions on Industrial Informatics
-  * IEEE Transactions on Audio, Speech and Language Processing
-  * IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
-  * IEEE Transactions on Dependable and Secure Computing
-  * IEEE Transactions on Services Computing
-  * IEEE Access
-  * IEEE Transactions on Privacy
-  * ACM Transactions on Privacy and Security
-  * AEU - International Journal of Electronics and Communications
-  * Journal of Medical Internet Research (JMIR)
-  * Information and Software Technology Journal
-  * Future Generation Computer Systems
-  * Computer Science Review
-  * Neural Computing and Applications
-  * Cluster Computing
-  * International Journal of Information Security
-  * Artificial Intelligence Review
-  * Journal of Intelligent Information Systems
+---
 
-&nbsp;
+## Community Contributions
 
-* Open-source projects
-  * Maintainer and core contributor to [OpenFHE](https://github.com/openfheorg/openfhe-development)
-  * OpenFHE [Discourse Forum](https://openfhe.discourse.group/) Contributor (2022 - Present)
-      Actively participating in discussions, providing technical guidance and support to users on learning and using OpenFHE for homomorphic encryption.
+### Open-Source Projects
+*   **Maintainer & Core Contributor** | [OpenFHE Library](https://github.com/openfheorg/openfhe-development)
+*   **Forum Contributor** | [OpenFHE Discourse Forum](https://openfhe.discourse.group/) (2022–Present)
+    *   Actively participate in discussions, providing technical guidance and support to users learning and applying homomorphic encryption with OpenFHE.
 
-&nbsp;
-
-* Challenges and Hackathons
-  * Played a key role in the design and preparation of FHERMA FHE challenges: [Ethereum Fraud Detection via SVM
-](https://fherma.io/challenges/66e8180996829cc963805ffb/overview) and [House Price Prediction](https://fherma.io/challenges/676035a7890eef39561cf7c9/overview).
+### Challenges & Hackathons
+*   Played a key role in designing and preparing the **FHERMA FHE Challenges**, including:
+    *   [Ethereum Fraud Detection via SVM](https://fherma.io/challenges/66e8180996829cc963805ffb/overview)
+    *   [House Price Prediction](https://fherma.io/challenges/676035a7890eef39561cf7c9/overview)
