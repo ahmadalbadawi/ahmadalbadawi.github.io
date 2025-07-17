@@ -13,7 +13,7 @@ I am a dedicated researcher specializing in applied cryptography and privacy-pre
 
 My ultimate goal is to contribute to a more secure and resilient digital world. Whether exploring the theoretical foundations of security or developing practical solutions, I am driven to use my knowledge and skills to create a positive impact. By applying cutting-edge techniques, I strive to solve real-world problems and deliver value across diverse domains.
 
-Explore this website to learn more about my research interests, projects, and publications. If you have any questions, comments, or collaboration inquiries, please do not hesitate to [contact](https://ahmadalbadawi.com/contact/) me.
+Explore this website to learn more about my [research interests](/research/), [projects](/code/), and [publications](/publications/). If you have any questions, comments, or collaboration inquiries, please do not hesitate to [contact](https://ahmadalbadawi.com/contact/) me.
 
 ## Professional Summary
 
