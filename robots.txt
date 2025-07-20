@@ -1,4 +1,16 @@
-User-agent: *
-Allow: /
-
+#
+# This file is licensed under the MIT License (MIT)
+# http://opensource.org/licenses/MIT
+#
 Sitemap: https://ahmadalbadawi.com/sitemap.xml
+
+User-agent: *
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /_sass/
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /package.json
+Disallow: /talkmap.py
+Disallow: /talkmap.ipynb
+Disallow: /vendor/
