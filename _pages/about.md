@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Dr. Ahmad Al Badawi - Cryptography & Privacy Scientist"
+title: "Dr. Ahmad Al Badawi - Cryptography & Privacy Scientist"
 author_profile: true
 redirect_from:
   - /about/
@@ -15,18 +15,18 @@ My ultimate goal is to contribute to a more secure and resilient digital world. 
 
 Explore this website to learn more about my [research interests](/research/), [projects](/code/), and [publications](/publications/). If you have any questions, comments, or collaboration inquiries, please do not hesitate to [contact](/contact/) me.
 
-## Professional Summary: Dr. Ahmad Al Badawi's Expertise
+## Dr. Ahmad Al Badawi: Expertise in Cryptography and Privacy-Preserving Technologies
 
 I earned my Ph.D. in Electrical and Computer Engineering from the National University of Singapore in 2018. I also hold a B.Sc. and M.Sc. in Computer Engineering from Al-Balqa' Applied University and the Jordan University of Science and Technology, respectively. As a Senior Scientist in Cryptography, I conduct research on privacy-preserving technologies, trustworthy machine learning, cryptographic engineering, and hardware acceleration. Over my two-decade career, I have applied my expertise in research, teaching, and application development across telecommunications, networking, databases, cybersecurity, and AI. This diverse skillset allows me to conduct impactful research, deliver practical solutions, and guide successful implementations that lead to tangible outcomes.
 
 **Research and Development Expertise**
 
-- **Cryptography & Privacy-Preserving Technologies**: **10+ years** of research experience in cutting-edge areas such as hardware cryptography, post-quantum cryptography, and privacy-preserving technologies, including fully homomorphic encryption, secure multi-party computation, and trustworthy machine learning.
+- **Cryptography & Privacy-Preserving Technologies**: With over a decade of dedicated research, I possess extensive expertise in cutting-edge cryptographic solutions and privacy-preserving technologies. My work spans hardware cryptography, focusing on efficient and secure implementations; post-quantum cryptography, addressing the threat of quantum computers to current encryption standards; and advanced privacy-preserving techniques such as fully homomorphic encryption (FHE), secure multi-party computation (MPC), and trustworthy machine learning (TML). I am committed to developing robust and innovative methods to protect sensitive data and ensure digital privacy in an evolving technological landscape.
 
-- **Optimization & Scheduling**: **2+ years** of research experience in multi-processor task scheduling and optimization, with a focus on evolutionary algorithms and particle swarm optimization.
+- **Optimization & Scheduling**: My research includes over two years of experience in multi-processor task scheduling and optimization. I have focused on developing and applying advanced algorithms, including evolutionary algorithms and particle swarm optimization, to enhance system efficiency and performance. This work is crucial for optimizing resource allocation and throughput in complex computing environments.
 
-- **Education & Training**: **4+ years** of experience teaching computer science and engineering courses at the university level.
+- **Education & Training**: With over four years of experience, I have actively contributed to academic instruction by teaching various computer science and engineering courses at the university level. My teaching philosophy emphasizes practical application and fostering a deep understanding of complex technical concepts, preparing students for real-world challenges in the field.
 
-- **Industry & Consulting**: **3+ years** of experience as a freelancer, consultant, and contractor for machine learning and privacy-preserving analytics startups, providing expert guidance on secure and efficient solutions.
+- **Industry & Consulting**: I have accumulated over three years of experience as a freelancer, consultant, and contractor, primarily assisting machine learning and privacy-preserving analytics startups. My role involves providing expert guidance on designing, developing, and implementing secure and efficient solutions that meet industry standards and client needs.
 
-- **Telecommunications**: **3+ years** of experience in software development for mobile telecommunications technologies, including GSM, USSD, SS7, CAMEL, and SIGTRAN.
+- **Telecommunications**: I have over three years of hands-on experience in software development specifically tailored for mobile telecommunications technologies. My expertise covers a wide range of protocols and systems, including GSM (Global System for Mobile Communications), USSD (Unstructured Supplementary Service Data), SS7 (Signaling System No. 7), CAMEL (Customized Applications for Mobile Enhanced Logic), and SIGTRAN (Signaling Transport). This background allows me to understand and contribute to the intricate workings of mobile networks and their underlying infrastructure.
