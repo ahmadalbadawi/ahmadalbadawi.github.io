@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-## Education
 * **Ph.D. in Electrical & Computer Engineering** | [National University of Singapore](https://www.nus.edu.sg/){:target="_blank" rel="noopener noreferrer"} | 2018
   * <small>Thesis: [*Practical Post-Quantum Cryptography & Fully Homomorphic Encryption on Graphics Processors: Design & Performance Evaluation*](https://scholarbank.nus.edu.sg/handle/10635/152822){:target="_blank" rel="noopener noreferrer"}</small>
 <br>
