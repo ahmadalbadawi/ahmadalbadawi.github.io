@@ -5,6 +5,8 @@ permalink: /code/
 author_profile: true
 ---
 
+* **Private Numpy operations with Homomorphic Encryption (openfhe-numpy):** Main contributor of <a href="https://github.com/openfheorg/openfhe-numpy" target="_blank" rel="noopener noreferrer">OpenFHE-NumPy</a>, a library that extends OpenFHE with a NumPy-like API. This work enables data scientists to perform computations on encrypted data using numpy-like syntax, bridging the gap between homomorphic encryption and practical data science workflows.
+
 * **Homomorphic SVM Inference of Image Vector Embeddings:** Developed a method for performing Support Vector Machine (SVM) inference on image embeddings using homomorphic encryption. <a href="https://github.com/caesaretos/embed-svm-fhe" target="_blank" rel="noopener noreferrer">[Code]</a>
 
 * **Private SVM with Homomorphic Encryption:** Implemented a private SVM using the OpenFHE library in C++. An OpenFHE-Python version, based on my implementation, is available as an <a href="https://github.com/openfheorg/education/tree/main/openfhe_svm" target="_blank" rel="noopener noreferrer">example</a> by Bill Buchanan. <a href="https://github.com/caesaretos/svm-fhe" target="_blank" rel="noopener noreferrer">[C++ Code]</a>
