@@ -13,13 +13,13 @@ redirect_from:
 
 ### Program & Organizing Committees
 
-**WAHC 2025**: [13th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/wahc-2025/){:target="_blank" rel="noopener noreferrer"} (Taipei, Taiwan | Oct 2025)
+* **WAHC 2025**: [13th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/wahc-2025/){:target="_blank" rel="noopener noreferrer"} (Taipei, Taiwan - Oct 2025)
 
-**IVSP 2025**: [7th International Conference on Image, Video and Signal Processing](https://ivsp.net/index.html){:target="_blank" rel="noopener noreferrer"} (Kawasaki, Japan | Mar 2025)
+* **IVSP 2025**: [7th International Conference on Image, Video and Signal Processing](https://ivsp.net/index.html){:target="_blank" rel="noopener noreferrer"} (Kawasaki, Japan - Mar 2025)
 
-**WAHC 2023**: [11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/workshops-wahc23/){:target="_blank" rel="noopener noreferrer"} (Copenhagen, Denmark | Nov 2023)
+* **WAHC 2023**: [11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/workshops-wahc23/){:target="_blank" rel="noopener noreferrer"} (Copenhagen, Denmark - Nov 2023)
 
-**ICBIP 2021**: [6th International Conference on Biomedical Signal and Image Processing](https://www.icbip.org/icbip2021.html){:target="_blank" rel="noopener noreferrer"} (Suzhou, China | Aug 2021)
+* **ICBIP 2021**: [6th International Conference on Biomedical Signal and Image Processing](https://www.icbip.org/icbip2021.html){:target="_blank" rel="noopener noreferrer"} (Suzhou, China - Aug 2021)
 
 ### Journal Reviewer
 I have served as a reviewer for numerous scholarly journals, including:
@@ -50,8 +50,8 @@ I have served as a reviewer for numerous scholarly journals, including:
 ## Community Contributions
 
 ### Open-Source Projects
-* **Maintainer & Core Contributor** | [OpenFHE Library](https://github.com/openfheorg/openfhe-development){:target="_blank" rel="noopener noreferrer"}
-* **Forum Contributor** | [OpenFHE Discourse Forum](https://openfhe.discourse.group/){:target="_blank" rel="noopener noreferrer"} (2022–Present)
+* **Maintainer & Core Contributor**: [OpenFHE Library](https://github.com/openfheorg/openfhe-development){:target="_blank" rel="noopener noreferrer"}
+* **Forum Contributor**: [OpenFHE Discourse Forum](https://openfhe.discourse.group/){:target="_blank" rel="noopener noreferrer"} (2022–Present)
   * Actively participate in discussions, providing technical guidance and support to users learning and applying homomorphic encryption with OpenFHE.
 
 ### Challenges & Hackathons
