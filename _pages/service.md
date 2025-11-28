@@ -13,7 +13,7 @@ redirect_from:
 
 ### Program & Organizing Committees
 
-* **IVSP 2026**: [ISPASS-2026 - 2026 IEEE International Symposium on Performance Analysis of Systems and Software](https://ispass.org/ispass2026/){:target="_blank" rel="noopener noreferrer"} (Seoul, South Korea - Apr 2026)
+* **ISPASS 2026**: [2026 IEEE International Symposium on Performance Analysis of Systems and Software](https://ispass.org/ispass2026/){:target="_blank" rel="noopener noreferrer"} (Seoul, South Korea - Apr 2026)
 
 * **IVSP 2026**: [8th International Conference on Image, Video and Signal Processing](https://ivsp.net/index.html){:target="_blank" rel="noopener noreferrer"} (Tokyo, Japan - Mar 2026)
 
