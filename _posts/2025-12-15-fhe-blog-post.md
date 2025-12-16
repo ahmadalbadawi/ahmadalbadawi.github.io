@@ -1,7 +1,7 @@
 ---
 title: 'SIMD Packing in BGV/BFV FHE Schemes'
 date: 2025-12-15
-permalink: /posts/2025/12/fhe-blog-post/
+permalink: /posts/2025/12/simd-packing-bgv-bfv-fhe/
 tags:
   - FHE
   - BGV
@@ -560,7 +560,7 @@ If you found this article useful and wish to cite it in your work, please use th
   title = {SIMD Packing in BGV/BFV FHE Schemes},
   year = {2025},
   month = {December},
-  howpublished = {\url{https://ahmadalbadawi.com/posts/2025/12/fhe-blog-post/}},
+  howpublished = {\url{https://ahmadalbadawi.com/posts/2025/12/simd-packing-bgv-bfv-fhe/}},
   note = {Accessed: [Current Date]}
 }
 ```
