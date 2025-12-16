@@ -121,3 +121,40 @@ div.highlighter-rouge, figure.highlight {
 .highlight .vg { color: #22b3eb } /* Name.Variable.Global */
 .highlight .vi { color: #22b3eb } /* Name.Variable.Instance */
 .highlight .il { color: #2aa198 } /* Literal.Number.Integer.Long */
+
+.copy-code-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #404040;
+  background-color: #e6e6e6;
+  border: solid 1px #d3d3d3;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  z-index: 10;
+  
+  /* FIX: Removes default theme outlines and icons */
+  outline: none;
+  box-shadow: none;
+  background-image: none;
+}
+
+/* FIX: Removes the "ugly square" (pseudo-elements) */
+.copy-code-button:after,
+.copy-code-button:before {
+    content: none !important;
+    display: none !important;
+}
+
+.copy-code-button:hover {
+  background-color: #d0d0d0;
+}
+
+.copy-code-button:active {
+  background-color: #a0a0a0;
+  transform: translateY(1px);
+}
