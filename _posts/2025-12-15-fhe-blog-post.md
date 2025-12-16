@@ -550,6 +550,21 @@ Any typos, questions, comments, or issues must be directed to the author at the 
 
 ***
 
+## Citing this Post
+
+If you found this article useful and wish to cite it in your work, please use the following BibTeX entry:
+
+```bibtex
+@misc{simdpacking2025,
+  author = {Al Badawi, Ahmad},
+  title = {SIMD Packing in BGV/BFV FHE Schemes},
+  year = {2025},
+  month = {December},
+  howpublished = {\url{https://ahmadalbadawi.com/posts/2025/12/fhe-blog-post/}},
+  note = {Accessed: [Current Date]}
+}
+```
+
 > **License:**
 > The code in this post is licensed under the **[MIT License](https://opensource.org/licenses/MIT)**.
 > The text and content are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
