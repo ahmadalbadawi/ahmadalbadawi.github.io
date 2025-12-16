@@ -15,6 +15,19 @@ tags:
 
 ***
 
+This post provides a deep dive into the SIMD (Single Instruction, Multiple Data) packing techniques used in BGV and BFV Fully Homomorphic Encryption (FHE) schemes. We explore the mathematical isomorphism between vectors and polynomials that enables parallel processing of encrypted data. The roadmap for this article includes a high-level intuitive explanation using standard algebra, a detailed breakdown of the Chinese Remainder Theorem (CRT) as applied to cyclotomic rings, and finally, a concrete step-by-step code walkthrough in Python demonstrating data encoding and decoding procedures in BGV/BFV.
+
+***Disclaimer**: This article is written for readers with basic background in cryptography or advanced mathematics and FHE. It assumes a working knowledge of abstract algebra concepts; specifically rings, finite fields, and polynomial arithmetic, as well as familiarity with the basic mechanics of homomorphic encryption.*
+
+***
+
+**Contents**
+* ToC
+{:toc}
+
+
+***
+
 ### Introduction
 
 Single Instruction, Multiple Data (SIMD) parallelism is the cornerstone of arithmetic FHE schemes such as BGV, BFV, and CKKS. While modern FHE libraries abstract away the complexity of ciphertext packing, a deep understanding of the underlying algebraic structure is crucial for efficient parameter selection and performance tuning.
@@ -89,9 +102,11 @@ In BGV/BFV, a single plaintext is represented by a polynomial within a specializ
 
 We have established that the fundamental data unit in BGV and BFV schemes is the polynomial; consequently, all cryptographic operations are performed as polynomial arithmetic. This leads us to the central question of this post: 
 
+<div style="background-color: #f8f9fa; border-left: 4px solid #333; padding: 15px; margin: 20px 0;" markdown="1">
 How do you map data vectors $$\mathbf{u} = \{u_0, u_1, \ldots, u_{n-1}\}$$ and $$\mathbf{v} = \{v_0, v_1, \ldots, v_{n-1}\}$$ into polynomials $U(x)$ and $V(x)$ such that, for an operation $$\star \in \{+, \times\}$$, the resulting polynomial $U(x) \star V(x)$ satisfies the following decoding property:
 
-$$\text{Decode}(U(x) \star V(x)) = \{u_0 \star v_0, u_1 \star v_1, \ldots, u_{n-1} \star v_{n-1}\}$$
+$$ \text{Decode}(U(x) \star V(x)) = \{u_0 \star v_0, u_1 \star v_1, \ldots, u_{n-1} \star v_{n-1}\} $$
+</div>
 
 ***
 ## Basic Intuition: How Polynomials Affect Vector Operations in a Single Shot
@@ -102,7 +117,7 @@ In standard programming, if you want to add two arrays of numbers, you use a loo
 
 Here is a simple demonstration of how this works, using standard arithmetic. Although this example accurately illustrates the core intuition behind SIMD encoding, we note that the specific underlying algebraic rings used in BGV/BFV schemes are more complex than those demonstrated in this simple example. The key takeaway, however, is the concept of leveraging polynomial arithmetic for vector operations.
 
-### 1. The Setup: Data as Coordinates
+### 1. Setup: Data as Coordinates
 Imagine we have two data vectors, $\mathbf{u}$ and $\mathbf{v}$. To transform them into polynomials, we set up a coordinate system by pre-selecting a fixed list of $x$-coordinates. The data values from the vectors are then treated as the $y$-coordinates, creating a set of fixed points for interpolation.
 
 *   **Vector $\mathbf{u}$:** $$\{1, 10, 49, 142\}$$ at positions $$\mathbf{x} = \{0, 1, 2, 3\}$$
@@ -120,7 +135,7 @@ data_u = [(0, 1), (1, 10), (2, 49), (3, 142)]
 data_v = [(0, 5), (1, 2), (2, 5), (3, 32)]
 ```
 
-### 2. The Encoding: Interpolation
+### 2. Data Encoding: Interpolation
 Instead of storing the vectors as lists, we find a curve (a polynomial) that passes perfectly through these points.
 *   **$U(x)$** is the equation that passes through every point in Vector $\mathbf{u}$.
 *   **$V(x)$** is the equation that passes through every point in Vector $\mathbf{v}$.
@@ -145,7 +160,7 @@ U(x): 4*x**3 + 3*x**2 + 2*x + 1
 V(x): 3*x**3 - 6*x**2 + 5
 ```
 
-### 3. The "Single Shot" Operation
+### 3. "Single Shot" Operations
 Now comes the magic. We don't touch the numbers inside the vectors. Instead, we simply add or multiply the **polynomial equations themselves**.
 
 $$ \text{Sum}(x) = U(x) + V(x) = 7x^3 - 3x^2 + 2x + 6 $$
@@ -170,7 +185,7 @@ Sum(x): 7*x**3 - 3*x**2 + 2*x + 6
 Prod(x): 12*x**6 - 15*x**5 - 12*x**4 + 11*x**3 + 9*x**2 + 10*x + 5
 ```
 
-### 4. The Verification
+### 4. Verification
 Does this algebraic manipulation actually affect the data points correctly? Let's check the result by evaluating our new polynomials at the original positions ($$\mathbf{x}=\{0, 1, 2, 3\}$$).
 
 | Index ($\mathbf{x}$) | $\mathbf{u}$ | $\mathbf{v}$ | **$\text{Sum}(x)$** | **Expected Sum** | **$\text{Prod}(x)$** | **Expected Product** |
@@ -218,7 +233,7 @@ X-Value | U(x) | V(x) | Sum(x) | U(x)+V(x) | Prod(x) | U(x)*V(x)
 
 This demonstration confirms the validity of the SIMD arithmetic approach. Specifically, the evaluation of the resulting sum or product polynomial at each pre-selected position (slot) precisely matches the component-wise arithmetic operation applied to the original input vectors. This demonstrates that algebraic manipulations of a single encoded polynomial can simultaneously process all the underlying data slots.
 
-### 5. The Takeaway
+### 5. Key Takeaway
 As you can see, adding the polynomials resulted in a new curve that represents the **sum** of the data at every position point. Multiplying them created a curve representing the **product**.
 
 We successfully processed four independent data points using a single algebraic instruction on polynomials. This ability to "pack" data into a polynomial and process it in parallel is the mathematical engine that powers modern FHE schemes.
@@ -266,7 +281,7 @@ $$ \text{Inverse CRT (Synthesis): } \text{Vector of Parts } \rightarrow \text{Po
 
 ***
 
-### 3. Packing (Encoding) via Inverse CRT
+### 3. Packing (Encoding) via Inverse CRT (Interpolation)
 
 The CRT guarantees that a polynomial $U(x) \in \mathcal{R}$ is uniquely determined by its values when evaluated at these $n$ distinct roots. This gives us a direct mapping between our data vector and the polynomial:
 
@@ -330,7 +345,7 @@ $$
 
 To visualize this with actual modular arithmetic, let's look at a concrete setup using Python and the **SymPy** library, which allows us to manipulate polynomials over finite fields easily.
 
-### The Setup
+### Setup
 
 | Parameter | Value | Description |
 | :--- | :--- | :--- |
@@ -367,7 +382,7 @@ Setup: Ring Z_73[x] / (x^4 + 1)
 Found 4 slots (roots) at indices: [10, 22, 51, 63]
 ```
 
-### The Encoding (Packing)
+### Encoding (Packing)
 
 We define two data vectors, $\mathbf{u}$ and $\mathbf{v}$, that we wish to process.
 
@@ -409,7 +424,7 @@ Polynomial V(x):
 13*x**3 - 19*x - 31
 ```
 
-### The SIMD Check
+### SIMD Check
 
 Now we perform the arithmetic operations directly on the polynomials.
 1.  **Addition:** We simply add the polynomials.
@@ -445,7 +460,7 @@ Polynomial Prod(x):
 18*x**3 - 27*x**2 + 13*x - 27
 ```
 
-### The Decoding (Unpacking)
+### Decoding (Unpacking)
 
 To verify the result, we evaluate the resulting `sum_poly` and `prod_poly` at the original roots. If the SIMD property holds, these evaluations should match the component-wise sum and product of our original vectors $\mathbf{u}$ and $\mathbf{v}$.
 
@@ -545,11 +560,6 @@ If you want to dive deeper into the mathematics and proofs behind these concepts
 
 ***
 
-**Feedback:**
-Any typos, questions, comments, or issues must be directed to the author at the [contact page](/contact/).
-
-***
-
 ## Citing this Post
 
 If you found this article useful and wish to cite it in your work, please use the following BibTeX entry:
@@ -564,6 +574,13 @@ If you found this article useful and wish to cite it in your work, please use th
   note = {Accessed: [Current Date]}
 }
 ```
+
+***
+
+> **Feedback:**
+> Please direct any typos, questions, comments, or issues to me at my [contact page](/contact/).
+
+***
 
 > **License:**
 > The code in this post is licensed under the **[MIT License](https://opensource.org/licenses/MIT)**.
