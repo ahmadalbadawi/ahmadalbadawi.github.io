@@ -15,7 +15,7 @@ tags:
 
 ***
 
-This post provides a deep dive into the SIMD (Single Instruction, Multiple Data) packing techniques used in BGV and BFV Fully Homomorphic Encryption (FHE) schemes. We explore the mathematical isomorphism between vectors and polynomials that enables parallel processing of encrypted data. The roadmap for this article includes a high-level intuitive explanation using standard algebra, a detailed breakdown of the Chinese Remainder Theorem (CRT) as applied to cyclotomic rings, and finally, a concrete step-by-step code walkthrough in Python demonstrating data encoding and decoding procedures in BGV/BFV.
+This article provides a deep dive into the SIMD (Single Instruction, Multiple Data) packing techniques used in BGV and BFV Fully Homomorphic Encryption (FHE) schemes. We explore the mathematical isomorphism between vectors and polynomials that enables parallel processing of encrypted data. The roadmap for this article includes a high-level intuitive explanation using standard algebra, a detailed breakdown of the Chinese Remainder Theorem (CRT) as applied to cyclotomic rings, and finally, a concrete step-by-step code walkthrough in Python demonstrating data encoding and decoding procedures in BGV/BFV.
 
 ***Disclaimer**: This article is written for readers with basic background in cryptography or advanced mathematics and FHE. It assumes a working knowledge of abstract algebra concepts; specifically rings, finite fields, and polynomial arithmetic, as well as familiarity with the basic mechanics of homomorphic encryption.*
 
@@ -30,9 +30,9 @@ This post provides a deep dive into the SIMD (Single Instruction, Multiple Data)
 
 ### Introduction
 
-Single Instruction, Multiple Data (SIMD) parallelism is the cornerstone of arithmetic FHE schemes such as BGV, BFV, and CKKS. While modern FHE libraries abstract away the complexity of ciphertext packing, a deep understanding of the underlying algebraic structure is crucial for efficient parameter selection and performance tuning.
+Broadly speaking, FHE schemes fall into two main families: those optimized for boolean operations or low-bit-width integers, and those designed for computations on long vectors of data (e.g., real numbers, complex numbers, or integers). In this article, we focus on the BGV and BFV FHE schemes, which are particularly well-suited for processing long vectors of integers.
 
-Broadly speaking, FHE schemes fall into two main families: those optimized for boolean operations or low-bit-width integers, and those designed for computations on long vectors of data (e.g., real numbers, complex numbers, or integers). This post focuses on BGV and BFV FHE schemes, which are particularly well-suited for processing long vectors of integers.
+**SIMD parallelism is the cornerstone of these arithmetic schemes.** While modern FHE libraries abstract away the complexity of ciphertext packing, a true grasp of the technology requires looking beyond the interface. This article is for the curious FHE practitioner who wants to peel back that abstraction to understand the elegant know-how behind the machinery.
 
 If you have used these schemes before, you know that their "magic" lies in their ability to process long vectors of integers simultaneously. A single addition or multiplication performed on a ciphertext translates to the same operation being applied to every slot of the underlying vector. This capability is what enables high-performance FHE; without it, we would be limited to encrypting integers one by one, which is prohibitively slow for complex applications.
 
@@ -68,7 +68,7 @@ This property, where one ciphertext operation equals $n$ plaintext operations, i
 
 **However, a structural disconnect exists.** Internally, these FHE schemes do not operate on vectors; they operate on large polynomials. This raises a critical question: **How can a polynomial efficiently represent and process a vector of independent data?** The answer lies in the **Chinese Remainder Theorem (CRT)**, which provides the mathematical isomorphism necessary to pack a vector of numbers into a single polynomial.
 
-This post will unpack the core concept of SIMD packing, the engine behind popular ring-based HE schemes, using a concrete algebraic example. You can follow along with the code used in this post in the **[accompanying GitHub repository](https://github.com/caesaretos/bgv_bfv_slots_packing)**.
+This article will unpack the core concept of SIMD packing, the engine behind popular ring-based HE schemes, using a concrete algebraic example. You can follow along with the code used in this article in the **[accompanying GitHub repository](https://github.com/caesaretos/bgv_bfv_slots_packing)**.
 
 ***
 
@@ -102,7 +102,7 @@ $$\text{Decode}(\text{ptxt}_{\text{prod}}) = \{u_0 \times v_0, u_1 \times v_1, \
 
 In BGV/BFV, a single plaintext is represented by a polynomial within a specialized mathematical structure called a ring. This polynomial acts as a container, or 'slot' system, holding an array of multiple data values. For this reason, polynomials are the core mathematical object, and all homomorphic calculations rely exclusively on polynomial arithmetic.
 
-We have established that the fundamental data unit in BGV and BFV schemes is the polynomial; consequently, all cryptographic operations are performed as polynomial arithmetic. This leads us to the central question of this post: 
+We have established that the fundamental data unit in BGV and BFV schemes is the polynomial; consequently, all cryptographic operations are performed as polynomial arithmetic. This leads us to the central question of this article: 
 
 <div style="background-color: #f8f9fa; border-left: 4px solid #333; padding: 15px; margin: 20px 0;" markdown="1">
 How do you map data vectors $$\mathbf{u} = \{u_0, u_1, \ldots, u_{n-1}\}$$ and $$\mathbf{v} = \{v_0, v_1, \ldots, v_{n-1}\}$$ into polynomials $U(x)$ and $V(x)$ such that, for an operation $$\star \in \{+, \times\}$$, the resulting polynomial $U(x) \star V(x)$ satisfies the following decoding property:
@@ -562,7 +562,7 @@ If you want to dive deeper into the mathematics and proofs behind these concepts
 
 ***
 
-## Citing this Post
+## Citing this Article
 
 If you found this article useful and wish to cite it in your work, please use the following BibTeX entry:
 
@@ -585,7 +585,7 @@ If you found this article useful and wish to cite it in your work, please use th
 ***
 
 > **License:**
-> The code in this post is licensed under the **[MIT License](https://opensource.org/licenses/MIT)**.
+> The code in this article is licensed under the **[MIT License](https://opensource.org/licenses/MIT)**.
 > The text and content are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
 
 ***
