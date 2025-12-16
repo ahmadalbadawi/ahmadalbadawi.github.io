@@ -36,6 +36,8 @@ Broadly speaking, FHE schemes fall into two main families: those optimized for b
 
 If you have used these schemes before, you know that their "magic" lies in their ability to process long vectors of integers simultaneously. A single addition or multiplication performed on a ciphertext translates to the same operation being applied to every slot of the underlying vector. This capability is what enables high-performance FHE; without it, we would be limited to encrypting integers one by one, which is prohibitively slow for complex applications.
 
+***
+
 ### Vectors vs. Polynomials
 
 To understand what is happening under the hood, let's look at the arithmetic interface these schemes provide. If you have used BGV ([BGV et al., 2011](#ref-bgv)) or BFV ([BFV et al., 2012](#ref-bfv)), you are essentially given machinery to perform operations on encrypted integer vectors.
