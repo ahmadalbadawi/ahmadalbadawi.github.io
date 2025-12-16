@@ -180,7 +180,7 @@ Does this algebraic manipulation actually affect the data points correctly? Let'
 | **2** | 49 | 5 | **54** | $49+5=54$ | **245** | $49\times5=245$ |
 | **3** | 142 | 32 | **174** | $142+32=174$ | **4544** | $142\times32=4544$ |
 
-We can run a verification loop in our script to prove that evaluating the resulting polynomials matches the manual arithmetic:
+We can run a verification loop in our script to demonstrate that evaluating the resulting polynomials matches the manual arithmetic:
 
 ```python
 # 4. Verification
@@ -216,7 +216,7 @@ X-Value | U(x) | V(x) | Sum(x) | U(x)+V(x) | Prod(x) | U(x)*V(x)
    3    | 142  |  32  |  174   |    174    |  4544   |  4544 
 ```
 
-This demonstration confirms the validity of the SIMD arithmetic approach. Specifically, the evaluation of the resulting sum or product polynomial at each pre-selected position (slot) precisely matches the component-wise arithmetic operation applied to the original input vectors. This proves that algebraic manipulations of a single encoded polynomial can simultaneously process all the underlying data slots.
+This demonstration confirms the validity of the SIMD arithmetic approach. Specifically, the evaluation of the resulting sum or product polynomial at each pre-selected position (slot) precisely matches the component-wise arithmetic operation applied to the original input vectors. This demonstrates that algebraic manipulations of a single encoded polynomial can simultaneously process all the underlying data slots.
 
 ### 5. The Takeaway
 As you can see, adding the polynomials resulted in a new curve that represents the **sum** of the data at every position point. Multiplying them created a curve representing the **product**.
