@@ -39,3 +39,32 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* Break out of the narrow layout */
+.page__related {
+  clear: both;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.page__related .grid__wrapper {
+  display: flex !important;
+  flex-direction: row !important; /* Force side-by-side */
+  flex-wrap: wrap !important;
+  gap: 2%; /* Space between items */
+}
+
+.page__related .grid__item {
+  /* This ensures that if there is 1 post, it's wide. If 2, they share 50/50. */
+  flex: 1 1 300px !important; 
+  max-width: 100% !important;
+  margin-bottom: 2em;
+}
+
+/* Fix the text styling so it doesn't look squashed */
+.archive__item-title {
+  line-height: 1.5 !important;
+  font-size: 1.25rem !important;
+  word-break: keep-all; /* Prevents breaking technical words like BGV/BFV */
+}
