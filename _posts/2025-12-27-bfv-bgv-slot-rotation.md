@@ -22,7 +22,7 @@ This article extends the previous article on [SIMD Packing in BGV/BFV FHE Scheme
 
 While point-wise addition and multiplication are powerful, they are insufficient for performing arbitrary computations on encoded vectors. Because these operations are strictly component-wise, data at different indices remain isolated. In the previous article, we noted that this functionality did not depend on the ordering of the data slots. To break this isolation and enable arbitrary logic, we must now address this very topic: by choosing a *specific*, non-arbitrary ordering of the slots, we can implement permutation operators (such as cyclic shifts) to facilitate interaction across the entire vector.
 
-In this article, we will explore how vector permutations can be achieved via simple polynomial operations. We will dive into **Galois Theory** to understand how the abstract "symmetry" of roots allows us to shuffle data, and how we can utilize **Cyclic Groups** to turn those shuffles into precise, controllable rotations. It was the efficient use of these permutations that allowed Gentry, Halevi, and Smart ([GHS et al., 2012](#ref-simd-auto)) to demonstrate that FHE has only 'polylogarithmic overhead', proving that encrypted computation does not need to be exponentially slower than plaintext computation.
+In this article, we will explore how vector permutations can be achieved via simple polynomial operations. We will dive into **Galois Theory** to understand how the abstract "symmetry" of roots allows us to shuffle data, and how we can utilize **Cyclic Groups** to turn those shuffles into precise, controllable rotations. It was the efficient use of these permutations that allowed Gentry, Halevi, and Smart ([GHS et al., 2012](#ref-simd-auto)) to demonstrate that FHE has only "polylogarithmic overhead", proving that encrypted computation does not need to be exponentially slower than plaintext computation.
 
 Just like our previous article, we will disregard the encryption layer to focus on the encoding map. This is where the vector operations are actually defined. Thanks to the homomorphic property of FHE schemes, we know that whatever logic we establish for encoding will automatically hold true for the encrypted ciphertext. The encryption layer simply maintains data confidentiality across all performed operations. 
 
@@ -43,7 +43,7 @@ You can follow along with the code used in this article in the **[accompanying G
 
 In our previous discussion on [SIMD packing in BFV and BGV](https://ahmadalbadawi.com/posts/2025/12/simd-packing-bgv-bfv-fhe/), we learned how to take a vector of individual values, say $\mathbf{v} = (v_0, v_1, \dots, v_{n-1})$, and encode it into a single polynomial. This was achieved by constructing a special polynomial $V(x)$ such that evaluating $V(x)$ at specific, predetermined roots of unity ($r_0, r_1, \dots$) would reveal our individual messages ($V(x=r_i) = v_i$). This technique is incredibly powerful, allowing us to encode and operate on multiple values simultaneously, significantly boosting efficiency in FHE schemes like BGV ([BGV et al., 2011](#ref-bgv)) and BFV ([BFV et al., 2012](#ref-bfv)). We focused on component-wise addition and multiplication, which are achieved by performing those same operations on the polynomials encoding the original vectors.
 
-However, simply packing data is not enough for many real-world applications. Imagine performing a convolution (a fundamental operation in signal processing and deep learning) or a matrix multiplication. These tasks inherently require shifting elements of a vector, e.g., moving $v_0$ to the position where $v_1$ used to be, and so on. If our data remains static and rooted in its original slots within the polynomial, these advanced computations become very challenging. The main challenge is to perform these shifts, or "rotations," on the polynomials encoding the original vectors using polynomial operations only.
+However, simply packing data is not enough for many real-world applications. Imagine performing a convolution (a fundamental operation in signal processing and deep learning) or a matrix multiplication. These tasks inherently require shifting elements of a vector, e.g., moving $v_0$ to the position where $v_1$ used to be, and so on. If our data remains static and rooted in its original slots within the polynomial, these advanced computations become very challenging. The main challenge is to perform these shifts, or "rotations", on the polynomials encoding the original vectors using polynomial operations only.
 
 So, how do we achieve this seemingly impossible feat? The answer lies not in directly manipulating the seemingly random coefficients of the encoding polynomial but in a deeper mathematical concept. We do not try to "shift" the polynomial directly. Instead, we leverage the elegant properties of **Galois Automorphisms**. These powerful operators allow us to systematically permute the underlying roots of unity, and by doing so, subtly rearrange the messages stored in their associated slots, all while maintaining the integrity of data encoding. This transformation is the key to provide arbitrary computations in the FHE world.
 
@@ -57,7 +57,7 @@ Before we dive deep into how to rotate a vector through its encoding polynomial,
 Imagine a magician performing a shell game with identical marbles. If the magician swaps two marbles while your back is turned, the game looks exactly the same to you. The marbles are indistinguishable; they have the same weight, size, and color.
 
 In our encoding scheme, the **roots of unity** (the locations where we store our data) are like these marbles.
-We are working with the polynomial $x^N + 1$ (where $N = m/2$) over a finite field. The roots of this polynomial are the "Primitive $m$-th roots of unity."
+We are working with the polynomial $x^N + 1$ (where $N = m/2$ when $m$ is a power of two) over a finite field. The roots of this polynomial are the "Primitive $m$-th roots of unity."
 
 To the underlying number system (modular arithmetic), these roots are **algebraically indistinguishable**.
 *   They all satisfy $r_i^m \equiv 1$.
@@ -82,7 +82,7 @@ $$ \sigma_k: U(x) \mapsto U(x^k) $$
 Here is what happens when we do this:
 1.  Our data was originally stored at a specific root, say $r$.
 2.  When we transform the polynomial to $U(x^k)$, the value that *was* at $r$ moves.
-3.  Effectively, the slot that used to look at root $r$ now looks at root $r^k$.
+3.  Effectively, the slot that used to look at root $r$ is now looks at root $r^k$.
 4.  Since $r^k$ is *also* a primitive root (because $k$ is co-prime to $m$), we have not destroyed data; we have simply **permuted** which data sits in which slot.
 
 ---
@@ -208,21 +208,27 @@ New: [4, 2, 6, 0, 7, 1, 5, 3]
 **What just happened?**
 The vector `[0, 1, 2, 3...]` turned into `[4, 2, 6, 0...]`.
 *   Look at **Slot 3** (fourth slot) (originally holding value `3` at root 7).
-*   The automorphism moved root 7 to root $7^3 \equiv 3 \pmod{17}$.
-*   Root 3 corresponds to **Slot 0** (originally holding the value `0`).
-*   Hence, Slot 0's value `0` moved to Slot 3 (root 7).
+*   The automorphism transforms the evaluation point from $x$ to $x^3$; root 7 to root $7^3 \equiv 3 \pmod{17}$.
+*   Slot 3 now looks up the value at $3 \pmod{17}$.
+*   Hence, the value residing at Root 3 (which is `0`) is pulled into Slot 3.
 
-The data *did* shuffle, but the result looks chaotic. This is because we ordered our roots numerically (`3, 5, 6...`). To make this a clean "Shift Left" or "Shift Right," we need to be smarter about the order. We need the **Cyclic Group**.
+We effectively replaced $x$ with $x^3$ to create a new polynomial (whose coefficients are `rotated_coeffs`). As a result, looking up the value at root $r_i$ in this new polynomial is mathematically equivalent to pulling the value from $r_i^3$ in the original encoding polynomial.
+
+As can be seen in the example above, the data did shuffle, but the result looks chaotic. This is because we ordered our roots ascendingly (`3, 5, 6...`). To make this a clean "Shift Left" or "Shift Right", we need to be smarter about the order. We need the **Cyclic Group**.
+
+> **Important Note: Fixed Slots vs. Moving Data**
+> Before we rotate, remember: The **Slots** (indices 0, 1, 2...) and their assigned **Roots** never change positions. Slot 0 is always Root 3, as we specified in the setup.
+> When we say "Rotation", we are not rearranging the slots themselves. We are changing the polynomial so that the **data** flows from one slot to another.
 
 ***
 
 ## Controlling the Chaos: From Galois to Cyclic Groups
 
-In the previous example, we saw that applying a Galois automorphism ($x \to x^3$) moved our data around, but the result felt chaotic. Slot 0 swapped with Slot 3, Slot 1 went to Slot 6... it was, more or less, a random shuffle.
+In the previous example, we saw that applying a Galois automorphism ($x \to x^3$) moved our data around, but the result felt chaotic.
 
 In most real-world FHE applications (like matrix multiplication or convolution), we do not want a random shuffle. We want a structured **Rotation**:
-*   **Shift Left:** Slot $0 \leftarrow$ Slot $1 \leftarrow$ Slot $2 \dots$
-*   **Shift Right:** Slot $0 \rightarrow$ Slot $1 \rightarrow$ Slot $2 \dots$
+*   **Rotate Left:** Slot $0 \leftarrow$ Slot $1 \leftarrow$ Slot $2 \dots$
+*   **Rotate Right:** Slot $0 \rightarrow$ Slot $1 \rightarrow$ Slot $2 \dots$
 
 How do we tame the "chaos" of the Galois group to perform these neat cyclic rotations? The secret lies in how we **order** our slots.
 
@@ -236,7 +242,7 @@ This isomorphism tells us two things:
 ### The Bridge: Generators and Ordering
 If we assign our roots to slots in a simple ascending order (Root 1, Root 2, Root 3...), applying a multiplication $x \to x^k$ jumps us around the list unpredictably.
 
-However, if the group $(\mathbb{Z}/m\mathbb{Z})^\times$ is **cyclic**, there exists a special number called a **Generator** ($g$). A generator is an integer whose powers visit every valid number in the group before repeating.
+However, if the group $(\mathbb{Z}/m\mathbb{Z})^\times$ is **cyclic**, there exists a special number called a **Generator** ($g$). A generator is an integer whose powers visit every valid number in the multiplicative group before repeating.
 
 $$ \{ g^0, g^1, g^2, g^3, \dots \} \pmod m $$
 
@@ -378,7 +384,7 @@ Result: Instant jump from Slot 0 to Slot 5
 
 By choosing the correct exponent $k$, we can "teleport" data any distance around the cycle in a single step. This is the foundation of efficient rotations in FHE.
 
-Now, there is a catch. Most FHE libraries use $m$ as a **Power of Two** (e.g., $m=8192$), not a prime. For powers of two, a single generator is not enough. This leads us to the "Semi-Cyclic" case which we cover next.
+Now, there is a catch. Most FHE libraries use $m$ as a **Power of Two** (e.g., $m=8192$) rather than a prime number to maximize computational efficiency. For powers of two, a single generator is not enough. This leads us to the "Semi-Cyclic" case which we cover next.
 
 ***
 
@@ -444,12 +450,12 @@ This means we need **two** generators to navigate the group structure:
 1.  **$g = 5$**: This generator creates the main cycles.
 2.  **$h = -1$ (or $m-1$)**: This generator acts as a "swap" or reflection.
 
-One might ask, 'Why 5 but not 3?' We use 5 because it provides a cleaner split of the sub-groups, ensuring that rotations do not interfere with row placement. Explaining the precise group theory behind this choice would fill an article of its own, but in essence, 5 is chosen because its powers generate the subgroup of elements congruent to $1 \pmod 4$, which provides a clean decomposition of the group structure.
+One might ask, **Why 5 but not 3?** We use 5 because it provides a cleaner split of the sub-groups, ensuring that rotations do not interfere with row placement. Explaining the precise group theory behind this choice would fill an article of its own, but in essence, 5 is chosen because its powers generate the subgroup of elements congruent to $1 \pmod 4$, which provides a clean decomposition of the group structure.
 
 ### Visualizing the Hypercube (2 x m/4 Matrix)
 Because of this split, we do not think of our slots as a single long line anymore. We visualize them as a **Matrix** with 2 rows.
 *   **Row 1:** Powers of 5 modulo $m$ ($\{5^0, 5^1, 5^2 \dots\}$)
-*   **Row 2:** Powers of 5 modulo $m$, multiplied by $-1$ ($\{-5^0, -5^1, -5^2 \dots\}$)
+*   **Row 2:** Powers of 5 modulo $m$, multiplied by $-1$, that is, ($\{-5^0, -5^1, -5^2 \dots\}$)
 
 When we pack a vector of messages, we essentially fill Row 1 first, then Row 2.
 
@@ -529,7 +535,7 @@ Row 1 moved to:           [31, 27, 7, 3, 15, 11, 23, 19]
 Does this match Row 2?    True
 ```
 
-Notice that applying $x^5$ caused the lists to cycle perfectly ($1 \to 5 \dots \to 1$ for Row 1) and ($31 \to 27 \dots \to 31$ for Row 2), but Row 1 stayed in Row 1 and Row 2 stayed in Row 2.
+Notice that applying $x^5$ caused the lists to cycle perfectly, but Row 1 stayed in Row 1 and Row 2 stayed in Row 2, whereas applying the action $x^{-1}$ swapped the rows.
 
 ***
 
@@ -660,7 +666,7 @@ This holds true regardless of whether the polynomial is represented in the **coe
 ### Why Rotations are Expensive in FHE?
 If the polynomial shuffle is so fast, why is Rotation often cited as one of the slowest operations in FHE?
 
-The answer lies not in the *data*, but in the *key*. While we can easily shuffle the ciphertext polynomials, doing so fundamentally alters the mathematical relationship between the ciphertext and the secret key. We have shuffled the data as we like within the ciphertext, but the modified ciphertext becomes incompatible with the original secret key, rendering decryption impossible without a heavy maintenance operation, known as key switching.
+The answer lies not in the *data*, but in the *secret key*. While we can easily shuffle the ciphertext polynomials, doing so fundamentally alters the mathematical relationship between the ciphertext and the secret key. We have shuffled the data as we like within the ciphertext, but the modified ciphertext becomes incompatible with the original secret key, rendering decryption impossible without a heavy maintenance operation, known as key switching.
 
 ### The Hard Part: Key Mismatch
 To understand this, recall that a BGV/BFV ciphertext is a pair of polynomials $(c_0, c_1)$ that hides a message $m(x)$ relative to a secret key $s(x)$:
@@ -674,14 +680,14 @@ $$ c_0(x^k) + c_1(x^k) \cdot s(x^k) \approx m(x^k) $$
 Do you see the problem? The decryption logic now requires the **permuted secret key**, $s(x^k)$.
 However, the user only holds the original secret key $s(x)$. They cannot decrypt this rotated ciphertext!
 
-To fix this, the server must perform a heavy operation called **Key Switching**. This requires a special public "Rotation Key" (a.k.a. Galois Key) given by the client. The server uses this key to mathematically transform the encryption from being under $s(x^k)$ back to being under $s(x)$.
+To fix this, the server must perform a heavy maintenance operation called **Key Switching**. This requires a special public "Rotation Key" (a.k.a. Galois Key) given by the client. The server uses this key to mathematically transform the encryption from being under $s(x^k)$ back to being under $s(x)$.
 
-**Key Takeaway:** The rotation of the data is instant; the heavy cost comes from transforming the key back to a usable state.
+**Key Takeaway:** The rotation of the data is instant; the heavy cost comes from transforming the secret key back to a usable state.
 
 ### The Implication
-1.  **Storage:** A unique Rotation Key is required for every specific shift amount you want to execute in a single step (e.g., separate keys for Rotate-1, Rotate-2, Rotate-4). Storing keys for every possible shift is memory-prohibitive (often gigabytes). While one can save memory by composing smaller rotations to reach a target index (e.g., applying "Rotate 1" five times), this drastically degrades performance, as each step incurs a costly key-switching operation and accumulates noise.
+1.  **Storage:** A unique Rotation Key is required for every specific shift amount you want to execute in a single step (e.g., separate keys for Rotate-1, Rotate-2, Rotate-4). Storing keys for every possible shift is memory-prohibitive (often gigabytes). While one can save memory by composing smaller rotations to reach a target rotation amount (e.g., applying "Rotate 1" five times), this drastically degrades performance, as each step incurs a costly key-switching operation.
 2.  **Noise:** The Key Switching process involves complex multiplications that add "noise" to the ciphertext. If you rotate too many times, the noise budget runs out, and the data becomes corrupted (decryption fails).
-3.  **Speed:** Because of the key switching step, Rotation is often **orders of magnitude slower** than a simple addition.
+3.  **Speed:** Because of the key switching step, Rotation is often **orders of magnitude slower** than a simple homomorphic addition.
 
 Therefore, while Galois rotations allow us to move data freely, they should be used sparingly in FHE applications!
 
@@ -693,7 +699,7 @@ In this article, we bridged the gap between static data packing and dynamic data
 
 *  **Galois Theory is the engine:** The ability to move data comes from the "indistinguishability" of roots. The automorphism map is the mathematical lever that physically moves data from one slot to another.
 *  **Generators provide control:** An arbitrary automorphism index creates a random shuffle. By ordering our slots based on powers of a generator, we turn the automorphism into a clean **Cyclic Shift**.
-*  **Power-of-Two means Semi-Cyclic:** In standard efficient FHE (where $m=2^k$), we cannot rotate the whole vector in one loop. The data is split into two batches (rows). A standard rotation shifts data *within* these rows.
+*  **Power-of-Two means Semi-Cyclic:** In efficient instantiations of FHE schemes (where $m=2^k$), we cannot rotate the whole vector in one loop. The data is split into two batches (rows). A standard rotation shifts data *within* these rows.
 *  **Automorphism is Cheap but Rotation is Expensive:** Automorphism is just data shuffling in memory, but every rotation changes the underlying secret key of the ciphertext ($s(x) \to s(x^k)$). To fix this, we must perform **Key Switching**, which adds noise and computational cost.
 
 ***
