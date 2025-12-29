@@ -15,9 +15,20 @@ My ultimate goal is to contribute to a more secure and resilient digital world. 
 
 Explore this website to learn more about my [research interests](/research/), [projects](/code/), and [publications](/publications/). If you have any questions, comments, or collaboration inquiries, please do not hesitate to [contact](/contact/) me.
 
+***
+
+## News
+
+- Dec 28 2025: Blog post on [The Math of Slot Rotation in BGV and BFV](/posts/2025/12/slot-rotation-bgv-bfv-fhe/)
+- Dec 15 2025: Blog post on [SIMD Packing in BGV/BFV FHE Schemes](/posts/2025/12/simd-packing-bgv-bfv-fhe/)
+
+***
+
 ## Dr. Ahmad Al Badawi: Expertise in Cryptography and Privacy-Preserving Technologies
 
 I earned my Ph.D. in Electrical and Computer Engineering from the National University of Singapore in 2018. I also hold a B.Sc. and M.Sc. in Computer Engineering from Al-Balqa' Applied University and the Jordan University of Science and Technology, respectively. As a Senior Scientist in Cryptography, I conduct research on privacy-preserving technologies, trustworthy machine learning, cryptographic engineering, and hardware acceleration. Over my two-decade career, I have applied my expertise in research, teaching, and application development across telecommunications, networking, databases, cybersecurity, and AI. This diverse skillset allows me to conduct impactful research, deliver practical solutions, and guide successful implementations that lead to tangible outcomes.
+
+***
 
 **Research and Development Expertise**
 
@@ -30,3 +41,6 @@ I earned my Ph.D. in Electrical and Computer Engineering from the National Unive
 - **Industry & Consulting**: I have accumulated over three years of experience as a freelancer, consultant, and contractor, primarily assisting machine learning and privacy-preserving analytics startups. My role involves providing expert guidance on designing, developing, and implementing secure and efficient solutions that meet industry standards and client needs.
 
 - **Telecommunications**: I have over three years of hands-on experience in software development specifically tailored for mobile telecommunications technologies. My expertise covers a wide range of protocols and systems, including GSM (Global System for Mobile Communications), USSD (Unstructured Supplementary Service Data), SS7 (Signaling System No. 7), CAMEL (Customized Applications for Mobile Enhanced Logic), and SIGTRAN (Signaling Transport). This background allows me to understand and contribute to the intricate workings of mobile networks and their underlying infrastructure.
+
+***
+
