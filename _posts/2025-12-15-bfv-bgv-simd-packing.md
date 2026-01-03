@@ -298,7 +298,7 @@ This mapping relies on the condition that $U(x=r_i) \equiv u_i \pmod{p}$ for all
 
 To pack the vector $\mathbf{u}$, we perform the same **interpolation** process (Inverse CRT) we saw earlier, but this time using the pairs of (root, data value): $\langle (r_0, u_0), (r_1, u_1), \ldots, (r_{n-1}, u_{n-1}) \rangle$. 
 
-A natural question arises regarding the specific sequence of the roots $r_i$. While the ordering of roots is critical for implementing efficient **rotation operations** (cyclic shifts) on encrypted vectors, it does not affect the element-wise addition or multiplication discussed here. Therefore, we will assume a fixed arbitrary order for this article and reserve the intricacies of root permutation and Galois automorphisms for a future article.
+A natural question arises regarding the specific sequence of the roots $r_i$. While the ordering of roots is critical for implementing efficient **rotation operations** (cyclic shifts) on encrypted vectors, it does not affect the element-wise addition or multiplication discussed here. Therefore, we will assume a fixed arbitrary order for this article and reserve the intricacies of root permutation and Galois automorphisms for a future article, which is discussed in detail in [The Math of Slot Rotation in BGV and BFV](https://ahmadalbadawi.com/posts/2025/12/slot-rotation-bgv-bfv-fhe/).
 
 ### 4. SIMD Operation on Ciphertext
 
