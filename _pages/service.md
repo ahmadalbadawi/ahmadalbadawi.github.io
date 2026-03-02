@@ -47,6 +47,7 @@ I have served as a reviewer for numerous scholarly journals, including:
 * International Journal of Information Security
 * Artificial Intelligence Review
 * Journal of Intelligent Information Systems
+* Journal of Nuclear Science and Techniques
 * And others ...
 
 ---
