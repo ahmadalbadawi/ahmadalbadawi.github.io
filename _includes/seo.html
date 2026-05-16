@@ -44,6 +44,11 @@
 <title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description }}">
 
+{%- assign seo_keywords = page.keywords | default: site.keywords -%}
+{%- if seo_keywords %}
+<meta name="keywords" content="{{ seo_keywords }}">
+{%- endif %}
+
 <link rel="canonical" href="{{ canonical_url }}">
 
 {%- if site.google_site_verification %}

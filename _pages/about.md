@@ -6,7 +6,7 @@ author_profile: false
 redirect_from:
   - /about/
   - /about.html
-description: "Official website of Dr. Ahmad Al Badawi, a Senior Scientist in Cryptography. Privacy-preserving technologies, fully homomorphic encryption, and private machine learning."
+description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
 ---
 
 {% include hero.html %}

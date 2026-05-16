@@ -3,7 +3,7 @@ layout: archive
 title: "Selected Publications"
 permalink: /publications/
 author_profile: true
-description: "Peer-reviewed publications by Dr. Ahmad Al Badawi on fully homomorphic encryption, privacy-preserving machine learning, and hardware acceleration of lattice cryptography."
+description: "Peer-reviewed publications by Dr. Ahmad Al Badawi on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
 ---
 
 <p style="color: var(--text-muted); margin-bottom: var(--s-5);">

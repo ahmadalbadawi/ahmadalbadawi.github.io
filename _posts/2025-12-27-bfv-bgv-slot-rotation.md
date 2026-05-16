@@ -3,7 +3,7 @@ title: 'The Math of Slot Rotation in BGV and BFV'
 date: 2025-12-28
 permalink: /posts/2025/12/slot-rotation-bgv-bfv-fhe/
 mathjax: true
-description: 'How slot rotation works in BGV and BFV homomorphic encryption - the automorphism machinery on cyclotomic rings, the relation to Galois groups, and worked examples of cyclic and column-wise rotations on packed SIMD ciphertexts.'
+description: 'How slot rotation works in BGV and BFV homomorphic encryption: automorphisms on cyclotomic rings, Galois groups, and worked examples on packed SIMD ciphertexts.'
 tags:
   - FHE
   - BGV

@@ -3,7 +3,7 @@ title: 'SIMD Packing in BGV/BFV FHE Schemes'
 date: 2025-12-15
 permalink: /posts/2025/12/simd-packing-bgv-bfv-fhe/
 mathjax: true
-description: 'A deep dive into SIMD packing in BGV and BFV fully homomorphic encryption schemes - covering the vector/polynomial isomorphism, the Chinese Remainder Theorem over cyclotomic rings, and a Python walkthrough of encoding and decoding.'
+description: 'A deep dive into SIMD packing in BGV and BFV homomorphic encryption: the vector/polynomial isomorphism, CRT over cyclotomic rings, and a Python walkthrough.'
 tags:
   - FHE
   - BGV
