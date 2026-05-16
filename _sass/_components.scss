@@ -395,6 +395,10 @@ a.card:hover .card__title {
 }
 
 .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s-2);
   padding: var(--s-4) var(--s-3);
   border-radius: var(--radius);
   background: var(--bg-subtle);
@@ -412,6 +416,13 @@ a.card:hover .card__title {
   line-height: 1.05;
 }
 
+// Text-style value (used when the value is alphanumeric, not just a number).
+.stat__value--text {
+  font-size: var(--fs-xl);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
 .stat__plus {
   font-size: 0.65em;
   color: var(--text-muted);
@@ -421,11 +432,44 @@ a.card:hover .card__title {
 
 .stat__label {
   display: block;
-  margin-top: var(--s-2);
   font-size: var(--fs-xs);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+// Side-by-side metrics inside a single stat card (e.g. h-index + i10-index).
+.stat__cols {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--s-6);
+}
+
+.stat__cols li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.stat__col-value {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.stat__col-label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   font-weight: 600;
 }
 
@@ -606,27 +650,31 @@ a.card:hover .card__title {
   inset-block: 0 50%;
 }
 
-// Dot at the rail position, vertically aligned with the year text.
-.timeline__item::after {
+.timeline__year {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  line-height: 1.2;
+  color: var(--accent);
+  text-align: right;
+  padding-top: var(--s-3);
+  position: relative;
+}
+
+// Dot anchored to the year cell so its vertical position scales with the
+// year font-size. `top: padding + half line-height` puts the dot center at
+// the same height as the year text's visual center.
+.timeline__year::after {
   content: "";
   position: absolute;
-  inset-inline-start: var(--tl-rail-x);
-  top: calc(var(--s-3) + 8px);
+  inset-inline-start: calc(100% + (var(--tl-gap) / 2));
+  top: calc(var(--s-3) + 0.6em);
   width: 14px;
   height: 14px;
   border-radius: var(--radius-full);
   background: var(--accent);
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 4px var(--bg);
-}
-
-.timeline__year {
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  font-size: var(--fs-lg);
-  color: var(--accent);
-  text-align: right;
-  padding-top: var(--s-3);
 }
 
 .timeline__card {
