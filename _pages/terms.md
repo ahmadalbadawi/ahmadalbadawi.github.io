@@ -2,6 +2,7 @@
 permalink: /terms/
 title: "Terms and Privacy Policy"
 modified: 2016-06-06
+description: "Terms of use and privacy policy for ahmadalbadawi.com."
 ---
 
 {% include base_path %}

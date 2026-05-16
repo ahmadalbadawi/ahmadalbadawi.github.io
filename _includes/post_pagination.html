@@ -1,16 +1,23 @@
 {% include base_path %}
 
 {% if page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="pagination" aria-label="Post pagination">
     {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <a class="btn btn--ghost" href="{{ base_path }}{{ page.previous.url }}" rel="prev">
+        <span aria-hidden="true">&larr;</span>
+        <span>{{ page.previous.title | markdownify | strip_html | truncate: 40 }}</span>
+      </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <span></span>
     {% endif %}
+
     {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <a class="btn btn--ghost" href="{{ base_path }}{{ page.next.url }}" rel="next">
+        <span>{{ page.next.title | markdownify | strip_html | truncate: 40 }}</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <span></span>
     {% endif %}
   </nav>
 {% endif %}

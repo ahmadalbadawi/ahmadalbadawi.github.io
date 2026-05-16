@@ -1,0 +1,8 @@
+{%- assign limit = include.limit | default: 3 -%}
+{%- if site.posts.size > 0 -%}
+  <ul class="card-grid" style="list-style: none; padding: 0;">
+    {% for post in site.posts limit: limit %}
+      <li>{% include archive-single.html %}</li>
+    {% endfor %}
+  </ul>
+{%- endif -%}

@@ -1,0 +1,41 @@
+{% comment %}
+  Renders a responsive image with WebP source and JPG fallback.
+
+  Required params:
+    src   - path under /images/ (e.g. "hero.jpg")
+    alt   - alt text (required for accessibility)
+
+  Optional params:
+    sizes  - `sizes` attribute value
+    class  - extra CSS class on the <img>
+    width  - intrinsic width (prevents CLS)
+    height - intrinsic height
+    loading - "lazy" (default) or "eager"
+    fetchpriority - "auto" (default), "high", or "low"
+
+  Convention: if both `image.jpg` and `image.webp` exist in /images/, the
+  <picture> emits both sources. Otherwise it falls back to a plain <img>.
+{% endcomment %}
+{% include base_path %}
+
+{%- assign src = include.src -%}
+{%- assign alt = include.alt -%}
+{%- assign loading = include.loading | default: "lazy" -%}
+{%- assign fp = include.fetchpriority | default: "auto" -%}
+
+{%- assign basename = src | replace: ".jpg", "" | replace: ".jpeg", "" | replace: ".png", "" -%}
+{%- assign webp = basename | append: ".webp" -%}
+
+<picture>
+  <source srcset="{{ base_path }}/images/{{ webp }}" type="image/webp">
+  <img
+    src="{{ base_path }}/images/{{ src }}"
+    alt="{{ alt }}"
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+    {% if include.sizes %}sizes="{{ include.sizes }}"{% endif %}
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    loading="{{ loading }}"
+    decoding="async"
+    fetchpriority="{{ fp }}">
+</picture>

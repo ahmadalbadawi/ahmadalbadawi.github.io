@@ -1,0 +1,41 @@
+{% include base_path %}
+
+{% if page.tags or page.categories %}
+  <footer class="page-header__meta" style="margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--border);">
+    {% if page.categories %}
+      <ul class="inline-list" aria-label="Categories">
+        {% for cat in page.categories %}
+          <li><a class="tag" href="{{ base_path }}/categories/#{{ cat | slugify }}">{{ cat }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if page.tags %}
+      <ul class="inline-list" aria-label="Tags">
+        {% for tag in page.tags %}
+          <li><a class="tag" href="{{ base_path }}/tags/#{{ tag | slugify }}">#{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </footer>
+{% endif %}
+
+{% if page.share %}
+  {% include social-share.html %}
+{% endif %}
+
+{% include post_pagination.html %}
+
+{% if site.comments.provider and page.comments %}
+  {% include comments.html %}
+{% endif %}
+
+{% if page.id and page.related and site.related_posts.size > 0 %}
+  <section style="margin-top: var(--s-10); padding-top: var(--s-6); border-top: 1px solid var(--border);">
+    <h2 style="margin-top: 0;">You may also enjoy</h2>
+    <ul class="card-grid" style="list-style: none; padding: 0; margin-top: var(--s-5);">
+      {% for post in site.related_posts limit:4 %}
+        <li>{% include archive-single.html post=post %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

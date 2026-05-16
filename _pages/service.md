@@ -3,63 +3,100 @@ layout: archive
 title: "Service"
 permalink: /service/
 author_profile: true
+description: "Academic and professional service of Dr. Ahmad Al Badawi: program committees, reviewing, and community contributions in cryptography."
 redirect_from:
   - /service
 ---
 
-{% include base_path %}
+## Program &amp; Organizing Committees
 
-## Academic Service
+<ul class="committee-grid">
+  <li class="committee">
+    <p class="committee__acronym">ISPASS 2026</p>
+    <p class="committee__name"><a href="https://ispass.org/ispass2026/" target="_blank" rel="noopener noreferrer">IEEE International Symposium on Performance Analysis of Systems and Software</a></p>
+    <p class="committee__meta">Seoul, South Korea &middot; Apr 2026</p>
+  </li>
+  <li class="committee">
+    <p class="committee__acronym">IVSP 2026</p>
+    <p class="committee__name"><a href="https://ivsp.net/index.html" target="_blank" rel="noopener noreferrer">8th International Conference on Image, Video and Signal Processing</a></p>
+    <p class="committee__meta">Tokyo, Japan &middot; Mar 2026</p>
+  </li>
+  <li class="committee">
+    <p class="committee__acronym">WAHC 2025</p>
+    <p class="committee__name"><a href="https://homomorphicencryption.org/wahc-2025/" target="_blank" rel="noopener noreferrer">13th Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography</a></p>
+    <p class="committee__meta">Taipei, Taiwan &middot; Oct 2025</p>
+  </li>
+  <li class="committee">
+    <p class="committee__acronym">IVSP 2025</p>
+    <p class="committee__name"><a href="https://ivsp.net/IVSP2025/" target="_blank" rel="noopener noreferrer">7th International Conference on Image, Video and Signal Processing</a></p>
+    <p class="committee__meta">Kawasaki, Japan &middot; Mar 2025</p>
+  </li>
+  <li class="committee">
+    <p class="committee__acronym">WAHC 2023</p>
+    <p class="committee__name"><a href="https://homomorphicencryption.org/workshops-wahc23/" target="_blank" rel="noopener noreferrer">11th Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography</a></p>
+    <p class="committee__meta">Copenhagen, Denmark &middot; Nov 2023</p>
+  </li>
+  <li class="committee">
+    <p class="committee__acronym">ICBIP 2021</p>
+    <p class="committee__name"><a href="https://www.icbip.org/icbip2021.html" target="_blank" rel="noopener noreferrer">6th International Conference on Biomedical Signal and Image Processing</a></p>
+    <p class="committee__meta">Suzhou, China &middot; Aug 2021</p>
+  </li>
+</ul>
 
-### Program & Organizing Committees
+## Journal Reviewer
 
-* **ISPASS 2026**: [2026 IEEE International Symposium on Performance Analysis of Systems and Software](https://ispass.org/ispass2026/){:target="_blank" rel="noopener noreferrer"} (Seoul, South Korea - Apr 2026)
+<p style="color: var(--text-muted); font-size: var(--fs-sm); margin-top: var(--s-3);">Selected venues for which I have served as a reviewer:</p>
 
-* **IVSP 2026**: [8th International Conference on Image, Video and Signal Processing](https://ivsp.net/index.html){:target="_blank" rel="noopener noreferrer"} (Tokyo, Japan - Mar 2026)
-
-* **WAHC 2025**: [13th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/wahc-2025/){:target="_blank" rel="noopener noreferrer"} (Taipei, Taiwan - Oct 2025)
-
-* **IVSP 2025**: [7th International Conference on Image, Video and Signal Processing](https://ivsp.net/IVSP2025/){:target="_blank" rel="noopener noreferrer"} (Kawasaki, Japan - Mar 2025)
-
-* **WAHC 2023**: [11th Workshop on Encrypted Computing & Applied Homomorphic Cryptography](https://homomorphicencryption.org/workshops-wahc23/){:target="_blank" rel="noopener noreferrer"} (Copenhagen, Denmark - Nov 2023)
-
-* **ICBIP 2021**: [6th International Conference on Biomedical Signal and Image Processing](https://www.icbip.org/icbip2021.html){:target="_blank" rel="noopener noreferrer"} (Suzhou, China - Aug 2021)
-
-### Journal Reviewer
-I have served as a reviewer for numerous scholarly journals, including:
-* Journal of Cryptography
-* IEEE Transactions on:
-  * Information Forensics & Security
-  * Computers
-  * Emerging Topics in Computing
-  * Parallel and Distributed Systems
-  * Industrial Informatics
-  * Audio, Speech and Language Processing
-  * Computer-Aided Design of Integrated Circuits and Systems
-  * Dependable and Secure Computing
-  * Services Computing
-  * Privacy
-* IEEE Access
-* ACM Transactions on Privacy and Security
-* Future Generation Computer Systems
-* Neural Computing and Applications
-* Cluster Computing
-* International Journal of Information Security
-* Artificial Intelligence Review
-* Journal of Intelligent Information Systems
-* Journal of Nuclear Science and Techniques
-* And others ...
+<ul class="tag-cloud">
+  <li><span class="tag">Journal of Cryptography</span></li>
+  <li><span class="tag">IEEE TIFS</span></li>
+  <li><span class="tag">IEEE Trans. Computers</span></li>
+  <li><span class="tag">IEEE TETC</span></li>
+  <li><span class="tag">IEEE TPDS</span></li>
+  <li><span class="tag">IEEE Trans. Industrial Informatics</span></li>
+  <li><span class="tag">IEEE TASLP</span></li>
+  <li><span class="tag">IEEE TCAD</span></li>
+  <li><span class="tag">IEEE TDSC</span></li>
+  <li><span class="tag">IEEE TSC</span></li>
+  <li><span class="tag">IEEE Trans. Privacy</span></li>
+  <li><span class="tag">IEEE Access</span></li>
+  <li><span class="tag">ACM TOPS</span></li>
+  <li><span class="tag">Future Generation Computer Systems</span></li>
+  <li><span class="tag">Neural Computing &amp; Applications</span></li>
+  <li><span class="tag">Cluster Computing</span></li>
+  <li><span class="tag">Int. J. Information Security</span></li>
+  <li><span class="tag">Artificial Intelligence Review</span></li>
+  <li><span class="tag">J. Intelligent Information Systems</span></li>
+  <li><span class="tag">J. Nuclear Science &amp; Techniques</span></li>
+</ul>
 
 ---
 
 ## Community Contributions
 
-### Open-Source Projects
-* **Maintainer & Core Contributor**: [OpenFHE Library](https://github.com/openfheorg/openfhe-development){:target="_blank" rel="noopener noreferrer"}
-* **Forum Contributor**: [OpenFHE Discourse Forum](https://openfhe.discourse.group/){:target="_blank" rel="noopener noreferrer"} (2022–Present)
-  * Actively participate in discussions, providing technical guidance and support to users learning and applying homomorphic encryption with OpenFHE.
+<article class="feature-card">
+  <header class="feature-card__meta">
+    <span class="badge badge--accent">Open Source</span>
+    <span class="badge">2022 &ndash; Present</span>
+  </header>
+  <h3 class="feature-card__title">OpenFHE</h3>
+  <p class="feature-card__role"><strong>Maintainer &amp; Core Contributor</strong></p>
+  <div class="feature-card__body">
+    <p>Long-term contributor to the <a href="https://github.com/openfheorg/openfhe-development" target="_blank" rel="noopener noreferrer">OpenFHE library</a> - the leading open-source FHE implementation. I also actively support users on the <a href="https://openfhe.discourse.group/" target="_blank" rel="noopener noreferrer">OpenFHE Discourse forum</a>, providing technical guidance to researchers and engineers adopting homomorphic encryption.</p>
+  </div>
+</article>
 
-### Challenges & Hackathons
-* Played a key role in designing and preparing the **FHERMA FHE Challenges**, including:
-  * [Ethereum Fraud Detection via SVM](https://fherma.io/challenges/66e8180996829cc963805ffb/overview){:target="_blank" rel="noopener noreferrer"}
-  * [House Price Prediction](https://fherma.io/challenges/676035a7890eef39561cf7c9/overview){:target="_blank" rel="noopener noreferrer"}
+<article class="feature-card">
+  <header class="feature-card__meta">
+    <span class="badge badge--accent">Challenges</span>
+  </header>
+  <h3 class="feature-card__title">FHERMA FHE Challenges</h3>
+  <p class="feature-card__role"><strong>Challenge Designer</strong></p>
+  <div class="feature-card__body">
+    <p>Designed and prepared FHE benchmark challenges to drive the field forward and recruit talent:</p>
+    <ul>
+      <li><a href="https://fherma.io/challenges/66e8180996829cc963805ffb/overview" target="_blank" rel="noopener noreferrer">Ethereum Fraud Detection via SVM</a></li>
+      <li><a href="https://fherma.io/challenges/676035a7890eef39561cf7c9/overview" target="_blank" rel="noopener noreferrer">House Price Prediction</a></li>
+    </ul>
+  </div>
+</article>

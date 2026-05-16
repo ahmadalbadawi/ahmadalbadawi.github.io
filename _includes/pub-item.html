@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders one publication item. Caller passes `pub` (a hash from
+  site.data.publications). Used by the publications page and the home page's
+  recent-publications section.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<li class="pub">
+  <header class="pub__meta">
+    <span class="pub__venue">{{ pub.venue }}</span>
+    {%- if pub.type %}<span class="pub__type">{{ pub.type }}</span>{%- endif %}
+    {%- if pub.id %}<span class="pub__type">{{ pub.id }}</span>{%- endif %}
+  </header>
+  <h3 class="pub__title">{{ pub.title }}</h3>
+  <p class="pub__authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  {%- if pub.url %}
+  <div class="pub__actions">
+    <a class="pub__link" href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      {% if pub.kind == "patent" %}Patent{% else %}Paper{% endif %}
+    </a>
+  </div>
+  {%- endif %}
+</li>

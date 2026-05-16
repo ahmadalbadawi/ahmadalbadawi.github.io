@@ -1,101 +1,135 @@
 {% comment %}
-  SEO and Open Graph meta tags for Jekyll (academicpages)
-  Place this file in _includes/seo.html
+  SEO and Open Graph meta tags for Jekyll.
+  Emits:
+    - <title>, meta description
+    - Canonical link
+    - OpenGraph (og:*) tags, including og:image dimensions and alt
+    - Twitter Card tags
+    - JSON-LD: Person/Organization (always) and Article (on dated posts)
 {% endcomment %}
 
-{% assign seo_title = page.title | default: site.title %}
-{% if site.title_separator and page.title %}
-  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
-{% endif %}
-{% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
+{%- assign seo_title = page.title | default: site.title -%}
+{%- comment -%}
+  Only append " - {site.title}" when the page is sub-page AND the page title
+  doesn't already contain the site title (avoids "Foo - Site - Site" output).
+{%- endcomment -%}
+{%- if page.title and page.url != "/" -%}
+  {%- unless page.title contains site.title -%}
+    {%- assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title -%}
+  {%- endunless -%}
+{%- endif -%}
+{%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
 
-{% assign seo_description = page.description | default: page.excerpt | default: site.description %}
-{% if seo_description %}
-  {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
-{% endif %}
+{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once -%}
 
-{% assign seo_author = page.author | default: site.author %}
-{% assign seo_url = site.url | append: site.baseurl %}
-{% assign canonical_url = page.url | replace: "index.html", "" | prepend: seo_url %}
+{%- assign seo_url = site.url | append: site.baseurl -%}
+{%- assign canonical_url = page.url | replace: "index.html", "" | prepend: seo_url -%}
+
+{%- comment -%}
+  Resolve OG image: page.header.image > page.og_image > site.og_image.
+  Allows full URLs (with "://") to pass through unchanged.
+{%- endcomment -%}
+{%- if page.header.image -%}
+  {%- assign og_img = page.header.image -%}
+{%- elsif page.og_image -%}
+  {%- assign og_img = page.og_image -%}
+{%- else -%}
+  {%- assign og_img = site.og_image -%}
+{%- endif -%}
+{%- unless og_img contains "://" -%}
+  {%- assign og_img = og_img | prepend: site.baseurl | prepend: site.url -%}
+{%- endunless -%}
 
 <title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description }}">
 
-<meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
+<link rel="canonical" href="{{ canonical_url }}">
+
+<meta property="og:locale" content="{{ site.locale | replace: '-', '_' | default: 'en_US' }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ seo_title }}">
 <meta property="og:description" content="{{ seo_description }}">
 <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ og_img }}">
+{%- if page.header.image or page.og_image -%}
+  {%- comment -%}page-specific image - sizes unknown, skip width/height{%- endcomment -%}
+{%- else -%}
+  {%- if site.og_image_width %}
+<meta property="og:image:width" content="{{ site.og_image_width }}">
+  {%- endif %}
+  {%- if site.og_image_height %}
+<meta property="og:image:height" content="{{ site.og_image_height }}">
+  {%- endif %}
+  {%- if site.og_image_alt %}
+<meta property="og:image:alt" content="{{ site.og_image_alt }}">
+  {%- endif %}
+{%- endif %}
 
-{% comment %}
-  Open Graph image logic: page.header.image > page.og_image > site.og_image
-{% endcomment %}
-{% if page.header.image %}
-  <meta property="og:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% elsif page.og_image %}
-  <meta property="og:image" content="{% if page.og_image contains '://' %}{{ page.og_image }}{% else %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% elsif site.og_image %}
-  <meta property="og:image" content="{% if site.og_image contains '://' %}{{ site.og_image }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% endif %}
+{%- if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif %}
+{%- if page.last_modified_at %}
+<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+{%- endif %}
 
-{% if page.date %}
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-{% endif %}
-
-{% if page.last_modified_at %}
-  <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
-{% endif %}
-
-<link rel="canonical" href="{{ canonical_url }}">
-
-{% comment %}
-  Twitter Card tags
-{% endcomment %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ seo_title }}">
 <meta name="twitter:description" content="{{ seo_description }}">
-{% if page.header.image %}
-  <meta name="twitter:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% elsif page.og_image %}
-  <meta name="twitter:image" content="{% if page.og_image contains '://' %}{{ page.og_image }}{% else %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% elsif site.og_image %}
-  <meta name="twitter:image" content="{% if site.og_image contains '://' %}{{ site.og_image }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-{% endif %}
-{% if site.twitter and site.twitter.username %}
-  <meta name="twitter:site" content="@{{ site.twitter.username | replace: '@', '' }}">
-{% endif %}
-{% if seo_author and seo_author.twitter %}
-  <meta name="twitter:creator" content="@{{ seo_author.twitter | replace: '@', '' }}">
-{% endif %}
+<meta name="twitter:image" content="{{ og_img }}">
+{%- if site.og_image_alt %}
+<meta name="twitter:image:alt" content="{{ site.og_image_alt }}">
+{%- endif %}
+{%- if site.twitter and site.twitter.username %}
+<meta name="twitter:site" content="@{{ site.twitter.username | replace: '@', '' }}">
+{%- endif %}
 
-{% comment %}
-  JSON-LD structured data for better search engine context
-{% endcomment %}
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
-  "@type": "{% if site.organization %}Organization{% else %}Person{% endif %}",
-  "name": "{{ site.title | escape }}",
-  "url": "{{ site.url | append: site.baseurl }}",
-  {% if site.og_image %}
-  "logo": "{% if site.og_image contains '://' %}{{ site.og_image }}{% else %}{{ site.url | append: site.baseurl | append: site.og_image }}{% endif %}",
-  {% endif %}
-
-  {% comment %}
-    Build the sameAs array from social links in _config.yml
-  {% endcomment %}
-  {% assign social_urls = "" %}
-  {% if site.social %}
-    {% for item in site.social %}
-      {% if item.url %}
-        {% assign social_urls = social_urls | append: '"' | append: item.url | append: '",' %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-  {% if social_urls != "" %}
-  "sameAs": [{{ social_urls | remove_last: "," }}],
-  {% endif %}
-  "description": "{{ seo_description }}"
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.title | jsonify }},
+  "url": {{ seo_url | jsonify }},
+  {%- if site.author.bio %}
+  "description": {{ site.author.bio | jsonify }},
+  {%- endif %}
+  {%- if site.author.location %}
+  "homeLocation": {{ site.author.location | jsonify }},
+  {%- endif %}
+  "image": {{ og_img | jsonify }},
+  "sameAs": [
+    {%- capture _sep -%}{%- endcapture -%}
+    {%- if site.author.github -%}{{ _sep }}"https://github.com/{{ site.author.github }}"{%- capture _sep -%},{%- endcapture -%}{%- endif -%}
+    {%- if site.author.linkedin -%}{{ _sep }}"https://www.linkedin.com/in/{{ site.author.linkedin | replace: '/', '' }}/"{%- capture _sep -%},{%- endcapture -%}{%- endif -%}
+    {%- if site.author.googlescholar -%}{{ _sep }}{{ site.author.googlescholar | jsonify }}{%- capture _sep -%},{%- endcapture -%}{%- endif -%}
+    {%- if site.author.orcid -%}{{ _sep }}{{ site.author.orcid | jsonify }}{%- capture _sep -%},{%- endcapture -%}{%- endif -%}
+    {%- if site.author.researchgate -%}{{ _sep }}{{ site.author.researchgate | jsonify }}{%- endif -%}
+  ]
 }
 </script>
+
+{%- if page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ seo_title | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {%- if page.last_modified_at or page.modified %}
+  "dateModified": {{ page.last_modified_at | default: page.modified | date_to_xmlschema | jsonify }},
+  {%- endif %}
+  "description": {{ seo_description | jsonify }},
+  "image": {{ og_img | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical_url | jsonify }}
+  },
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ seo_url | jsonify }}
+  }
+}
+</script>
+{%- endif %}

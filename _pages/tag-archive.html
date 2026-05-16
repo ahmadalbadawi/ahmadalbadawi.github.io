@@ -10,8 +10,10 @@ author_profile: true
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
+  <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+  <ul class="card-list">
+    {% for post in posts %}
+      <li>{% include archive-single.html %}</li>
+    {% endfor %}
+  </ul>
 {% endfor %}

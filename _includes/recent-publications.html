@@ -1,0 +1,25 @@
+{%- comment -%}
+  Top N most recent publications (papers only - no patents). Drives the
+  "Recent publications" section on the home page.
+
+  Iteration order: years descending, then data-file order within each year.
+  So putting newest-first within each year in _data/publications.yml gives
+  the most-recent-first display.
+
+  Param: limit (default 3)
+{%- endcomment -%}
+{%- assign limit = include.limit | default: 3 -%}
+{%- assign papers = site.data.publications | where_exp: "p", "p.kind != 'patent'" -%}
+{%- assign years = papers | map: "year" | uniq | sort | reverse -%}
+<ul class="pub-list">
+  {%- assign shown = 0 -%}
+  {%- for year in years -%}
+    {%- if shown >= limit -%}{%- break -%}{%- endif -%}
+    {%- assign year_papers = papers | where: "year", year -%}
+    {%- for pub in year_papers -%}
+      {%- if shown >= limit -%}{%- break -%}{%- endif -%}
+      {% include pub-item.html pub=pub %}
+      {%- assign shown = shown | plus: 1 -%}
+    {%- endfor -%}
+  {%- endfor -%}
+</ul>

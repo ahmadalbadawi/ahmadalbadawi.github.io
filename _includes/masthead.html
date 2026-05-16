@@ -1,18 +1,34 @@
 {% include base_path %}
 
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/" rel="noopener noreferrer">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item"><a href="{{ base_path }}{{ link.url }}" rel="noopener noreferrer">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-brand" href="{{ base_path }}/">{{ site.title }}</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list" id="site-nav-list">
+        {% for link in site.data.navigation.main %}
+          {% assign current = false %}
+          {% if page.url == link.url %}{% assign current = true %}{% endif %}
+          <li>
+            <a class="site-nav__link" href="{{ base_path }}{{ link.url }}"{% if current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="site-actions">
+        {% include theme-toggle.html %}
+        <button type="button" class="site-nav__toggle" data-nav-toggle aria-label="Toggle navigation" aria-controls="site-nav-list" aria-expanded="false">
+          <svg class="icon icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
   </div>
-</div>
+</header>

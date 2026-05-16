@@ -3,20 +3,45 @@ layout: archive
 title: "Education"
 permalink: /education/
 author_profile: true
+description: "Academic background and degrees of Dr. Ahmad Al Badawi in cryptography and computer science."
 redirect_from:
   - /education
 ---
 
-{% include base_path %}
+<ol class="timeline">
+  <li class="timeline__item">
+    <div class="timeline__year">2018</div>
+    <div class="timeline__card">
+      <p class="timeline__degree">Ph.D. in Electrical &amp; Computer Engineering</p>
+      <a class="timeline__inst" href="https://www.nus.edu.sg/" target="_blank" rel="noopener noreferrer">National University of Singapore</a>
+      <p class="timeline__thesis">
+        <strong>Thesis:</strong>
+        <a href="https://scholarbank.nus.edu.sg/handle/10635/152822" target="_blank" rel="noopener noreferrer"><em>Practical Post-Quantum Cryptography &amp; Fully Homomorphic Encryption on Graphics Processors: Design &amp; Performance Evaluation</em></a>
+      </p>
+    </div>
+  </li>
 
-### **Ph.D. in Electrical & Computer Engineering**
-* **[National University of Singapore](https://www.nus.edu.sg/){:target="_blank" rel="noopener noreferrer"}**, 2018
-  * Thesis: [*Practical Post-Quantum Cryptography & Fully Homomorphic Encryption on Graphics Processors: Design & Performance Evaluation*](https://scholarbank.nus.edu.sg/handle/10635/152822){:target="_blank" rel="noopener noreferrer"}*
+  <li class="timeline__item">
+    <div class="timeline__year">2010</div>
+    <div class="timeline__card">
+      <p class="timeline__degree">M.Sc. in Computer Engineering</p>
+      <a class="timeline__inst" href="https://www.just.edu.jo/Pages/Default.aspx" target="_blank" rel="noopener noreferrer">Jordan University of Science and Technology</a>
+      <p class="timeline__thesis">
+        <strong>Thesis:</strong>
+        <em>Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization</em>
+      </p>
+    </div>
+  </li>
 
-### **M.Sc. in Computer Engineering**
-* **[Jordan University of Science and Technology](https://www.just.edu.jo/Pages/Default.aspx){:target="_blank" rel="noopener noreferrer"}**, 2010
-  * Thesis: *Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization*
-
-### **B.Sc. in Computer Engineering**
-* **[Al-Balqa Applied University](https://www.bau.edu.jo/index.aspx){:target="_blank" rel="noopener noreferrer"}**, 2007
-  * Capstone Project: *Wireless Control System Using Speech Recognition and a Smartphone*
+  <li class="timeline__item">
+    <div class="timeline__year">2007</div>
+    <div class="timeline__card">
+      <p class="timeline__degree">B.Sc. in Computer Engineering</p>
+      <a class="timeline__inst" href="https://www.bau.edu.jo/index.aspx" target="_blank" rel="noopener noreferrer">Al-Balqa Applied University</a>
+      <p class="timeline__thesis">
+        <strong>Capstone:</strong>
+        <em>Wireless Control System Using Speech Recognition and a Smartphone</em>
+      </p>
+    </div>
+  </li>
+</ol>

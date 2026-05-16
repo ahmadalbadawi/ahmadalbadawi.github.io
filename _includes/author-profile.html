@@ -1,123 +1,80 @@
 {% include base_path %}
 
 {% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
-
-  <div class="author__avatar">
+<div class="profile-card" itemscope itemtype="https://schema.org/Person">
+  {% if author.avatar %}
+    {%- comment -%}
+      Use the optimized 480px crop when available. The asset pipeline produces
+      `<basename>-480.jpg` and `<basename>-480.webp` from the source avatar.
+    {%- endcomment -%}
+    {% assign avatar_base = author.avatar | split: '.' | first %}
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+      <img class="profile-card__avatar" src="{{ author.avatar }}" alt="Portrait of {{ author.name }}" width="160" height="160" decoding="async" fetchpriority="high">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" width="150" height="150">
+      <picture>
+        <source srcset="{{ base_path }}/images/{{ avatar_base }}-480.webp" type="image/webp">
+        <img class="profile-card__avatar" src="{{ base_path }}/images/{{ avatar_base }}-480.jpg" alt="Portrait of {{ author.name }}" width="160" height="160" decoding="async" fetchpriority="high">
+      </picture>
     {% endif %}
-  </div>
+  {% endif %}
 
-  <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
-  </div>
+  <div class="profile-card__body">
+    <p id="profile-name" class="profile-card__name" itemprop="name">{{ author.name }}</p>
+    {% if author.bio %}
+      <p class="profile-card__bio" itemprop="description">{{ author.bio }}</p>
+    {% endif %}
 
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <div class="profile-card__meta">
       {% if author.location %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+        <span class="profile-card__meta-item" itemprop="homeLocation">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {{ author.location }}
+        </span>
       {% endif %}
       {% if author.employer %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+        <span class="profile-card__meta-item" itemprop="worksFor">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18z"/><path d="M2 22h20"/></svg>
+          {{ author.employer }}
+        </span>
       {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
-      {% endif %}
+    </div>
+
+    <div class="profile-card__links">
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
-      {% endif %}
-      {% if author.keybase %}
-        <li><a href="https://keybase.io/{{ author.keybase }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
-      {% endif %}
-       {% if author.researchgate %}
-        <li><a href="{{ author.researchgate }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
-      {% endif %}
-      {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-      {% endif %}
-      {% if author.facebook %}
-        <li><a href="https://www.facebook.com/{{ author.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-      {% endif %}
-      {% if author.google_plus %}
-        <li><a href="https://plus.google.com/+{{ author.google_plus }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i> Google+</a></li>
-      {% endif %}
-      {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-      {% endif %}
-      {% if author.xing %}
-        <li><a href="https://www.xing.com/profile/{{ author.xing }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-xing-square" aria-hidden="true"></i> XING</a></li>
-      {% endif %}
-      {% if author.instagram %}
-        <li><a href="https://instagram.com/{{ author.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-      {% endif %}
-      {% if author.tumblr %}
-        <li><a href="https://{{ author.tumblr }}.tumblr.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-tumblr-square" aria-hidden="true"></i> Tumblr</a></li>
-      {% endif %}
-      {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+        <a class="profile-card__link" href="mailto:{{ author.email }}" aria-label="Email" itemprop="email">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
       {% endif %}
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        <a class="profile-card__link" href="https://github.com/{{ author.github }}" rel="me noopener" aria-label="GitHub" itemprop="sameAs">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.86-.38.97 0 1.95.13 2.86.38 2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
       {% endif %}
-      {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
-      {% endif %}
-      {% if author.lastfm %}
-        <li><a href="https://lastfm.com/user/{{ author.lastfm }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true"></i> Last.fm</a></li>
-      {% endif %}
-      {% if author.dribbble %}
-        <li><a href="https://dribbble.com/{{ author.dribbble }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-dribbble-square" aria-hidden="true"></i> Dribbble</a></li>
-      {% endif %}
-      {% if author.pinterest %}
-        <li><a href="https://www.pinterest.com/{{ author.pinterest }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
-      {% endif %}
-      {% if author.foursquare %}
-        <li><a href="https://foursquare.com/{{ author.foursquare }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-foursquare" aria-hidden="true"></i> Foursquare</a></li>
-      {% endif %}
-      {% if author.steam %}
-        <li><a href="https://steamcommunity.com/id/{{ author.steam }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-steam-square" aria-hidden="true"></i> Steam</a></li>
-      {% endif %}
-      {% if author.youtube %}
-        <li><a href="https://www.youtube.com/user/{{ author.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
-      {% endif %}
-      {% if author.soundcloud %}
-        <li><a href="https://soundcloud.com/{{ author.soundcloud }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
-      {% endif %}
-      {% if author.weibo %}
-        <li><a href="https://www.weibo.com/{{ author.weibo }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i> Weibo</a></li>
-      {% endif %}
-      {% if author.flickr %}
-        <li><a href="https://www.flickr.com/{{ author.flickr }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i> Flickr</a></li>
-      {% endif %}
-      {% if author.codepen %}
-        <li><a href="https://codepen.io/{{ author.codepen }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-codepen" aria-hidden="true"></i> CodePen</a></li>
-      {% endif %}
-      {% if author.vine %}
-        <li><a href="https://vine.co/u/{{ author.vine }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
+      {% if author.linkedin %}
+        <a class="profile-card__link" href="https://www.linkedin.com/in/{{ author.linkedin }}" rel="me noopener" aria-label="LinkedIn" itemprop="sameAs">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
       {% endif %}
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
-      {% endif %}
-      {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
+        <a class="profile-card__link" href="{{ author.googlescholar }}" rel="me noopener" aria-label="Google Scholar" itemprop="sameAs">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.451 11.054 14.95 9.5 12 9.5c-2.95 0-5.451 1.554-6.758 4.269zM12 10c-3.59 0-6.5 2.91-6.5 6.5S8.41 23 12 23s6.5-2.91 6.5-6.5S15.59 10 12 10z"/></svg>
+        </a>
       {% endif %}
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <a class="profile-card__link" href="{{ author.orcid }}" rel="me noopener" aria-label="ORCID" itemprop="sameAs">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+        </a>
       {% endif %}
-      {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
+      {% if author.researchgate %}
+        <a class="profile-card__link" href="{{ author.researchgate }}" rel="me noopener" aria-label="ResearchGate" itemprop="sameAs">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.586 0H4.414C1.984 0 0 1.984 0 4.414v15.172C0 22.016 1.984 24 4.414 24h15.172C22.016 24 24 22.016 24 19.586V4.414C24 1.984 22.016 0 19.586 0zM8.7 15.295c-.07.236-.236.4-.473.4-.236 0-.4-.164-.473-.4-.07-.236-1.3-4.31-1.3-4.31-.07-.236-.236-.4-.473-.4-.236 0-.4.164-.473.4-.07.236-1.3 4.31-1.3 4.31-.07.236-.236.4-.473.4-.236 0-.4-.164-.473-.4-.07-.236-1.582-5.243-1.582-5.243-.07-.236.07-.4.307-.4h.945c.236 0 .4.164.473.4l.85 3.026.85-3.026c.07-.236.236-.4.473-.4h.708c.236 0 .4.164.473.4l.85 3.026.85-3.026c.07-.236.236-.4.473-.4h.945c.236 0 .377.164.307.4 0 0-1.512 5.007-1.582 5.243zm9.42-.71c0 .473-.4.71-.708.71h-2.6c-1.535 0-2.836-1.182-2.836-2.717v-3.026c0-1.535 1.3-2.717 2.836-2.717h2.6c.4 0 .708.236.708.71v.4c0 .4-.236.71-.708.71h-2.6c-.55 0-.945.4-.945.945v.945h2.694c.4 0 .708.236.708.71v.4c0 .4-.236.71-.708.71h-2.694v.945c0 .55.4.945.945.945h2.6c.4 0 .708.236.708.71v.4z"/></svg>
+        </a>
       {% endif %}
-      {% if author.wikipedia %}
-        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
-{% endif %}
-    </ul>
+    </div>
   </div>
 </div>

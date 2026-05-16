@@ -1,27 +1,74 @@
 {% include base_path %}
 
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-    {% if site.twitter.username %}
-      <li><a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-    {% endif %}
-    {% if site.facebook.username %}
-      <li><a href="https://facebook.com/{{ site.facebook.username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-  </ul>
-</div>
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All rights reserved.</p>
 
-<!-- <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div> -->
-<!-- <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</div>  -->
-<div class="page__footer-copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} - All Rights Reserved.</div>
-  
-<script src="/assets/js/copy-code.js"></script>
+    <ul class="inline-list">
+      {% if site.author.github %}
+        <li>
+          <a href="https://github.com/{{ site.author.github }}" rel="me noopener" aria-label="GitHub">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.86-.38.97 0 1.95.13 2.86.38 2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.linkedin %}
+        <li>
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" rel="me noopener" aria-label="LinkedIn">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.googlescholar %}
+        <li>
+          <a href="{{ site.author.googlescholar }}" rel="me noopener" aria-label="Google Scholar">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.451 11.054 14.95 9.5 12 9.5c-2.95 0-5.451 1.554-6.758 4.269zM12 10c-3.59 0-6.5 2.91-6.5 6.5S8.41 23 12 23s6.5-2.91 6.5-6.5S15.59 10 12 10z"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.orcid %}
+        <li>
+          <a href="{{ site.author.orcid }}" rel="me noopener" aria-label="ORCID">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.researchgate %}
+        <li>
+          <a href="{{ site.author.researchgate }}" rel="me noopener" aria-label="ResearchGate">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.586 0H4.414C1.984 0 0 1.984 0 4.414v15.172C0 22.016 1.984 24 4.414 24h15.172C22.016 24 24 22.016 24 19.586V4.414C24 1.984 22.016 0 19.586 0zM8.7 15.295c-.07.236-.236.4-.473.4-.236 0-.4-.164-.473-.4-.07-.236-1.3-4.31-1.3-4.31-.07-.236-.236-.4-.473-.4-.236 0-.4.164-.473.4-.07.236-1.3 4.31-1.3 4.31-.07.236-.236.4-.473.4-.236 0-.4-.164-.473-.4-.07-.236-1.582-5.243-1.582-5.243-.07-.236.07-.4.307-.4h.945c.236 0 .4.164.473.4l.85 3.026.85-3.026c.07-.236.236-.4.473-.4h.708c.236 0 .4.164.473.4l.85 3.026.85-3.026c.07-.236.236-.4.473-.4h.945c.236 0 .377.164.307.4 0 0-1.512 5.007-1.582 5.243zm9.42-.71c0 .473-.4.71-.708.71h-2.6c-1.535 0-2.836-1.182-2.836-2.717v-3.026c0-1.535 1.3-2.717 2.836-2.717h2.6c.4 0 .708.236.708.71v.4c0 .4-.236.71-.708.71h-2.6c-.55 0-.945.4-.945.945v.945h2.694c.4 0 .708.236.708.71v.4c0 .4-.236.71-.708.71h-2.694v.945c0 .55.4.945.945.945h2.6c.4 0 .708.236.708.71v.4z"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.email %}
+        <li>
+          <a href="mailto:{{ site.author.email }}" aria-label="Email">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+      <li>
+        <a href="{{ base_path }}/feed.xml" aria-label="RSS feed">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 11a9 9 0 0 1 9 9"/>
+            <path d="M4 4a16 16 0 0 1 16 16"/>
+            <circle cx="5" cy="19" r="1"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>

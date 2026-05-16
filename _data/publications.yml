@@ -1,0 +1,221 @@
+# Single source of truth for the publications page and the "Recent publications"
+# section on the home page. Entries are rendered newest first by `year`.
+#
+# Fields:
+#   title    - paper / patent title
+#   authors  - markdown-allowed author string (use **Al Badawi, A.** for self)
+#   year     - integer
+#   venue    - short venue label shown as a colored tag
+#   type     - Journal / Conference / Workshop / Preprint (papers)
+#              or "2024" / "2022" etc. (patents, where venue is the patent body)
+#   url      - link to the paper or patent
+#   kind     - omit for papers; set to "patent" to render in the Patents section
+#   id       - optional patent number or identifier
+
+- title: "SoK: Private LLM Inference using Approximate Homomorphic Encryption"
+  authors: "**Al Badawi, A.**, Alexandru, A., Polyakov, Y., & Vaikuntanathan, V."
+  year: 2026
+  venue: "Cryptology ePrint"
+  type: "Preprint"
+  url: "https://eprint.iacr.org/2026/935"
+
+- title: "Application-Aware Approximate Homomorphic Encryption: Configuring FHE for Practical Use"
+  authors: "Alexandru, A., **Al Badawi, A.**, Micciancio, D., & Polyakov, Y."
+  year: 2026
+  venue: "IACR CiC"
+  type: "Journal"
+  url: "https://eprint.iacr.org/2024/203"
+
+- title: "Hardware Design for Fast Gate Bootstrapping in Fully Homomorphic Encryption over the Torus"
+  authors: "Vig, S., **Al Badawi, A.**, & Yusof, M."
+  year: 2025
+  venue: "IJRES"
+  type: "Journal"
+  url: "https://ijres.iaescore.com/index.php/IJRES/article/view/21300"
+
+- title: "FHERMA Cookbook: FHE Components for Privacy-Preserving Applications"
+  authors: "Adamek, J., Aikata, A., **Al Badawi, A.**, Alexandru, A., Arakelov, A., Arakelov, G., et al."
+  year: 2025
+  venue: "WAHC"
+  type: "Workshop"
+  url: "https://dl.acm.org/doi/10.1145/3733811.3767313"
+
+- title: "Encrypt What Matters: Selective Model Encryption for More Efficient Secure Federated Learning"
+  authors: "Mazzone, F., **Al Badawi, A.**, Polyakov, Y., Everts, M., Hahn, F., & Peter, A."
+  year: 2025
+  venue: "IFIP DBSec"
+  type: "Conference"
+  url: "https://dl.acm.org/doi/10.1007/978-3-031-96590-6_6"
+
+- title: "Private SVM Inference on Encrypted Data"
+  authors: "**Al Badawi, A.**"
+  year: 2025
+  venue: "Book Chapter"
+  type: "Federated Learning: A Systematic Review"
+  url: "https://www.intechopen.com/chapters/1202652"
+
+- title: "Private Pathological Assessment via Machine Learning and Homomorphic Encryption"
+  authors: "**Al Badawi, A.**, & Faizal Bin Yusof, M."
+  year: 2024
+  venue: "BioData Mining"
+  type: "Journal"
+  url: "https://link.springer.com/article/10.1186/s13040-024-00379-9"
+
+- title: "Investigating Privacy Attacks in the Gray-Box Setting to Enhance Collaborative Learning Schemes"
+  authors: "Mazzone, F., **Badawi, A. A.**, Polyakov, Y., Everts, M., Hahn, F., & Peter, A."
+  year: 2024
+  venue: "arXiv"
+  type: "Preprint"
+  url: "https://arxiv.org/abs/2409.17283"
+
+- title: "A Generalized Number-Theoretic Transform for Efficient Multiplication in Lattice Cryptography"
+  authors: "**Al Badawi, A.**, Yeo, S. L., & Yusof, M. F. B."
+  year: 2024
+  venue: "Contemp. Math."
+  type: "Journal"
+  url: "https://ojs.wiserpub.com/index.php/CM/article/view/4468"
+
+- title: "A Comparative Evaluation of Intrusion Detection Systems on the Edge-IIoT-2022 Dataset"
+  authors: "Al Nuaimi, T., Al Zaabi, S., Alyilieli, M., AlMaskari, M., Alblooshi, S., Alhabsi, F., Yusof, M. F. B., & **Al Badawi, A.**"
+  year: 2023
+  venue: "Intell. Syst. with Apps."
+  type: "Journal"
+  url: "https://www.sciencedirect.com/science/article/pii/S2667305323001230"
+
+- title: "Collaborative Privacy-Preserving Analysis of Oncological Data using Multiparty Homomorphic Encryption"
+  authors: "Geva, R., Gusev, A., Polyakov, Y., Liram, L., Rosolio, O., Alexandru, A., Genise, N., Blatt, M., Duchin, Z., Waissengrin, B., Mirelman, D., Bukstein, F., Blumenthal, D. T., Wolf, I., Pelles, S., Schaffer, T., Lavi, L. A., Micciancio, D., Vaikuntanathan, V., **Al Badawi, A.**, & Goldwasser, S."
+  year: 2023
+  venue: "PNAS"
+  type: "Journal"
+  url: "https://www.pnas.org/doi/10.1073/pnas.2304415120"
+
+- title: "RPU: The Ring Processing Unit"
+  authors: "Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K., & Pedram, M."
+  year: 2023
+  venue: "ISPASS"
+  type: "Conference"
+  url: "https://www.computer.org/csdl/proceedings-article/ispass/2023/973900a272/1OddHf0wgmc"
+
+- title: "Demystifying Bootstrapping in Fully Homomorphic Encryption"
+  authors: "**Al Badawi, A.**, & Polyakov, Y."
+  year: 2023
+  venue: "Cryptology ePrint"
+  type: "Preprint"
+  url: "https://eprint.iacr.org/2023/149.pdf"
+
+- title: "Fast Homomorphic SVM Inference on Encrypted Data"
+  authors: "**Al Badawi, A.**, Chen, L., & Vig, S."
+  year: 2022
+  venue: "Neural Comput. & Appl."
+  type: "Journal"
+  url: "https://doi.org/10.1007/s00521-022-07202-8"
+
+- title: "OpenFHE: Open-Source Fully Homomorphic Encryption Library"
+  authors: "**Al Badawi, A.**, Bates, J., Bergamaschi, F., Cousins, D. B., Erabelli, S., Genise, N., Halevi, S., et al."
+  year: 2022
+  venue: "WAHC"
+  type: "Workshop"
+  url: "https://doi.org/10.1145/3560827.3563379"
+
+- title: "High-Performance Intrusion Detection System for Networked UAVs via Deep Learning"
+  authors: "Abu Al-Haija, Q., & **Al Badawi, A.**"
+  year: 2022
+  venue: "Neural Comput. & Appl."
+  type: "Journal"
+  url: "https://link.springer.com/article/10.1007/s00521-022-07015-9"
+
+- title: "Boost-Defence for Resilient IoT Networks: A Head-to-Toe Approach"
+  authors: "Abu Al-Haija, Q., **Al Badawi, A.**, & Bojja, G. R."
+  year: 2022
+  venue: "Expert Systems"
+  type: "Journal"
+  url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.12934"
+
+- title: "Privacy-Preserving Collective Learning with Homomorphic Encryption"
+  authors: "Paul, J., Annamalai, M. S. M. S., Ming, W., **Al Badawi, A.**, Veeravalli, B., & Aung, K. M. M."
+  year: 2021
+  venue: "IEEE Access"
+  type: "Journal"
+  url: "https://ieeexplore.ieee.org/abstract/document/9543673"
+
+- title: "Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters"
+  authors: "**Al Badawi, A.**, et al."
+  year: 2020
+  venue: "IEEE TPDS"
+  type: "Journal"
+  url: "https://doi.org/10.1109/TPDS.2020.3021238"
+
+- title: "PrivFT: Private and Fast Text Classification With Homomorphic Encryption"
+  authors: "**Al Badawi, A.**, Hoang, L., Mun, C. F., Laine, K., & Aung, K. M. M."
+  year: 2020
+  venue: "IEEE Access"
+  type: "Journal"
+  url: "https://doi.org/10.1109/ACCESS.2020.3045465"
+
+- title: "Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs"
+  authors: "**Al Badawi, A.**, et al."
+  year: 2020
+  venue: "IEEE TETC"
+  type: "Journal"
+  url: "https://doi.org/10.1109/TETC.2020.3014636"
+
+- title: "Implementation and Performance Evaluation of RNS Variants of the BFV Homomorphic Encryption Scheme"
+  authors: "**Al Badawi, A.**, et al."
+  year: 2019
+  venue: "IEEE TETC"
+  type: "Journal"
+  url: "https://doi.org/10.1109/TETC.2019.2902799"
+
+- title: "CareNets: Efficient Homomorphic CNN for High-Resolution Images"
+  authors: "Jin, C., **Al Badawi, A.**, Unnikrishnan, J. B., Mun, C. F., Brown, J. M., Campbell, J. P., Chiang, M., Kalpathy-Cramer, J., Chandrasekhar, V. R., & Krishnaswamy, P."
+  year: 2019
+  venue: "NeurIPS PriML"
+  type: "Workshop"
+  url: "https://priml-workshop.github.io/priml2019/papers/PriML2019_paper_28.pdf"
+
+- title: "High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA"
+  authors: "**Al Badawi, A.**, Veeravalli, B., Mun, C. F., & Aung, K. M. M."
+  year: 2018
+  venue: "IACR TCHES"
+  type: "Journal"
+  url: "https://tches.iacr.org/index.php/TCHES/article/view/875"
+
+- title: "Accelerating Subset Sum and Lattice-Based Public-Key Cryptosystems with Multi-Core CPUs and GPUs"
+  authors: "**Al Badawi, A.**, Veeravalli, B., & Aung, K. M. M."
+  year: 2018
+  venue: "J. Parallel Distrib. Comput."
+  type: "Journal"
+  url: "https://doi.org/10.1016/j.jpdc.2018.04.014"
+
+- title: "Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization"
+  authors: "**Al Badawi, A.**, & Shatnawi, A."
+  year: 2013
+  venue: "Comput. & Oper. Res."
+  type: "Journal"
+  url: "https://doi.org/10.1016/j.cor.2013.03.015"
+
+# --- Patents -----------------------------------------------------------------
+
+- kind: patent
+  title: "Device for Processing Homomorphically Encrypted Data"
+  authors: "Yang, H., Kang, D. M., **Al Badawi, A.**, & Aung, K. M. M."
+  year: 2025
+  venue: "U.S. Patent"
+  id: "US 12,489,602"
+  url: "https://patents.google.com/patent/US12489602B2/en"
+
+- kind: patent
+  title: "Homomorphic Encryption Using Discrete Galois Transforms"
+  authors: "**Al Badawi, A.**, & Aung, K. M. M."
+  year: 2022
+  venue: "U.S. Patent"
+  id: "US 11,368,280"
+  url: "https://patents.google.com/patent/US11368280B2/en"
+
+- kind: patent
+  title: "Multiplication Methods, Non-Transitory Computer-Readable Media, and Multiplication Devices"
+  authors: "**Al Badawi, A.**, & Aung, K. M. M."
+  year: 2018
+  venue: "PCT & U.S."
+  id: "PCT/SG2018/050366, US20220085970A1"
+  url: "https://patents.google.com/patent/US20220085970A1/en"

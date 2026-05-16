@@ -3,10 +3,13 @@ layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+description: "University courses, tutorials, and academic mentoring by Dr. Ahmad Al Badawi."
 ---
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul class="card-list">
+  {% for post in site.teaching reversed %}
+    <li>{% include archive-single.html %}</li>
+  {% endfor %}
+</ul>

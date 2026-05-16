@@ -1,16 +1,11 @@
 ---
-layout: default
+layout: archive
 author_profile: false
 ---
+{% include base_path %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    <h1 class="page__title">{{ page.title }}</h1>
-    {% include base_path %}
-    {% for post in page.posts %}
-      {% include archive-single.html %}
-    {% endfor %}
-  </div>
-</div>
+<ul class="card-list">
+  {% for post in page.posts %}
+    <li>{% include archive-single.html %}</li>
+  {% endfor %}
+</ul>

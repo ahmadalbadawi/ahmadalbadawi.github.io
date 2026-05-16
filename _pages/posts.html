@@ -3,8 +3,11 @@ layout: archive
 title: "Blog Posts"
 permalink: /posts/
 author_profile: true
+description: "Technical articles and notes by Dr. Ahmad Al Badawi on fully homomorphic encryption, cryptographic engineering, and privacy-preserving computation."
 ---
 
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul class="card-list">
+  {% for post in site.posts %}
+    <li>{% include archive-single.html %}</li>
+  {% endfor %}
+</ul>

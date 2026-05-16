@@ -1,0 +1,48 @@
+{% include base_path %}
+
+{% if page.title and page.hide_title != true %}
+  <header class="page-header">
+    <h1 class="page-header__title" itemprop="headline">
+      {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    </h1>
+
+    {% if page.excerpt and page.show_excerpt != false and page.collection != 'talks' %}
+      <p class="page-header__subtitle">{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}</p>
+    {% endif %}
+
+    <div class="page-header__meta">
+      {% if page.date %}
+        <span>
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </span>
+      {% endif %}
+
+      {% if page.modified %}
+        <span>
+          Updated <time datetime="{{ page.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ page.modified | date: "%B %-d, %Y" }}</time>
+        </span>
+      {% endif %}
+
+      {% if page.read_time %}
+        <span>{% include read-time.html %}</span>
+      {% endif %}
+
+      {% if page.collection == 'teaching' and page.type %}
+        <span>{{ page.type }}{% if page.venue %}, {{ page.venue }}{% endif %}</span>
+      {% elsif page.collection == 'talks' and page.venue %}
+        <span>{{ page.venue }}{% if page.location %} &middot; {{ page.location }}{% endif %}</span>
+      {% elsif page.venue %}
+        <span>Published in <em>{{ page.venue }}</em></span>
+      {% endif %}
+    </div>
+
+    {% if page.citation %}
+      <p class="page-header__meta">
+        <strong>Recommended citation:</strong> {{ page.citation }}
+        {% if page.paperurl %}<a href="{{ page.paperurl }}">{{ page.paperurl }}</a>{% endif %}
+      </p>
+    {% endif %}
+  </header>
+{% endif %}

@@ -1,0 +1,17 @@
+<script>
+  // Inline theme bootstrap - runs before paint to avoid a light/dark flash.
+  // The site defaults to dark; light is opt-in via the toggle button, which
+  // persists the choice in localStorage as "light".
+  (function() {
+    try {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else if (stored === 'dark') {
+        // Clean up an older saved value: dark is the default so the attribute
+        // doesn't need to be set.
+        localStorage.removeItem('theme');
+      }
+    } catch (e) {}
+  })();
+</script>

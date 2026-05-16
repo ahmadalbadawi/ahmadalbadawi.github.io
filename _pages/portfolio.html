@@ -3,12 +3,16 @@ layout: archive
 title: "Portfolio"
 permalink: /portfolio/
 author_profile: true
+description: "Selected projects from Dr. Ahmad Al Badawi's research portfolio."
 ---
 
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+{% if site.portfolio.size == 0 %}
+  <p style="color: var(--text-muted);">Portfolio items will appear here.</p>
+{% else %}
+  <ul class="card-grid">
+    {% for post in site.portfolio %}
+      <li>{% include archive-single.html %}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
 
