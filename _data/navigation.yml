@@ -1,16 +1,19 @@
-# main links links
-main: 
+# Top-level nav. An item may declare `children:` to render as a dropdown.
+main:
   - title: "Education"
     url: /education/
 
+  - title: "Experience"
+    url: /experience/
+
   - title: "Research"
     url: /research/
-  
+
   - title: "Publications"
     url: /publications/
 
   - title: "Talks"
-    url: /talks/    
+    url: /talks/
 
   - title: "Teaching"
     url: /teaching/
@@ -21,9 +24,12 @@ main:
   - title: "Blog"
     url: /posts/
 
-  - title: "Code"
-    url: /code/
-
   - title: "Contact"
     url: /contact/
-    
+
+  - title: "More"
+    children:
+      - title: "Honors"
+        url: /honors/
+      - title: "Code"
+        url: /code/

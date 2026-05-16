@@ -474,6 +474,147 @@ a.card:hover .card__title {
 }
 
 // ---------------------------------------------------------------------------
+// Affiliations strip (home page) - subtle horizontal list of organizations
+// ---------------------------------------------------------------------------
+
+.affiliations {
+  margin: 0 0 var(--s-8);
+  padding-block: var(--s-6);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.affiliations__label {
+  margin: 0 0 var(--s-4);
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.affiliations__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-3);
+}
+
+.affiliations__list li {
+  display: inline-flex;
+}
+
+.affiliation {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: transform var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease),
+    background var(--t-fast) var(--ease);
+}
+
+.affiliation:hover,
+.affiliation:focus-visible {
+  background: color-mix(in oklch, var(--accent), transparent 92%);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+// ---------------------------------------------------------------------------
+// Venue grid - acronym + full name cards (research page "Selected venues")
+// ---------------------------------------------------------------------------
+
+.venue-grid {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-5) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s-3);
+}
+
+.venue {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding: var(--s-4);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--accent);
+}
+
+.venue__acronym {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.venue__name {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  line-height: var(--lh-snug);
+}
+
+// ---------------------------------------------------------------------------
+// Specs grid - inline metric strip inside a feature card (DPRIVE)
+// ---------------------------------------------------------------------------
+
+.specs-grid {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--s-3);
+  border-block: 1px solid var(--border);
+  padding-block: var(--s-4);
+}
+
+.specs-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-1);
+}
+
+.specs-grid__value {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+}
+
+.specs-grid__label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+// ---------------------------------------------------------------------------
 // Small utility classes (used in markdown pages where inline styles were)
 // ---------------------------------------------------------------------------
 

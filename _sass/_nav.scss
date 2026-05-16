@@ -137,3 +137,111 @@
   align-items: center;
   gap: var(--s-1);
 }
+
+// ---------------------------------------------------------------------------
+// Nav dropdown ("More" menu)
+// ---------------------------------------------------------------------------
+
+.site-nav__item--dropdown {
+  position: relative;
+}
+
+.site-nav__more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  background: transparent;
+  cursor: pointer;
+}
+
+.site-nav__chevron {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.site-nav__more[aria-expanded="true"] .site-nav__chevron {
+  transform: rotate(180deg);
+}
+
+.site-nav__more[aria-expanded="true"] {
+  color: var(--text);
+  background: var(--bg-subtle);
+}
+
+.site-nav__dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 160px;
+  padding: var(--s-1);
+  margin: 0;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 60;
+}
+
+.site-nav__dropdown[hidden] {
+  display: none;
+}
+
+.site-nav__dropdown li {
+  margin: 0;
+}
+
+.site-nav__dropdown-link {
+  display: block;
+  padding: var(--s-2) var(--s-3);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color var(--t-fast) var(--ease),
+    background var(--t-fast) var(--ease);
+}
+
+.site-nav__dropdown-link:hover,
+.site-nav__dropdown-link[aria-current="page"] {
+  background: var(--bg-subtle);
+  color: var(--text);
+}
+
+// Mobile: flatten the dropdown into the vertical menu.
+@media (max-width: 767px) {
+  .site-nav__more {
+    pointer-events: none;
+    color: var(--text-faint);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding-top: var(--s-4);
+    background: transparent;
+  }
+  .site-nav__more[aria-expanded] {
+    background: transparent;
+  }
+  .site-nav__chevron {
+    display: none;
+  }
+  .site-nav__dropdown,
+  .site-nav__dropdown[hidden] {
+    position: static;
+    display: block;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+  .site-nav__dropdown-link {
+    padding: var(--s-3) var(--s-4);
+    font-size: var(--fs-md);
+  }
+}
