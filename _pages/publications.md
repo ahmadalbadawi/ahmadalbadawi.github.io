@@ -6,7 +6,7 @@ author_profile: true
 description: "Peer-reviewed publications by Dr. Ahmad Al Badawi on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
 ---
 
-<p style="color: var(--text-muted); margin-bottom: var(--s-5);">
+<p class="intro">
   A selection of journal, conference, and preprint publications.
   For the complete list, see my
   <a href="https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.
@@ -27,7 +27,7 @@ description: "Peer-reviewed publications by Dr. Ahmad Al Badawi on fully homomor
 </section>
 {% endfor %}
 
-<hr style="margin-top: var(--s-10);">
+<hr class="divider-wide">
 
 ## Patents
 

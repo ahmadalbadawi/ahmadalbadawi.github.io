@@ -1,7 +1,7 @@
 {% include base_path %}
 
 {% if page.tags or page.categories %}
-  <footer class="page-header__meta" style="margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--border);">
+  <footer class="article-footer">
     {% if page.categories %}
       <ul class="inline-list" aria-label="Categories">
         {% for cat in page.categories %}
@@ -30,9 +30,9 @@
 {% endif %}
 
 {% if page.id and page.related and site.related_posts.size > 0 %}
-  <section style="margin-top: var(--s-10); padding-top: var(--s-6); border-top: 1px solid var(--border);">
-    <h2 style="margin-top: 0;">You may also enjoy</h2>
-    <ul class="card-grid" style="list-style: none; padding: 0; margin-top: var(--s-5);">
+  <section class="related-posts">
+    <h2 class="related-posts__title">You may also enjoy</h2>
+    <ul class="card-grid related-posts__list">
       {% for post in site.related_posts limit:4 %}
         <li>{% include archive-single.html post=post %}</li>
       {% endfor %}

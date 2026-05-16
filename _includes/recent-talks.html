@@ -1,7 +1,7 @@
 {%- assign limit = include.limit | default: 3 -%}
 {%- assign talks_sorted = site.talks | sort: 'date' | reverse -%}
 {%- if talks_sorted.size > 0 -%}
-  <ul class="card-grid" style="list-style: none; padding: 0;">
+  <ul class="card-grid">
     {% for post in talks_sorted limit: limit %}
       <li>{% include archive-single.html %}</li>
     {% endfor %}

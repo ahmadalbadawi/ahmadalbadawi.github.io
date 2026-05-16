@@ -1,0 +1,43 @@
+---
+permalink: /llms.txt
+layout: null
+sitemap: false
+---
+# Dr. Ahmad Al Badawi
+
+> Senior Scientist in cryptography. Research on fully homomorphic encryption (FHE), privacy-preserving machine learning, and lattice cryptography. Core maintainer of OpenFHE.
+
+## About
+
+Ahmad Al Badawi, Ph.D. is a Senior Scientist working at the intersection of applied cryptography and machine learning. His research advances fully homomorphic encryption (FHE) toward practical, deployable systems for private AI inference.
+
+Selected expertise: fully homomorphic encryption (BFV, BGV, CKKS, TFHE schemes), privacy-preserving machine learning, lattice cryptography, hardware acceleration (GPU and ASIC), post-quantum cryptography.
+
+Affiliations: Ph.D. from the National University of Singapore (2018). Co-Principal Investigator and Technical Lead on the DARPA DPRIVE program (TREBUCHET team).
+
+## Key pages
+
+- [Research](https://ahmadalbadawi.com/research/): research themes, current projects, grants
+- [Publications](https://ahmadalbadawi.com/publications/): peer-reviewed publications and patents
+- [Talks](https://ahmadalbadawi.com/talks/): conference talks and invited lectures
+- [Teaching](https://ahmadalbadawi.com/teaching/): courses and academic instruction
+- [Service](https://ahmadalbadawi.com/service/): program committees and community contributions
+- [Code](https://ahmadalbadawi.com/code/): open-source projects including OpenFHE
+- [Blog](https://ahmadalbadawi.com/posts/): technical writing on FHE and cryptographic engineering
+- [Contact](https://ahmadalbadawi.com/contact/): how to get in touch
+
+## Recent work
+
+- 2026: SoK: Private LLM Inference using Approximate Homomorphic Encryption (https://eprint.iacr.org/2026/935)
+- 2026: Application-Aware Approximate Homomorphic Encryption (IACR Communications in Cryptology)
+- 2025: FHERMA Cookbook: FHE Components for Privacy-Preserving Applications (WAHC)
+- 2025: Encrypt What Matters: Selective Model Encryption for Secure Federated Learning (IFIP DBSec)
+- Ongoing: Privacy-Preserving LLM Inference under FHE
+
+## External profiles
+
+- Google Scholar: https://scholar.google.com.sg/citations?user=-EhCfyEAAAAJ
+- ORCID: https://orcid.org/0000-0001-7759-7368
+- LinkedIn: https://www.linkedin.com/in/ahmad-al-badawi/
+- GitHub: https://github.com/caesaretos
+- ResearchGate: https://www.researchgate.net/profile/Ahmad-Al-Badawi

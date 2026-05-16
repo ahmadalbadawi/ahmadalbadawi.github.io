@@ -45,7 +45,7 @@ redirect_from:
 
 ## Journal Reviewer
 
-<p style="color: var(--text-muted); font-size: var(--fs-sm); margin-top: var(--s-3);">Selected venues for which I have served as a reviewer:</p>
+<p class="intro intro--sm">Selected venues for which I have served as a reviewer:</p>
 
 <ul class="tag-cloud">
   <li><span class="tag">Journal of Cryptography</span></li>

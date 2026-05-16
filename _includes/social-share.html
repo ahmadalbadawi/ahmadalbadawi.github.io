@@ -3,8 +3,8 @@
 {%- assign share_url = page.url | prepend: site.baseurl | prepend: site.url -%}
 {%- assign share_title = page.title | markdownify | strip_html | strip_newlines | url_encode -%}
 
-<section style="margin-top: var(--s-6); padding-top: var(--s-5); border-top: 1px solid var(--border);" aria-label="Share">
-  <p style="margin-bottom: var(--s-3); color: var(--text-muted); font-size: var(--fs-sm);">Share this post</p>
+<section class="share" aria-label="Share">
+  <p class="share__heading">Share this post</p>
   <ul class="inline-list">
     <li>
       <a class="btn btn--ghost" href="https://twitter.com/intent/tweet?text={{ share_title }}&url={{ share_url | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X/Twitter">

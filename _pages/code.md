@@ -6,7 +6,7 @@ author_profile: true
 description: "Open-source projects and code contributions by Dr. Ahmad Al Badawi, including OpenFHE-NumPy and homomorphic ML experiments."
 ---
 
-<p style="color: var(--text-muted); margin-bottom: var(--s-5);">
+<p class="intro">
   Selected open-source work in homomorphic encryption, privacy-preserving ML, and cryptographic engineering.
 </p>
 

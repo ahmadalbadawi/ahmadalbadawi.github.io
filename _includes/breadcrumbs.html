@@ -1,7 +1,7 @@
 {% include base_path %}
 
-<nav class="page-header__meta" aria-label="Breadcrumb" style="margin-bottom: var(--s-5);">
-  <ol class="inline-list" itemscope itemtype="https://schema.org/BreadcrumbList" style="font-size: var(--fs-sm);">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="inline-list" itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
     {% assign trail = '' %}
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -10,9 +10,9 @@
     </li>
     {% for crumb in crumbs offset: 1 %}
       {% assign trail = trail | append: '/' | append: crumb %}
-      <li aria-hidden="true" style="color: var(--text-faint);">/</li>
+      <li class="breadcrumbs__sep" aria-hidden="true">/</li>
       {% if forloop.last %}
-        <li aria-current="page" style="color: var(--text);">{{ page.title }}</li>
+        <li class="breadcrumbs__current" aria-current="page">{{ page.title }}</li>
       {% else %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a href="{{ base_path }}{{ trail }}/" itemprop="item">

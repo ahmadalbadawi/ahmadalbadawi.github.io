@@ -12,10 +12,10 @@ description: "How to reach Dr. Ahmad Al Badawi - email and professional profiles
     <span class="badge">Replies within a few business days</span>
   </header>
   <h2 class="feature-card__title">Email me</h2>
-  <p class="feature-card__body" style="font-size: var(--fs-md); color: var(--text);">
+  <p class="feature-card__body feature-card__body--prominent">
     For research collaboration, consulting, speaking engagements, or just to say hello.
   </p>
-  <p style="margin-top: var(--s-4);">
+  <p class="section-more">
     <a class="btn btn--primary" href="mailto:ahmad@u.nus.edu">
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       ahmad@u.nus.edu
@@ -71,7 +71,7 @@ description: "How to reach Dr. Ahmad Al Badawi - email and professional profiles
 
 ## Find me elsewhere
 
-<ul class="inline-list" style="margin-top: var(--s-4); margin-bottom: var(--s-6);">
+<ul class="inline-list section-more">
   <li>
     <a class="btn btn--ghost" href="https://www.linkedin.com/in/ahmad-al-badawi/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
   </li>

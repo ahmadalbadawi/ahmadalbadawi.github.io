@@ -15,19 +15,19 @@ description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research o
 
 {% include recent-publications.html limit=3 %}
 
-<p style="margin-top: var(--s-4);"><a href="/publications/">All publications &rarr;</a></p>
+<p class="section-more"><a href="/publications/">All publications &rarr;</a></p>
 
 ## Recent writing
 
 {% include recent-posts.html limit=3 %}
 
-<p style="margin-top: var(--s-4);"><a href="/posts/">All posts &rarr;</a></p>
+<p class="section-more"><a href="/posts/">All posts &rarr;</a></p>
 
 ## Recent talks
 
 {% include recent-talks.html limit=3 %}
 
-<p style="margin-top: var(--s-4);"><a href="/talks/">All talks &rarr;</a></p>
+<p class="section-more"><a href="/talks/">All talks &rarr;</a></p>
 
 ---
 

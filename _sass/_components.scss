@@ -182,6 +182,19 @@ a.card:hover .card__title {
   display: inline;
 }
 
+// Callout / aside block used inside post content for important framing.
+.callout {
+  padding: var(--s-4) var(--s-5);
+  margin-block: var(--s-5);
+  background: var(--bg-subtle);
+  border-inline-start: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.callout > :last-child {
+  margin-bottom: 0;
+}
+
 // Notices / callouts (kept for compatibility with content using .notice classes)
 .notice,
 .notice--info,
@@ -414,6 +427,92 @@ a.card:hover .card__title {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
+}
+
+// ---------------------------------------------------------------------------
+// Small utility classes (used in markdown pages where inline styles were)
+// ---------------------------------------------------------------------------
+
+// Muted intro paragraph that sits between a page header and the content.
+.intro {
+  color: var(--text-muted);
+  margin-bottom: var(--s-5);
+}
+
+.intro--sm {
+  font-size: var(--fs-sm);
+  margin-top: var(--s-3);
+}
+
+// "All posts -> " link that follows a section preview.
+.section-more {
+  margin-top: var(--s-4);
+}
+
+// Horizontal divider used between major page sections (e.g. before Patents).
+.divider-wide {
+  margin-top: var(--s-10);
+}
+
+// Footer area inside an article (tag list + share buttons).
+.article-footer {
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--border);
+}
+
+// Share section under a post.
+.share {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--border);
+}
+
+.share__heading {
+  margin-bottom: var(--s-3);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+// Related posts section under a post.
+.related-posts {
+  margin-top: var(--s-10);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--border);
+}
+
+.related-posts__title {
+  margin-top: 0;
+}
+
+.related-posts__list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--s-5);
+}
+
+// Breadcrumbs row styling that was previously inline.
+.breadcrumbs {
+  margin-bottom: var(--s-5);
+  font-size: var(--fs-sm);
+}
+
+.breadcrumbs__sep {
+  color: var(--text-faint);
+}
+
+.breadcrumbs__current {
+  color: var(--text);
+}
+
+// Reset list-styling so card-grid / pub-list can be used on <ul> directly.
+.card-grid,
+.pub-list,
+.committee-grid,
+.project-grid,
+.timeline {
+  list-style: none;
+  padding: 0;
 }
 
 // Visually hidden but accessible to screen readers
@@ -685,6 +784,11 @@ a.card:hover .card__title {
   color: var(--text-muted);
   font-size: var(--fs-sm);
   line-height: var(--lh-normal);
+}
+
+.feature-card__body--prominent {
+  color: var(--text);
+  font-size: var(--fs-md);
 }
 
 .feature-card__body p {

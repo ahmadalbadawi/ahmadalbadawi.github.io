@@ -109,7 +109,7 @@ In BGV/BFV, a single plaintext is represented by a polynomial within a specializ
 
 We have established that the fundamental data unit in BGV and BFV schemes is the polynomial; consequently, all cryptographic operations are performed as polynomial arithmetic. This leads us to the central question of this article: 
 
-<div style="background-color: #f8f9fa; border-left: 4px solid #333; padding: 15px; margin: 20px 0;" markdown="1">
+<div class="callout" markdown="1">
 How do you map data vectors $$\mathbf{u} = \{u_0, u_1, \ldots, u_{n-1}\}$$ and $$\mathbf{v} = \{v_0, v_1, \ldots, v_{n-1}\}$$ into polynomials $U(x)$ and $V(x)$ such that, for an operation $$\star \in \{+, \times\}$$, the resulting polynomial $U(x) \star V(x)$ satisfies the following decoding property:
 
 $$ \text{Decode}(U(x) \star V(x)) = \{u_0 \star v_0, u_1 \star v_1, \ldots, u_{n-1} \star v_{n-1}\} $$
