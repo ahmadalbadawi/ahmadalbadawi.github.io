@@ -6,5 +6,3 @@ Allow: /
 # Block source files that should never be indexed.
 Disallow: /Gemfile
 Disallow: /Gemfile.lock
-Disallow: /talkmap.py
-Disallow: /talkmap.ipynb
