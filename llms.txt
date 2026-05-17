@@ -18,12 +18,14 @@ Affiliations: Ph.D. from the National University of Singapore (2018). Co-Princip
 ## Key pages
 
 - [Research](https://ahmadalbadawi.com/research/): research themes, current projects, grants
+- [Research Statement](https://ahmadalbadawi.com/research/statement/): long-form research agenda and the case for private-by-default computation
 - [Publications](https://ahmadalbadawi.com/publications/): peer-reviewed publications and patents
 - [Talks](https://ahmadalbadawi.com/talks/): conference talks and invited lectures
 - [Teaching](https://ahmadalbadawi.com/teaching/): courses and academic instruction
 - [Service](https://ahmadalbadawi.com/service/): program committees and community contributions
 - [Code](https://ahmadalbadawi.com/code/): open-source projects including OpenFHE
 - [Blog](https://ahmadalbadawi.com/posts/): technical writing on FHE and cryptographic engineering
+- [About](https://ahmadalbadawi.com/about/): hub linking to background, experience, honors, service, teaching, and code
 - [Contact](https://ahmadalbadawi.com/contact/): how to get in touch
 
 ## Recent work
