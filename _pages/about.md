@@ -37,4 +37,4 @@ I am a dedicated researcher specializing in **applied cryptography** and **priva
 
 My goal is to contribute to a more secure and resilient digital world - bridging theoretical foundations and practical solutions to make privacy-preserving computation usable at real-world scale.
 
-For details on my current and past projects, funding, and research themes, see my [research page](/research/). For the work in code, see [open-source contributions](/code/).
+For more on my research themes, current projects, and funding, see my [research page](/research/). For selected papers and patents, see my [publications](/publications/).

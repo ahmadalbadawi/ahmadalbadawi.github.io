@@ -6,6 +6,10 @@ author_profile: true
 description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encryption, privacy-preserving machine learning, and hardware acceleration of lattice cryptography."
 ---
 
+<p class="intro">
+  Research themes, signature work, and ongoing projects in cryptography, privacy-preserving machine learning, and hardware acceleration.
+</p>
+
 ## Themes
 
 <div class="theme-grid">

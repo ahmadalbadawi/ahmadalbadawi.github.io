@@ -14,7 +14,7 @@ description: "Open-source projects and code contributions by Dr. Ahmad Al Badawi
   <li class="project">
     <div class="project__header">
       <h3 class="project__title">OpenFHE-NumPy</h3>
-      <span class="project__role">Main Contributor</span>
+      <span class="project__role">Contributor</span>
     </div>
     <p class="project__body">
       Extends OpenFHE with a NumPy-like API so data scientists can run encrypted-data computations with familiar syntax - bridging FHE and practical data-science workflows.

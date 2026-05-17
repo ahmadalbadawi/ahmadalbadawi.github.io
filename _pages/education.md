@@ -8,6 +8,10 @@ redirect_from:
   - /education
 ---
 
+<p class="intro">
+  Academic background and degrees in electrical and computer engineering, completed across Singapore and Jordan.
+</p>
+
 <ol class="timeline">
   <li class="timeline__item">
     <div class="timeline__year">2018</div>

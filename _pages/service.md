@@ -8,6 +8,10 @@ redirect_from:
   - /service
 ---
 
+<p class="intro">
+  Program committees, journal reviewing, and community contributions across cryptography, hardware acceleration, and privacy-preserving computation.
+</p>
+
 ## Program &amp; Organizing Committees
 
 <ul class="committee-grid">

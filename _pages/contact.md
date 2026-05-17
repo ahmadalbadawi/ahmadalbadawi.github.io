@@ -6,14 +6,14 @@ author_profile: true
 description: "How to reach Dr. Ahmad Al Badawi - email and professional profiles for research collaboration, consulting, and speaking inquiries."
 ---
 
+<p class="intro">
+  Get in touch about research collaboration, consulting engagements, speaking invitations, or student mentorship.
+</p>
+
 <article class="feature-card">
-  <header class="feature-card__meta">
-    <span class="badge badge--accent">Best route</span>
-    <span class="badge">Replies within a few business days</span>
-  </header>
   <h2 class="feature-card__title">Email me</h2>
   <p class="feature-card__body feature-card__body--prominent">
-    For research collaboration, consulting, speaking engagements, or just to say hello.
+    Research collaboration, consulting and speaking engagements, student mentorship, or anything else - email is the fastest way to reach me.
   </p>
   <p class="section-more">
     <a class="btn btn--primary" href="mailto:ahmad@u.nus.edu">
@@ -22,52 +22,6 @@ description: "How to reach Dr. Ahmad Al Badawi - email and professional profiles
     </a>
   </p>
 </article>
-
-## How can I help?
-
-<ul class="project-grid">
-  <li class="project">
-    <div class="project__header">
-      <h3 class="project__title">Research collaboration</h3>
-    </div>
-    <p class="project__body">
-      Fully homomorphic encryption, privacy-preserving machine learning, lattice cryptography, hardware acceleration - happy to discuss new directions and joint work.
-    </p>
-    <div class="project__actions">
-      <a class="btn btn--ghost" href="mailto:ahmad@u.nus.edu?subject=Research%20collaboration">
-        Start a conversation &rarr;
-      </a>
-    </div>
-  </li>
-
-  <li class="project">
-    <div class="project__header">
-      <h3 class="project__title">Consulting &amp; speaking</h3>
-    </div>
-    <p class="project__body">
-      Deep-tech advisory for startups, technical talks, workshops, and tutorials on FHE and privacy-preserving computation.
-    </p>
-    <div class="project__actions">
-      <a class="btn btn--ghost" href="mailto:ahmad@u.nus.edu?subject=Consulting%20or%20speaking%20inquiry">
-        Get in touch &rarr;
-      </a>
-    </div>
-  </li>
-
-  <li class="project">
-    <div class="project__header">
-      <h3 class="project__title">Students &amp; mentees</h3>
-    </div>
-    <p class="project__body">
-      Researchers and students working on FHE or privacy-preserving ML who are looking for guidance - reach out with a short note on what you're exploring.
-    </p>
-    <div class="project__actions">
-      <a class="btn btn--ghost" href="mailto:ahmad@u.nus.edu?subject=Student%20mentorship">
-        Say hello &rarr;
-      </a>
-    </div>
-  </li>
-</ul>
 
 ## Find me elsewhere
 
