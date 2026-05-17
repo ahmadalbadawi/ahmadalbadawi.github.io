@@ -4,8 +4,7 @@ title: "Dr. Ahmad Al Badawi - Cryptography & Privacy Scientist"
 hide_title: true
 author_profile: false
 redirect_from:
-  - /about/
-  - /about.html
+  - /home/
 description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
 ---
 
@@ -33,8 +32,10 @@ description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research o
 
 ## About
 
-I am a dedicated researcher specializing in **applied cryptography** and **privacy-preserving technologies** - fields focused on developing efficient methods to secure data throughout its lifecycle, whether at rest, in transit, or in use. I hold a Ph.D. in Electrical and Computer Engineering from the National University of Singapore (2018) and have built a strong publication record with papers in prestigious journals and top-tier conferences. Beyond research, I have taught university courses, built and led research teams, and advised deep-tech startups on designing and deploying secure, privacy-aware solutions. My expertise extends to hardware acceleration, where I focus on optimizing the performance and efficiency of complex cryptographic operations.
+I run research on **fully homomorphic encryption** and **privacy-preserving AI**, with a focus on what it takes to deploy them at production scale. My contributions include [OpenFHE](https://github.com/openfheorg/openfhe-development), a co-authored open-source FHE library now used across industry and academia; the first GPU homomorphic CNN (HCNN); the RNS variants of BFV that became standard building blocks in modern FHE libraries; and the technical leadership of DPRIVE, a $15M DARPA program that delivered a 1 GHz, 12 nm FHE accelerator from concept to tape-out-ready RTL.
 
-My goal is to contribute to a more secure and resilient digital world - bridging theoretical foundations and practical solutions to make privacy-preserving computation usable at real-world scale.
+I hold a Ph.D. in Electrical and Computer Engineering from the National University of Singapore. I have built and led research teams in industry, government, and academic settings, and I currently work on making large language model inference run under FHE with practical latency.
 
-For more on my research themes, current projects, and funding, see my [research page](/research/). For selected papers and patents, see my [publications](/publications/).
+I am open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML.
+
+For the agenda behind the work, see my [research statement](/research/statement/). For shipped open-source projects, see [code](/code/).

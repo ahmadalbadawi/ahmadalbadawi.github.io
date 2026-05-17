@@ -7,7 +7,7 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
 ---
 
 <p class="intro">
-  Research themes, signature work, and ongoing projects in cryptography, privacy-preserving machine learning, and hardware acceleration.
+  Research themes, signature work, and ongoing projects in cryptography, privacy-preserving machine learning, and hardware acceleration. For the agenda behind this work, see my <a href="/research/statement/">research statement</a>.
 </p>
 
 ## Themes
@@ -225,6 +225,7 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
 
   <div class="feature-card__body">
     <p>Includes a custom ISA, microcode scheduler, and node-array architecture. Validated on high-complexity workloads: encrypted CNN training and inference, plus AES transciphering.</p>
+    <p>Paper: <a href="https://arxiv.org/abs/2304.05237" target="_blank" rel="noopener noreferrer">TREBUCHET: Fully Homomorphic Encryption Accelerator for Deep Computation</a> (GOMACTech 2025).</p>
   </div>
 </article>
 

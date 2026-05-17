@@ -279,7 +279,29 @@ a.card:hover .card__title {
 // ---------------------------------------------------------------------------
 
 .hero {
+  position: relative;
   margin-block: var(--s-2) var(--s-8);
+  isolation: isolate;
+}
+
+// Subtle lattice motif behind the hero. Masked radial fade keeps the dots
+// away from text; opacity is low enough to be felt, not seen directly.
+.hero__motif {
+  position: absolute;
+  inset: -2rem -1rem -1rem -1rem;
+  background-image: url("/images/motif-lattice.svg");
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  color: var(--accent);
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+  mask-image: radial-gradient(60% 70% at 30% 35%, #000 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(60% 70% at 30% 35%, #000 0%, transparent 80%);
+}
+
+[data-theme="light"] .hero__motif {
+  opacity: 0.12;
 }
 
 .hero__inner {
@@ -314,18 +336,51 @@ a.card:hover .card__title {
 
 .hero__title {
   margin: 0 0 var(--s-3);
-  font-size: var(--fs-3xl);
-  font-weight: 800;
+  font-family: var(--font-serif);
+  font-size: var(--fs-4xl);
+  font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .hero__pitch {
-  color: var(--text-muted);
+  color: var(--text);
+  font-family: var(--font-serif);
   font-size: var(--fs-lg);
   line-height: var(--lh-snug);
-  max-width: 56ch;
-  margin: 0;
+  max-width: 60ch;
+  margin: 0 0 var(--s-3);
+  font-weight: 400;
+}
+
+.hero__now {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin: 0 0 var(--s-5);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.hero__now-label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.1rem var(--s-2);
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklch, var(--accent), transparent 88%);
+  border: 1px solid color-mix(in oklch, var(--accent), transparent 75%);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
 }
 
 .hero__social {
@@ -373,8 +428,17 @@ a.card:hover .card__title {
     height: 140px;
     margin-inline: auto;
   }
+  .hero__title {
+    font-size: var(--fs-3xl);
+  }
   .hero__pitch {
     margin-inline: auto;
+  }
+  .hero__now {
+    justify-content: center;
+  }
+  .hero__actions {
+    justify-content: center;
   }
   .hero__social {
     justify-content: center;
@@ -387,11 +451,23 @@ a.card:hover .card__title {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--s-3);
   list-style: none;
   padding: 0;
   margin: var(--s-2) 0 var(--s-8);
+}
+
+@media (max-width: 720px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
 }
 
 .stat {
@@ -446,7 +522,7 @@ a.card:hover .card__title {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: var(--s-6);
+  gap: var(--s-4);
 }
 
 .stat__cols li {
@@ -471,6 +547,7 @@ a.card:hover .card__title {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 // ---------------------------------------------------------------------------
@@ -1237,4 +1314,20 @@ a.card:hover .card__title {
 .committee__meta {
   font-size: var(--fs-xs);
   color: var(--text-faint);
+}
+
+// ---------------------------------------------------------------------------
+// View Transitions (progressive enhancement, ignored by older browsers)
+// ---------------------------------------------------------------------------
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 220ms;
+    animation-timing-function: var(--ease);
+  }
 }

@@ -2,8 +2,11 @@
   Renders one publication item. Caller passes `pub` (a hash from
   site.data.publications). Used by the publications page and the home page's
   recent-publications section.
+
+  Emits ScholarlyArticle JSON-LD per entry for academic SEO.
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
+{%- assign pub_authors_plain = pub.authors | markdownify | strip_html | strip_newlines | replace: '&amp;', '&' -%}
 <li class="pub">
   <header class="pub__meta">
     <span class="pub__venue">{{ pub.venue }}</span>
@@ -20,4 +23,22 @@
     </a>
   </div>
   {%- endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if pub.kind == 'patent' %}CreativeWork{% else %}ScholarlyArticle{% endif %}",
+    "headline": {{ pub.title | jsonify }},
+    "name": {{ pub.title | jsonify }},
+    "author": {{ pub_authors_plain | jsonify }},
+    "datePublished": "{{ pub.year }}",
+    "isPartOf": {
+      "@type": "{% if pub.kind == 'patent' %}CreativeWorkSeries{% else %}Periodical{% endif %}",
+      "name": {{ pub.venue | jsonify }}
+    }{% if pub.url %},
+    "url": {{ pub.url | jsonify }},
+    "identifier": {{ pub.url | jsonify }}{% endif %}{% if pub.id %},
+    "alternateName": {{ pub.id | jsonify }}{% endif %}
+  }
+  </script>
 </li>

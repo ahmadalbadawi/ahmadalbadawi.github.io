@@ -1,17 +1,23 @@
 {% include base_path %}
 
 <section class="hero" aria-label="Introduction">
+  <div class="hero__motif" aria-hidden="true"></div>
+
   <div class="hero__inner">
     <picture class="hero__avatar">
       <source srcset="{{ base_path }}/images/profile-480.webp" type="image/webp">
-      <img src="{{ base_path }}/images/profile-480.jpg" alt="Portrait of {{ site.author.name }}" width="200" height="200" fetchpriority="high" decoding="async">
+      <img src="{{ base_path }}/images/profile-480.jpg" alt="Portrait of {{ site.author.name }}" width="200" height="200" fetchpriority="high" decoding="async" style="view-transition-name: hero-avatar;">
     </picture>
 
     <div class="hero__content">
-      <p class="hero__eyebrow">Senior Scientist &middot; Cryptography</p>
-      <h1 class="hero__title">{{ site.author.name | remove: 'Dr. ' }}, Ph.D.</h1>
+      <p class="hero__eyebrow">Senior Scientist, Cryptography</p>
+      <h1 class="hero__title" style="view-transition-name: hero-title;">{{ site.author.name | remove: 'Dr. ' }}, Ph.D.</h1>
       <p class="hero__pitch">
-        I work at the intersection of applied cryptography, machine learning, and hardware acceleration, advancing fully homomorphic encryption toward practical, deployable private AI systems.
+        I build the cryptography that lets AI run on data it never gets to see. Co-author of OpenFHE, technical lead on the DARPA DPRIVE 12 nm FHE accelerator, and principal investigator on private LLM inference under fully homomorphic encryption.
+      </p>
+      <p class="hero__now">
+        <span class="hero__now-label">Now</span>
+        Private LLM inference under FHE at Duality Technologies.
       </p>
 
       <ul class="hero__social" aria-label="Social profiles">
@@ -52,8 +58,8 @@
 
 <ul class="stats">
   <li class="stat">
-    <span class="stat__value">50<span class="stat__plus">+</span></span>
-    <span class="stat__label">Publications</span>
+    <span class="stat__value">25<span class="stat__plus">+</span></span>
+    <span class="stat__label">Peer-reviewed papers</span>
   </li>
 
   <li class="stat">
@@ -75,8 +81,8 @@
   </li>
 
   <li class="stat">
-    <span class="stat__value">15<span class="stat__plus">+</span></span>
-    <span class="stat__label">Years in cryptography</span>
+    <span class="stat__value stat__value--text">$15M DARPA</span>
+    <span class="stat__label">12 nm FHE ASIC, Tech Lead</span>
   </li>
 
   <li class="stat">

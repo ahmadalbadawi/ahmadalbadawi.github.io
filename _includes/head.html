@@ -8,7 +8,16 @@
 <link rel="alternate" type="application/atom+xml" href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" title="{{ site.title }} Feed">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_path }}/sitemap.xml">
 
-<meta name="theme-color" content="#10141c">
+<meta name="theme-color" content="#10141c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<link rel="preload" as="image" href="{{ base_path }}/images/profile-480.webp" type="image/webp" fetchpriority="high">
+
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link rel="preload" as="style" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap"></noscript>
 
 {% include theme-init.html %}
 
