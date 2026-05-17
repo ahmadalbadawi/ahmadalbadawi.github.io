@@ -314,6 +314,7 @@ a.card:hover .card__title {
 .hero__avatar {
   display: block;
   flex-shrink: 0;
+  align-self: center;
 }
 
 .hero__avatar img {
@@ -337,10 +338,12 @@ a.card:hover .card__title {
 .hero__title {
   margin: 0 0 var(--s-3);
   font-family: var(--font-serif);
-  font-size: var(--fs-4xl);
+  font-size: clamp(1.875rem, 3.4vw, 2.5rem);
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .hero__pitch {
@@ -429,7 +432,8 @@ a.card:hover .card__title {
     margin-inline: auto;
   }
   .hero__title {
-    font-size: var(--fs-3xl);
+    font-size: clamp(1.625rem, 6vw, 2.25rem);
+    white-space: normal;
   }
   .hero__pitch {
     margin-inline: auto;
