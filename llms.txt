@@ -5,7 +5,7 @@ sitemap: false
 ---
 # Dr. Ahmad Al Badawi
 
-> Senior Scientist in cryptography. Research on fully homomorphic encryption (FHE), privacy-preserving machine learning, and lattice cryptography. Core maintainer of OpenFHE.
+> Senior Scientist in cryptography. Research on fully homomorphic encryption (FHE), privacy-preserving machine learning, and lattice cryptography. Core maintainer of OpenFHE (and its predecessor PALISADE).
 
 ## About
 
@@ -23,7 +23,7 @@ Affiliations: Ph.D. from the National University of Singapore (2018). Co-Princip
 - [Talks](https://ahmadalbadawi.com/talks/): conference talks and invited lectures
 - [Teaching](https://ahmadalbadawi.com/teaching/): courses and academic instruction
 - [Service](https://ahmadalbadawi.com/service/): program committees and community contributions
-- [Code](https://ahmadalbadawi.com/code/): open-source projects including OpenFHE
+- [Code](https://ahmadalbadawi.com/code/): open-source projects including OpenFHE and its predecessor PALISADE
 - [Blog](https://ahmadalbadawi.com/posts/): technical writing on FHE and cryptographic engineering
 - [About](https://ahmadalbadawi.com/about/): hub linking to background, experience, honors, service, teaching, and code
 - [Contact](https://ahmadalbadawi.com/contact/): how to get in touch

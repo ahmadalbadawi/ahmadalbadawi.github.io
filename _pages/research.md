@@ -110,7 +110,7 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
         <span>WAHC 2022</span>
         <span>609 citations</span>
       </div>
-      <p class="card__excerpt">Co-author of the leading open-source library for fully homomorphic encryption (BFV, BGV, CKKS, TFHE). Now standard infrastructure across the FHE research and industry community.</p>
+      <p class="card__excerpt">Co-author of the leading open-source library for fully homomorphic encryption (BFV, BGV, CKKS, TFHE). Successor to PALISADE, carrying forward a multi-year line of open-source FHE infrastructure. Now standard infrastructure across the FHE research and industry community.</p>
     </a>
   </li>
 
