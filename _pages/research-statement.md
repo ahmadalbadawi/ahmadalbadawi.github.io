@@ -13,7 +13,7 @@ keywords: "research statement, fully homomorphic encryption, FHE, privacy-preser
 
 ## Private computation should be a default, not a feature.
 
-Most of today's compute runs in the clear. Training data lives in a cluster, inference servers see raw inputs, analytics pipelines need column-level access. As models scale and inference moves into regulated industries (healthcare, finance, defense), that assumption is increasingly the bottleneck.
+Most of today's compute runs in the clear. Training data lives in a cluster, inference servers see raw inputs, analytics pipelines need column-level access. As models scale and inference moves into regulated industries (healthcare, finance, defense), that assumption becomes more difficult to satisfy.
 
 Fully homomorphic encryption is the most general tool we have for keeping data encrypted throughout its lifecycle, including during computation. The question is no longer whether FHE works. It does. The question is whether it can be made fast, ergonomic, and infrastructure-ready.
 
@@ -41,7 +41,7 @@ Closing it is not a single-discipline problem. It requires progress on all three
 - **Systems**: compilers, hybrid execution stacks, GPU acceleration, and silicon that turn the algorithmic gains into wall-clock latency a user will tolerate.
 - **Applications**: regulated, latency-tolerant use cases (healthcare diagnostics, federated analytics, multi-party machine learning, secure inference for defense) where the privacy guarantee is worth a real latency budget today, and where deployment exercises the rest of the stack.
 
-I work across all three and I am looking for collaborators (labs, startups, program committees) who want to make encrypted-by-default AI a practical industry reality.
+I work across all three and I am looking for collaborators (labs, startups, program committees) who want to make encrypted AI practical.
 
 <p class="section-more">
   <a class="btn btn--primary" href="/contact/">Get in touch</a>
