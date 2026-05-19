@@ -1,17 +1,41 @@
 <script>
-  // Inline theme bootstrap - runs before paint to avoid a light/dark flash.
-  // The site defaults to dark; light is opt-in via the toggle button, which
-  // persists the choice in localStorage as "light".
-  (function() {
-    try {
-      var stored = localStorage.getItem('theme');
-      if (stored === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-      } else if (stored === 'dark') {
-        // Clean up an older saved value: dark is the default so the attribute
-        // doesn't need to be set.
-        localStorage.removeItem('theme');
+  // Inline theme bootstrap. Runs synchronously in <head> before paint so the
+  // CSS can pick up [data-theme="light"] on the first render and no flash
+  // occurs. The site defaults to dark; light is opt-in via the toggle button.
+  //
+  // Persistence is two-layered:
+  //   - localStorage["theme"] (primary; per-origin, no expiry)
+  //   - cookie "theme=light; Max-Age=31536000; Path=/; SameSite=Lax"
+  //     (backup, in case localStorage is partitioned, blocked by a strict
+  //     privacy mode, or cleared between view-transition captures)
+  // Either source counts. Both are written when the user toggles to light;
+  // both are cleared when the user toggles back to dark.
+  (function () {
+    function readCookie(name) {
+      var cookies = document.cookie ? document.cookie.split('; ') : [];
+      for (var i = 0; i < cookies.length; i++) {
+        var idx = cookies[i].indexOf('=');
+        if (idx === -1) continue;
+        if (cookies[i].slice(0, idx) === name) {
+          return decodeURIComponent(cookies[i].slice(idx + 1));
+        }
       }
-    } catch (e) {}
+      return null;
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (e) {}
+    if (stored !== 'light' && stored !== 'dark') {
+      stored = readCookie('theme');
+    }
+
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      // Clean up an older saved value: dark is the default so no attribute
+      // is needed. Best-effort cleanup of both layers.
+      try { localStorage.removeItem('theme'); } catch (e) {}
+      document.cookie = 'theme=; Max-Age=0; Path=/; SameSite=Lax';
+    }
   })();
 </script>

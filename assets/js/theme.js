@@ -1,60 +1,89 @@
-// Theme toggle - pairs with the inline bootstrap in _includes/theme-init.html.
-// The site defaults to dark; clicking the button switches between dark and
-// light and persists "light" in localStorage. Switching back to dark removes
-// the saved value so the default takes over.
+// Theme toggle. Pairs with the inline bootstrap in _includes/theme-init.html.
+// Defaults to dark. Light is opt-in. Persists across pages via two layers:
+//   - localStorage["theme"]
+//   - cookie "theme" (one-year max-age, SameSite=Lax)
+// Either source on the next page load applies the light theme.
 
 (function () {
-  const root = document.documentElement;
-  const THEME_COLOR_DARK = '#10141c';
-  const THEME_COLOR_LIGHT = '#fafafa';
+  'use strict';
+
+  var root = document.documentElement;
+  var THEME_COLOR_DARK = '#10141c';
+  var THEME_COLOR_LIGHT = '#fafafa';
+  var COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // one year
 
   function currentTheme() {
     return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
   }
 
+  function writeStorage(theme) {
+    try {
+      if (theme === 'light') {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.removeItem('theme');
+      }
+    } catch (e) {}
+  }
+
+  function writeCookie(theme) {
+    if (theme === 'light') {
+      document.cookie =
+        'theme=light; Max-Age=' + COOKIE_MAX_AGE + '; Path=/; SameSite=Lax';
+    } else {
+      document.cookie = 'theme=; Max-Age=0; Path=/; SameSite=Lax';
+    }
+  }
+
   function applyTheme(theme) {
     if (theme === 'light') {
       root.setAttribute('data-theme', 'light');
-      try { localStorage.setItem('theme', 'light'); } catch (e) {}
     } else {
       root.removeAttribute('data-theme');
-      try { localStorage.removeItem('theme'); } catch (e) {}
     }
+    writeStorage(theme);
+    writeCookie(theme);
     syncMetaThemeColor();
   }
 
   function syncMetaThemeColor() {
-    const metas = document.querySelectorAll('meta[name="theme-color"]');
-    const color = currentTheme() === 'light' ? THEME_COLOR_LIGHT : THEME_COLOR_DARK;
-    metas.forEach((m) => {
-      // Drop any media-query qualifier so the value applies unconditionally.
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    var color = currentTheme() === 'light' ? THEME_COLOR_LIGHT : THEME_COLOR_DARK;
+    metas.forEach(function (m) {
       m.removeAttribute('media');
       m.setAttribute('content', color);
     });
   }
 
   function syncPressed(buttons) {
-    const isLight = currentTheme() === 'light';
-    buttons.forEach((btn) => btn.setAttribute('aria-pressed', String(!isLight)));
+    var isLight = currentTheme() === 'light';
+    buttons.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(!isLight));
+    });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function wire() {
     syncMetaThemeColor();
-    const buttons = document.querySelectorAll('[data-theme-toggle]');
+    var buttons = document.querySelectorAll('[data-theme-toggle]');
     syncPressed(buttons);
 
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
         applyTheme(currentTheme() === 'light' ? 'dark' : 'light');
         syncPressed(buttons);
       });
     });
 
-    // Cross-tab sync.
-    window.addEventListener('storage', (e) => {
+    window.addEventListener('storage', function (e) {
       if (e.key !== 'theme') return;
       applyTheme(e.newValue === 'light' ? 'light' : 'dark');
       syncPressed(buttons);
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
 })();
