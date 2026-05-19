@@ -1,5 +1,6 @@
-<script src="{{ base_path }}/assets/js/theme.js" defer></script>
-<script src="{{ base_path }}/assets/js/nav.js" defer></script>
-<script src="{{ base_path }}/assets/js/copy-code.js" defer></script>
+{%- assign asset_v = site.time | date: '%s' -%}
+<script src="{{ base_path }}/assets/js/theme.js?v={{ asset_v }}" defer></script>
+<script src="{{ base_path }}/assets/js/nav.js?v={{ asset_v }}" defer></script>
+<script src="{{ base_path }}/assets/js/copy-code.js?v={{ asset_v }}" defer></script>
 
 {% include analytics.html %}
