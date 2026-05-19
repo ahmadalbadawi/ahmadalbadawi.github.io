@@ -19,7 +19,31 @@
 <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap"></noscript>
 
-{% include theme-init.html %}
+<script>
+  // Inline theme bootstrap. Runs synchronously before paint so the CSS picks
+  // up [data-theme="light"] on the first frame, with no flash. Persistence
+  // is two-layered: localStorage["theme"] and cookie "theme".
+  (function () {
+    function readCookie(name) {
+      var c = document.cookie ? document.cookie.split('; ') : [];
+      for (var i = 0; i < c.length; i++) {
+        var idx = c[i].indexOf('=');
+        if (idx === -1) continue;
+        if (c[i].slice(0, idx) === name) return decodeURIComponent(c[i].slice(idx + 1));
+      }
+      return null;
+    }
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (e) {}
+    if (stored !== 'light' && stored !== 'dark') stored = readCookie('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      try { localStorage.removeItem('theme'); } catch (e) {}
+      document.cookie = 'theme=; Max-Age=0; Path=/; SameSite=Lax';
+    }
+  })();
+</script>
 
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
 
