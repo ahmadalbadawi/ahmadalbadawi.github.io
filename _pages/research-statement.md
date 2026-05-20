@@ -49,7 +49,9 @@ Closing it is not a single-discipline problem. It requires progress on all three
 - **Systems**: compilers, hybrid execution stacks, GPU acceleration, and silicon that turn the algorithmic gains into wall-clock latency a user will tolerate.
 - **Applications**: regulated, latency-tolerant use cases (healthcare diagnostics, federated analytics, multi-party machine learning, secure inference for defense) where the privacy guarantee is worth a real latency budget today, and where deployment exercises the rest of the stack.
 
-I work across all three and I am looking for collaborators (labs, startups, program committees) who want to make encrypted AI practical.
+A concrete prediction: a 10x improvement on each of the three pillars (algorithms, systems, applications) compounds to a 1000x reduction, closing most of the four-orders-of-magnitude gap and leaving encrypted inference roughly **10x slower than plaintext**. That overhead is well within what latency-tolerant production workloads can absorb (overnight analytics, federated training rounds, regulated medical and financial diagnostics, batch scoring, asynchronous LLM serving), and small enough that the privacy guarantee starts to dominate the cost calculus rather than be dominated by it. None of the three 10x gains is out of reach individually; the open question is whether the field can deliver them in a coordinated way rather than each pillar shipping a 10x in isolation.
+
+I work across all three pillars and I am looking for collaborators (labs, startups, program committees) who want to make encrypted AI practical.
 
 <p class="section-more">
   <a class="btn btn--primary" href="/contact/">Get in touch</a>
