@@ -1,5 +1,14 @@
 // Base typography and elements.
 
+// Cross-document View Transitions (Chrome 126+, Edge 126+, Safari TP).
+// Replaces the brief white canvas between page navigations with a default
+// cross-fade. Browsers without support ignore this rule. Targets the
+// Windows-Chrome navigation flash that paint-holding can't cover when
+// network latency exceeds the holding budget.
+@view-transition {
+  navigation: auto;
+}
+
 html {
   font-family: var(--font-sans);
   font-size: 16px;
