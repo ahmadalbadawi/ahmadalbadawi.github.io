@@ -3,7 +3,7 @@ layout: archive
 title: "Research Impact"
 permalink: /research/impact/
 author_profile: true
-description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE leading the FHE library market, RNS-BFV as standard library infrastructure, the DPRIVE FHE ASIC, and papers that have crossed 50 citations."
+description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE leading the FHE library market, RNS-BFV as standard library infrastructure, the DPRIVE FHE ASIC, and papers that have crossed 100 citations."
 ---
 
 <p class="intro">
@@ -76,9 +76,9 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
   </div>
 </article>
 
-## Papers with 50+ citations
+## Papers with 100+ citations
 
-<p class="intro">The following papers have crossed 50 citations on Google Scholar. Listed in citation-count order. Last updated, May 2026.</p>
+<p class="intro">The following papers have crossed 100 citations on Google Scholar. Listed in citation-count order. Last updated, May 2026.</p>
 
 <ul class="card-grid">
   <li>
@@ -137,76 +137,6 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
       <div class="card__meta">
         <span>IACR TCHES</span>
         <span>2018</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://eprint.iacr.org/2023/149" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Demystifying Bootstrapping in Fully Homomorphic Encryption</h3>
-      <div class="card__meta">
-        <span>IACR ePrint</span>
-        <span>2023</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://doi.org/10.1109/TPDS.2020.3021238" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters</h3>
-      <div class="card__meta">
-        <span>IEEE TPDS</span>
-        <span>2020</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://eprint.iacr.org/2024/203" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Application-Aware Approximate Homomorphic Encryption: Configuring FHE for Practical Use</h3>
-      <div class="card__meta">
-        <span>IACR CiC, Vol. 2(4)</span>
-        <span>2026</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://doi.org/10.3390/s22010241" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Attack-Aware IoT Network Traffic Routing Leveraging Ensemble Learning</h3>
-      <div class="card__meta">
-        <span>Sensors</span>
-        <span>2021</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://www.sciencedirect.com/science/article/pii/S2667305323001230" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">A Comparative Evaluation of Intrusion Detection Systems on the Edge-IIoT-2022 Dataset</h3>
-      <div class="card__meta">
-        <span>Intell. Syst. with Apps.</span>
-        <span>2023</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://ieeexplore.ieee.org/abstract/document/9543673" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Privacy-Preserving Collective Learning with Homomorphic Encryption</h3>
-      <div class="card__meta">
-        <span>IEEE Access</span>
-        <span>2021</span>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a class="card" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.12934" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">Boost-Defence for Resilient IoT Networks: A Head-to-Toe Approach</h3>
-      <div class="card__meta">
-        <span>Expert Systems</span>
-        <span>2022</span>
       </div>
     </a>
   </li>
