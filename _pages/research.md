@@ -10,6 +10,8 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
   Research themes, signature work, and ongoing projects in cryptography, privacy-preserving machine learning, and hardware acceleration. For the agenda behind this work, see my <a href="/research/statement/">research statement</a>.
 </p>
 
+<p class="section-more"><a href="/research/impact/">See research impact: adoption, deployments, and most-cited papers &rarr;</a></p>
+
 ## Themes
 
 <div class="theme-grid">

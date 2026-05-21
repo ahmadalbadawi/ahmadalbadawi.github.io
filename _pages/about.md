@@ -36,6 +36,6 @@ I run research on **fully homomorphic encryption** and **privacy-preserving AI**
 
 I hold a Ph.D. in Electrical and Computer Engineering from the National University of Singapore. I have built and led research teams in industry, government, and academic settings, and I currently work on making large language model inference run under FHE with practical latency.
 
-I am open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML.
+I am open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML. Feel free to reach out via my [contact page](/contact).
 
 For the agenda behind the work, see my [research statement](/research/statement/). For shipped open-source projects, see [code](/code/).
