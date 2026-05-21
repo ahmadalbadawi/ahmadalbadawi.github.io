@@ -21,6 +21,14 @@
 
 <script>!function(){try{var t=null;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'){var m=document.cookie.match(/(?:^|; )theme=([^;]+)/);t=m?decodeURIComponent(m[1]):null}if(t==='light'){document.documentElement.setAttribute('data-theme','light')}else if(t==='dark'){try{localStorage.removeItem('theme')}catch(e){}document.cookie='theme=; Max-Age=0; Path=/; SameSite=Lax'}}catch(e){}}();</script>
 
+<style>
+  /* Painted before the main stylesheet finishes parsing, so the canvas color
+     is known on first paint - prevents a white flash on dark theme between
+     page navigations. Values mirror --bg in _sass/_tokens.scss. */
+  html { background: #10141c; }
+  html[data-theme="light"] { background: #fcfcfd; }
+</style>
+
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
 
 <noscript>
