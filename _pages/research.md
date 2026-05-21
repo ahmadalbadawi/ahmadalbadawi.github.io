@@ -234,17 +234,36 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
 <article class="feature-card">
   <header class="feature-card__meta">
     <span class="badge">Completed</span>
-    <span class="badge badge--funding">S$9.9M · A*STAR RIE2020</span>
-    <span class="badge">Feb 2020 &ndash; Aug 2023</span>
+    <span class="badge badge--funding">S$9.9M &middot; A*STAR RIE2020</span>
+    <span class="badge">Feb 2020 to Aug 2023</span>
+    <span class="badge badge--accent">Co-PI &middot; WP2 Lead</span>
   </header>
-  <h3 class="feature-card__title">RIE2020 Advanced Manufacturing &amp; Engineering (AME) Programmatic Programme</h3>
-  <p class="feature-card__role"><strong>Co-Principal Investigator</strong> &middot; Award A19E3b0099</p>
+  <h3 class="feature-card__title">RIE2020 AME Programmatic: Accelerating Homomorphic Encryption</h3>
+  <p class="feature-card__role"><strong>Co-Principal Investigator</strong> and <strong>Work Package II Lead</strong> &middot; Award A19E3b0099</p>
   <div class="feature-card__body">
-    <p>Led <em>Work Package II - Strengthening HE Fundamentals</em>, optimizing fully homomorphic encryption for advanced manufacturing applications.</p>
-    <ul>
-      <li>Fast algorithms for primitive FHE computations.</li>
-      <li>Extended the FHE arithmetic set to support more complex operations.</li>
-      <li>Increased the usability of FHE to simplify application development.</li>
-    </ul>
+    <p>Co-authored the winning proposal for a four-institution Singapore consortium (I2R, NTU, SUTD, NUS) and presented it to A*STAR's review committee. The 3-year programme set out to make FHE deployment-ready for advanced manufacturing, with consulting input from Vinod Vaikuntanathan (MIT), Victor Shoup (NYU), and David Barber (UCL).</p>
+  </div>
+
+  <ul class="specs-grid">
+    <li>
+      <span class="specs-grid__value">S$9.9M</span>
+      <span class="specs-grid__label">Total programme budget</span>
+    </li>
+    <li>
+      <span class="specs-grid__value">4</span>
+      <span class="specs-grid__label">Singapore institutions</span>
+    </li>
+    <li>
+      <span class="specs-grid__value">3</span>
+      <span class="specs-grid__label">International advisors (MIT, NYU, UCL)</span>
+    </li>
+    <li>
+      <span class="specs-grid__value">27</span>
+      <span class="specs-grid__label">Researchers across the programme</span>
+    </li>
+  </ul>
+
+  <div class="feature-card__body">
+    <p>As PI of <em>Work Package II - Strengthening HE Fundamentals</em>, I led the algorithms track: fast algorithms for primitive FHE computations, an extended HE arithmetic set for non-polynomial operations, and tooling to make HE development accessible without deep cryptography expertise.</p>
   </div>
 </article>
