@@ -235,7 +235,7 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
   <header class="feature-card__meta">
     <span class="badge">Completed</span>
     <span class="badge badge--funding">S$9.9M &middot; A*STAR RIE2020</span>
-    <span class="badge">Feb 2020 to Aug 2023</span>
+    <span class="badge">Feb 2020 to Jan 2023</span>
     <span class="badge badge--accent">Co-PI &middot; WP2 Lead</span>
   </header>
   <h3 class="feature-card__title">RIE2020 AME Programmatic: Accelerating Homomorphic Encryption</h3>
@@ -265,5 +265,6 @@ description: "Research interests of Dr. Ahmad Al Badawi: fully homomorphic encry
 
   <div class="feature-card__body">
     <p>As PI of <em>Work Package II - Strengthening HE Fundamentals</em>, I led the algorithms track: fast algorithms for primitive FHE computations, an extended HE arithmetic set for non-polynomial operations, and tooling to make HE development accessible without deep cryptography expertise.</p>
+    <p>Programme outputs included 10 peer-reviewed publications, 2 patents, 3 software IPs, and 1 open-source library.</p>
   </div>
 </article>

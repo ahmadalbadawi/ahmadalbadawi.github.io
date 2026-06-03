@@ -22,6 +22,7 @@ redirect_from:
         <strong>Thesis:</strong>
         <a href="https://scholarbank.nus.edu.sg/handle/10635/152822" target="_blank" rel="noopener noreferrer"><em>Practical Post-Quantum Cryptography &amp; Fully Homomorphic Encryption on Graphics Processors: Design &amp; Performance Evaluation</em></a>
       </p>
+      <p class="timeline__thesis"><strong>Advisor:</strong> Prof. Bharadwaj Veeravalli</p>
     </div>
   </li>
 
@@ -34,6 +35,7 @@ redirect_from:
         <strong>Thesis:</strong>
         <em>Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization</em>
       </p>
+      <p class="timeline__thesis"><strong>Advisor:</strong> Prof. Ali M. Shatnawi</p>
     </div>
   </li>
 
@@ -46,6 +48,7 @@ redirect_from:
         <strong>Capstone:</strong>
         <em>Wireless Control System Using Speech Recognition and a Smartphone</em>
       </p>
+      <p class="timeline__thesis"><strong>Advisor:</strong> Prof. Abdelwadood Mesleh</p>
     </div>
   </li>
 </ol>

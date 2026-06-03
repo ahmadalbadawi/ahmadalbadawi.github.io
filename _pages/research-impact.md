@@ -96,7 +96,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
       <h3 class="card__title">Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs</h3>
       <div class="card__meta">
         <span>IEEE TETC</span>
-        <span>2018</span>
+        <span>2020</span>
       </div>
     </a>
   </li>

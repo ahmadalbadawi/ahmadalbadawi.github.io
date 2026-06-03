@@ -19,3 +19,5 @@ While serving as an Assistant Professor at the Faculty of Resilience, Rabdan Aca
 
 **Summer 2022**
   - HLS430 Data Analytics for Cybersecurity
+
+Across these terms, my teaching also covered Introduction to Cybersecurity, Cryptography, Network Security, and Incident Response.

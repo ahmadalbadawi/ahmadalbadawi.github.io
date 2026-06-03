@@ -7,7 +7,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
 ---
 
 <p class="intro">
-  Eighteen years across industry, national labs, and academia in five countries, building privacy-preserving cryptographic systems from research papers to silicon.
+  Twenty years across industry, national labs, and academia in five countries, building privacy-preserving cryptographic systems from research papers to silicon.
 </p>
 
 <ol class="timeline">
@@ -18,7 +18,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
       <a class="timeline__inst" href="https://dualitytech.com" target="_blank" rel="noopener noreferrer">Duality Technologies</a>
       <p class="timeline__thesis">
         <strong>Hoboken, NJ, USA &middot; Sep 2022 to Present</strong><br>
-        Lead researcher on privacy-preserving technologies and Technical PI for DARPA's DPRIVE program. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); core builder of OpenFHE and lead author of OpenFHE-NumPy.
+        Lead researcher on privacy-preserving technologies and Technical PI for DARPA's DPRIVE program. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); core builder of OpenFHE and co-author of OpenFHE-NumPy.
       </p>
     </div>
   </li>
@@ -38,7 +38,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
   <li class="timeline__item">
     <div class="timeline__year">2021</div>
     <div class="timeline__card">
-      <p class="timeline__degree">Cryptography Consultant</p>
+      <p class="timeline__degree">Cryptography Consultant (Part-time)</p>
       <a class="timeline__inst" href="https://dualitytech.com" target="_blank" rel="noopener noreferrer">Duality Technologies</a>
       <p class="timeline__thesis">
         <strong>Remote &middot; Jul 2021 to Aug 2022</strong><br>
@@ -50,7 +50,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
   <li class="timeline__item">
     <div class="timeline__year">2019</div>
     <div class="timeline__card">
-      <p class="timeline__degree">Privacy Consultant</p>
+      <p class="timeline__degree">Privacy Consultant (Part-time)</p>
       <a class="timeline__inst" href="https://inferati.com" target="_blank" rel="noopener noreferrer">Inferati Inc.</a>
       <p class="timeline__thesis">
         <strong>Seattle, WA, USA &middot; Oct 2019 to Feb 2022</strong><br>
@@ -98,7 +98,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
   <li class="timeline__item">
     <div class="timeline__year">2008</div>
     <div class="timeline__card">
-      <p class="timeline__degree">Software Developer &rarr; Senior Software Developer</p>
+      <p class="timeline__degree">Senior Software Engineer</p>
       <a class="timeline__inst" href="https://www.globitel.com/" target="_blank" rel="noopener noreferrer">Globitel</a>
       <p class="timeline__thesis">
         <strong>Amman, Jordan &middot; Jun 2008 to Sep 2011</strong><br>

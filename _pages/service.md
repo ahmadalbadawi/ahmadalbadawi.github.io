@@ -52,7 +52,7 @@ redirect_from:
 <p class="intro intro--sm">Selected venues for which I have served as a reviewer:</p>
 
 <ul class="tag-cloud">
-  <li><span class="tag">Journal of Cryptography</span></li>
+  <li><span class="tag">Journal of Cryptology</span></li>
   <li><span class="tag">IEEE TIFS</span></li>
   <li><span class="tag">IEEE Trans. Computers</span></li>
   <li><span class="tag">IEEE TETC</span></li>
@@ -65,6 +65,8 @@ redirect_from:
   <li><span class="tag">IEEE Trans. Privacy</span></li>
   <li><span class="tag">IEEE Access</span></li>
   <li><span class="tag">ACM TOPS</span></li>
+  <li><span class="tag">JMIR</span></li>
+  <li><span class="tag">AEUE</span></li>
   <li><span class="tag">Future Generation Computer Systems</span></li>
   <li><span class="tag">Neural Computing &amp; Applications</span></li>
   <li><span class="tag">Cluster Computing</span></li>
