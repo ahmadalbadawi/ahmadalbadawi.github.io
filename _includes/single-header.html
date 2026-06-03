@@ -6,7 +6,7 @@
       {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </h1>
 
-    {% if page.excerpt and page.show_excerpt != false and page.collection != 'talks' %}
+    {% if page.excerpt and page.show_excerpt != false and page.collection != 'talks' and page.collection != 'teaching' %}
       <p class="page-header__subtitle">{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}</p>
     {% endif %}
 
