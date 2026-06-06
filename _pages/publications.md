@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Selected Publications"
+title: "Selected Publications & Patents"
 permalink: /publications/
 author_profile: true
 description: "Peer-reviewed publications by Dr. Ahmad Al Badawi on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."

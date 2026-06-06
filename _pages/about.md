@@ -38,4 +38,4 @@ I hold a Ph.D. in Electrical and Computer Engineering from the National Universi
 
 **Open to principal/staff Cryptography & ML-Systems roles.** I am also open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML. Feel free to reach out via my [contact page](/contact).
 
-For the agenda behind the work, see my [research statement](/research/statement/). For shipped open-source projects, see [code](/code/).
+For the agenda behind the work, see my [research statement](/research/statement/). For how it is used in practice, see my [research impact](/research/impact/). For shipped open-source projects, see [code](/code/).
