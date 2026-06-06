@@ -19,6 +19,13 @@ description: "Background, experience, honors, service, teaching, and open-source
   </li>
 
   <li>
+    <a class="card" href="/research/impact/">
+      <h3 class="card__title">Research Impact</h3>
+      <p class="card__excerpt">Where the work is actually used: OpenFHE ranked the #1 FHE library (51% adoption), RNS-BFV as standard library infrastructure, and a 12 nm FHE ASIC.</p>
+    </a>
+  </li>
+
+  <li>
     <a class="card" href="/experience/">
       <h3 class="card__title">Experience</h3>
       <p class="card__excerpt">Industry and academic roles, including senior scientist positions, technical leadership on DARPA DPRIVE, and research at A*STAR and NUS.</p>

@@ -56,4 +56,5 @@ I work across all three pillars and I am looking for collaborators (labs, startu
 <p class="section-more">
   <a class="btn btn--primary" href="/contact/">Get in touch</a>
   <a class="btn btn--ghost" href="/research/">See current research</a>
+  <a class="btn btn--ghost" href="/research/impact/">See research impact</a>
 </p>
