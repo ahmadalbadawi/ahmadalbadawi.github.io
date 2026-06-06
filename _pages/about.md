@@ -30,12 +30,12 @@ description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research o
 
 ---
 
-## Bio
+## At a glance
 
 I run research on **fully homomorphic encryption** and **privacy-preserving AI**, with a focus on what it takes to deploy them at production scale. My contributions include [PALISADE](https://gitlab.com/palisade) (now [OpenFHE](https://github.com/openfheorg/openfhe-development)), a co-authored open-source FHE library now used across industry and academia; the first GPU homomorphic CNN (HCNN); the RNS variants of BFV that became standard building blocks in modern FHE libraries; and the technical leadership of DPRIVE, a $15M DARPA program that delivered a 1 GHz, 12 nm FHE accelerator from concept to tape-out-ready RTL.
 
 I hold a Ph.D. in Electrical and Computer Engineering from the National University of Singapore. I have built and led research teams in industry, government, and academic settings, and I currently work on making large language model inference run under FHE with practical latency.
 
-**Open to principal/staff research & ML-systems roles.** I am also open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML. Feel free to reach out via my [contact page](/contact).
+**Open to principal/staff Cryptography & ML-Systems roles.** I am also open to research collaboration, technical advising for founders building privacy-first infrastructure, and program committee service in cryptography and trustworthy ML. Feel free to reach out via my [contact page](/contact).
 
 For the agenda behind the work, see my [research statement](/research/statement/). For shipped open-source projects, see [code](/code/).
