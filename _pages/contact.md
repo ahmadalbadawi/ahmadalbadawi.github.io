@@ -75,7 +75,6 @@ description: "How to reach Dr. Ahmad Al Badawi - separate inboxes for academic c
   <li style="margin-bottom: var(--s-2);"><strong>Speaking at an industry conference or vendor event?</strong> Use <a href="mailto:aalbadawi@dualitytech.com">Duality</a>.</li>
   <li style="margin-bottom: var(--s-2);"><strong>Advisory, board, or due-diligence engagement?</strong> Use <a href="mailto:ahmad.albadawi.phd@gmail.com">independent consulting</a>.</li>
   <li style="margin-bottom: var(--s-2);"><strong>Press about FHE or open-source?</strong> Use <a href="mailto:ahmad@u.nus.edu">academic</a>. <strong>Press about Duality?</strong> Use <a href="mailto:aalbadawi@dualitytech.com">Duality</a>.</li>
-  <li style="margin-bottom: var(--s-2);"><strong>Recruiter or vendor pitch?</strong> Please don't.</li>
 </ul>
 
 ## Find me elsewhere
