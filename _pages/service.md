@@ -53,16 +53,20 @@ redirect_from:
 
 <ul class="tag-cloud">
   <li><span class="tag">Journal of Cryptology</span></li>
+  <li><span class="tag">IEEE TPAMI</span></li>
   <li><span class="tag">IEEE TIFS</span></li>
   <li><span class="tag">IEEE Trans. Computers</span></li>
   <li><span class="tag">IEEE TETC</span></li>
   <li><span class="tag">IEEE TPDS</span></li>
-  <li><span class="tag">IEEE Trans. Industrial Informatics</span></li>
+  <li><span class="tag">IEEE TII</span></li>
   <li><span class="tag">IEEE TASLP</span></li>
   <li><span class="tag">IEEE TCAD</span></li>
   <li><span class="tag">IEEE TDSC</span></li>
   <li><span class="tag">IEEE TSC</span></li>
+  <li><span class="tag">IEEE TCEDA</span></li>
+  <li><span class="tag">IEEE J-BHI</span></li>
   <li><span class="tag">IEEE Trans. Privacy</span></li>
+  <li><span class="tag">IEEE TBIOM</span></li>
   <li><span class="tag">IEEE Access</span></li>
   <li><span class="tag">ACM TOPS</span></li>
   <li><span class="tag">JMIR</span></li>
