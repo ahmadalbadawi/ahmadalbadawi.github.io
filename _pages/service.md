@@ -51,33 +51,32 @@ redirect_from:
 
 <p class="intro intro--sm">Selected venues for which I have served as a reviewer:</p>
 
-<ul class="tag-cloud">
-  <li><span class="tag">Journal of Cryptology</span></li>
-  <li><span class="tag">IEEE TPAMI</span></li>
-  <li><span class="tag">IEEE TIFS</span></li>
-  <li><span class="tag">IEEE Trans. Computers</span></li>
-  <li><span class="tag">IEEE TETC</span></li>
-  <li><span class="tag">IEEE TPDS</span></li>
-  <li><span class="tag">IEEE TII</span></li>
-  <li><span class="tag">IEEE TASLP</span></li>
-  <li><span class="tag">IEEE TCAD</span></li>
-  <li><span class="tag">IEEE TDSC</span></li>
-  <li><span class="tag">IEEE TSC</span></li>
-  <li><span class="tag">IEEE TCEDA</span></li>
-  <li><span class="tag">IEEE J-BHI</span></li>
-  <li><span class="tag">IEEE Trans. Privacy</span></li>
-  <li><span class="tag">IEEE TBIOM</span></li>
-  <li><span class="tag">IEEE Access</span></li>
-  <li><span class="tag">ACM TOPS</span></li>
-  <li><span class="tag">JMIR</span></li>
-  <li><span class="tag">AEUE</span></li>
-  <li><span class="tag">Future Generation Computer Systems</span></li>
-  <li><span class="tag">Neural Computing &amp; Applications</span></li>
-  <li><span class="tag">Cluster Computing</span></li>
-  <li><span class="tag">Int. J. Information Security</span></li>
-  <li><span class="tag">Artificial Intelligence Review</span></li>
-  <li><span class="tag">J. Intelligent Information Systems</span></li>
-  <li><span class="tag">J. Nuclear Science &amp; Techniques</span></li>
+<ul>
+  <li><a href="https://link.springer.com/journal/145" target="_blank" rel="noopener noreferrer">Journal of Cryptology</a> [IF: 2.1]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener noreferrer">IEEE TPAMI</a> [IF: 18.6]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206" target="_blank" rel="noopener noreferrer">IEEE TIFS</a> [IF: 8.7]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12" target="_blank" rel="noopener noreferrer">IEEE Trans. Computers</a> [IF: 4.9]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6245516" target="_blank" rel="noopener noreferrer">IEEE TETC</a> [IF: 4.8]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71" target="_blank" rel="noopener noreferrer">IEEE TPDS</a> [IF: 5.9]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9424" target="_blank" rel="noopener noreferrer">IEEE TII</a> [IF: 9.8]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6570655" target="_blank" rel="noopener noreferrer">IEEE TASLP</a> [IF: 5.2]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43" target="_blank" rel="noopener noreferrer">IEEE TCAD</a> [IF: 3.6]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858" target="_blank" rel="noopener noreferrer">IEEE TDSC</a> [IF: 6.8]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4629386" target="_blank" rel="noopener noreferrer">IEEE TSC</a> [IF: 6.2]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221020" target="_blank" rel="noopener noreferrer">IEEE J-BHI</a> [IF: 7.7]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10167710" target="_blank" rel="noopener noreferrer">IEEE Trans. Privacy</a></li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8423754" target="_blank" rel="noopener noreferrer">IEEE TBIOM</a> [IF: 4.4]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639" target="_blank" rel="noopener noreferrer">IEEE Access</a> [IF: 4.2]</li>
+  <li><a href="https://dl.acm.org/journal/tops" target="_blank" rel="noopener noreferrer">ACM TOPS</a> [IF: 4.0]</li>
+  <li><a href="https://www.jmir.org" target="_blank" rel="noopener noreferrer">JMIR</a> [IF: 8.2]</li>
+  <li><a href="https://www.sciencedirect.com/journal/aeu-international-journal-of-electronics-and-communications" target="_blank" rel="noopener noreferrer">AEUE</a> [IF: 3.1]</li>
+  <li><a href="https://www.sciencedirect.com/journal/future-generation-computer-systems" target="_blank" rel="noopener noreferrer">Future Generation Computer Systems</a> [IF: 5.9]</li>
+  <li><a href="https://link.springer.com/journal/521" target="_blank" rel="noopener noreferrer">Neural Computing &amp; Applications</a> [IF: 4.5]</li>
+  <li><a href="https://link.springer.com/journal/10586" target="_blank" rel="noopener noreferrer">Cluster Computing</a> [IF: 5.5]</li>
+  <li><a href="https://link.springer.com/journal/10207" target="_blank" rel="noopener noreferrer">Int. J. Information Security</a> [IF: 5.0]</li>
+  <li><a href="https://link.springer.com/journal/10462" target="_blank" rel="noopener noreferrer">Artificial Intelligence Review</a> [IF: 18.8]</li>
+  <li><a href="https://link.springer.com/journal/10844" target="_blank" rel="noopener noreferrer">J. Intelligent Information Systems</a> [IF: 3.5]</li>
+  <li><a href="https://link.springer.com/journal/41365" target="_blank" rel="noopener noreferrer">J. Nuclear Science &amp; Techniques</a> [IF: 4.7]</li>
 </ul>
 
 ---
