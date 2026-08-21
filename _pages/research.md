@@ -97,8 +97,8 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <span class="venue__name">Transactions on Parallel and Distributed Systems</span>
   </li>
   <li class="venue">
-    <span class="venue__acronym">WAHC</span>
-    <span class="venue__name">Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography (ACM CCS)</span>
+    <span class="venue__acronym">ACM CCS</span>
+    <span class="venue__name">ACM Conference on Computer and Communications Security</span>
   </li>
   <li class="venue">
     <span class="venue__acronym">ISPASS</span>
