@@ -85,16 +85,16 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <span class="venue__name">Transactions on Cryptographic Hardware and Embedded Systems</span>
   </li>
   <li class="venue">
+    <span class="venue__acronym">CRYPTO</span>
+    <span class="venue__name">Annual International Cryptology Conference</span>
+  </li>
+  <li class="venue">
     <span class="venue__acronym">IACR CiC</span>
     <span class="venue__name">Communications in Cryptology</span>
   </li>
   <li class="venue">
     <span class="venue__acronym">IEEE TPDS</span>
     <span class="venue__name">Transactions on Parallel and Distributed Systems</span>
-  </li>
-  <li class="venue">
-    <span class="venue__acronym">IEEE TETC</span>
-    <span class="venue__name">Transactions on Emerging Topics in Computing</span>
   </li>
   <li class="venue">
     <span class="venue__acronym">WAHC</span>
