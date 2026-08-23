@@ -49,7 +49,7 @@ redirect_from:
 
 ## Journal Reviewer
 
-<p class="intro intro--sm">Selected venues for which I have served as a reviewer:</p>
+<p class="intro intro--sm">Selected venues for which I have served as a reviewer. Impact factors are indicative and vary by year:</p>
 
 <ul>
   <li><a href="https://link.springer.com/journal/145" target="_blank" rel="noopener noreferrer">Journal of Cryptology</a> [IF: 2.1]</li>
@@ -89,7 +89,7 @@ redirect_from:
     <span class="badge">2022 &ndash; Present</span>
   </header>
   <h3 class="feature-card__title">OpenFHE</h3>
-  <p class="feature-card__role"><strong>Maintainer &amp; Core Contributor</strong></p>
+  <p class="feature-card__role"><strong>Co-author &amp; Maintainer</strong></p>
   <div class="feature-card__body">
     <p>Long-term contributor to the <a href="https://github.com/openfheorg/openfhe-development" target="_blank" rel="noopener noreferrer">OpenFHE library</a> - the leading open-source FHE implementation. I also actively support users on the <a href="https://openfhe.discourse.group/" target="_blank" rel="noopener noreferrer">OpenFHE Discourse forum</a>, providing technical guidance to researchers and engineers adopting homomorphic encryption.</p>
   </div>

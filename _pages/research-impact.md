@@ -7,7 +7,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
 ---
 
 <p class="intro">
-  Citations measure attention; this page tracks what the work has actually been <em>used</em> for. Libraries shipped and adopted across the field, hardware taped out, patient data analyzed across hospitals, and the papers that have crossed milestone citation counts.
+  Citations measure attention; this page tracks what the work has actually been <em>used</em> for. Libraries shipped and adopted across the field, an FHE accelerator carried to tape-out-ready RTL, patient data analyzed across hospitals, and the papers that have crossed milestone citation counts.
 </p>
 
 ## OpenFHE leads the FHE library market
@@ -51,7 +51,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
 
   <li>
     <a class="card" href="https://arxiv.org/abs/2304.05237" target="_blank" rel="noopener noreferrer">
-      <h3 class="card__title">TREBUCHET / DPRIVE - first 12 nm FHE ASIC</h3>
+      <h3 class="card__title">TREBUCHET / DPRIVE - 12 nm FHE ASIC design</h3>
       <div class="card__meta">
         <span>$15M DARPA</span>
         <span>1 GHz, 176 mm&sup2; floorplan</span>

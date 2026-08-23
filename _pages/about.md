@@ -5,7 +5,7 @@ hide_title: true
 author_profile: false
 redirect_from:
   - /home/
-description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
+description: "Dr. Ahmad Al Badawi - Senior Cryptography Scientist. Research on fully homomorphic encryption, privacy-preserving machine learning, and lattice cryptography."
 ---
 
 {% include hero.html %}
@@ -32,7 +32,7 @@ description: "Dr. Ahmad Al Badawi - Senior Scientist in cryptography. Research o
 
 ## At a glance
 
-I run research on **fully homomorphic encryption** and **privacy-preserving AI**, with a focus on what it takes to deploy them at production scale. My contributions include [PALISADE](https://gitlab.com/palisade) (now [OpenFHE](https://github.com/openfheorg/openfhe-development)), a co-authored open-source FHE library now used across industry and academia; the first GPU homomorphic CNN (HCNN); the RNS variants of BFV that became standard building blocks in modern FHE libraries; and the technical leadership of DPRIVE, a $15M DARPA program that delivered a 1 GHz, 12 nm FHE accelerator from concept to tape-out-ready RTL.
+I run research on **fully homomorphic encryption** and **privacy-preserving AI**, with a focus on what it takes to deploy them at production scale. My contributions include [PALISADE](https://gitlab.com/palisade) (now [OpenFHE](https://github.com/openfheorg/openfhe-development)), a co-authored open-source FHE library now used across industry and academia; the first GPU homomorphic CNN (HCNN); the RNS variants of BFV that became standard building blocks in modern FHE libraries; and the technical leadership of DPRIVE, a $15M DARPA-funded effort that delivered a 1 GHz, 12 nm FHE accelerator from concept to tape-out-ready RTL.
 
 I hold a Ph.D. in Electrical and Computer Engineering from the National University of Singapore. I have built and led research teams in industry, government, and academic settings, and I currently work on making large language model inference run under FHE with practical latency.
 

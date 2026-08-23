@@ -1,6 +1,6 @@
 # ahmadalbadawi.com
 
-Personal website of Dr. Ahmad Al Badawi - Senior Scientist, Cryptography.
+Personal website of Dr. Ahmad Al Badawi - Senior Cryptography Scientist.
 
 Custom Jekyll theme built in place, deployed via GitHub Pages on the custom
 domain [ahmadalbadawi.com](https://ahmadalbadawi.com). Originally forked from

@@ -7,7 +7,7 @@ description: "Background, experience, honors, service, teaching, and open-source
 ---
 
 <p class="intro">
-  A senior research scientist working on fully homomorphic encryption, privacy-preserving AI, and hardware acceleration of lattice cryptography. Below: where I've worked, what I've taught, the awards and service that frame the work, and the code I've shipped.
+  A senior cryptography scientist working on fully homomorphic encryption, privacy-preserving AI, and hardware acceleration of lattice cryptography. Below: where I've worked, what I've taught, the awards and service that frame the work, and the code I've shipped.
 </p>
 
 <ul class="card-grid">

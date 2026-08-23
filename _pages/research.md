@@ -85,8 +85,8 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <span class="venue__name">Transactions on Cryptographic Hardware and Embedded Systems</span>
   </li>
   <li class="venue">
-    <span class="venue__acronym">CRYPTO</span>
-    <span class="venue__name">Annual International Cryptology Conference</span>
+    <span class="venue__acronym">CRYPTO (PPML)</span>
+    <span class="venue__name">Privacy-Preserving Machine Learning Workshop at CRYPTO</span>
   </li>
   <li class="venue">
     <span class="venue__acronym">IACR CiC</span>
@@ -97,8 +97,8 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <span class="venue__name">Transactions on Parallel and Distributed Systems</span>
   </li>
   <li class="venue">
-    <span class="venue__acronym">ACM CCS</span>
-    <span class="venue__name">ACM Conference on Computer and Communications Security</span>
+    <span class="venue__acronym">ACM CCS (WAHC)</span>
+    <span class="venue__name">Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography at ACM CCS</span>
   </li>
   <li class="venue">
     <span class="venue__acronym">ISPASS</span>
@@ -140,7 +140,7 @@ For how my work has been used, see my <a href="/research/impact/">research impac
         <span>IEEE TETC 2019</span>
         <span>185 citations</span>
       </div>
-      <p class="card__excerpt">Introduced the BEHZ and HPS RNS variants of BFV that achieve roughly two orders of magnitude speedup over CPU baselines. Both variants are now standard building blocks in modern FHE libraries.</p>
+      <p class="card__excerpt">Introduced the BEHZ and HPS RNS GPU variants of BFV that achieve roughly two orders of magnitude speedup over CPU baselines. Both variants are now standard building blocks in modern FHE libraries.</p>
     </a>
   </li>
 
@@ -245,7 +245,7 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <span class="badge badge--accent">Co-PI &middot; WP2 Lead</span>
   </header>
   <h3 class="feature-card__title">RIE2020 AME Programmatic: Accelerating Homomorphic Encryption</h3>
-  <p class="feature-card__role"><strong>Co-Principal Investigator</strong> and <strong>Work Package II Lead</strong> &middot; Award A19E3b0099</p>
+  <p class="feature-card__role"><strong>Co-Principal Investigator</strong> and <strong>Work Package II Lead</strong> (through Sep 2021, when I left I2R) &middot; Award A19E3b0099</p>
   <div class="feature-card__body">
     <p>Co-authored the winning proposal for a four-institution Singapore consortium (I2R, NTU, SUTD, NUS) and presented it to A*STAR's review committee. The 3-year programme set out to make FHE deployment-ready for advanced manufacturing, with consulting input from Vinod Vaikuntanathan (MIT), Victor Shoup (NYU), and David Barber (UCL).</p>
   </div>

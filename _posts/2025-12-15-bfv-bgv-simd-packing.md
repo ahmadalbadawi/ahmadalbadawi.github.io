@@ -83,7 +83,7 @@ To understand how FHE enables vector operations, it is crucial to distinguish be
 
 For this reason, we will disregard the encryption step. If the desired arithmetic operation holds true for the encoded plaintexts, the defining homomorphic property of FHE guarantees that the same operation will yield the correct result when performed on the encrypted data as well. This is the mathematical essence of a homomorphism: operations conducted in one space are faithfully preserved when translated into a structurally similar second space. Our focus is exclusively on the encoding map, as this is where vector operations are mathematically defined.
 
-Considering only the encoding layer, we can simplify Equations 1-4 above as follows:
+Considering only the encoding layer, we can simplify the encryption equations above as follows:
 
 $$\text{ptxt}_{\mathbf{u}} = \text{Encode}(\{u_0, u_1, \ldots, u_{n-1}\})$$  
 
@@ -569,7 +569,7 @@ If you want to dive deeper into the mathematics and proofs behind these concepts
 
 ## Suggested Citation
 
-If you found this article useful and wish to cite it in your work, we suggest:
+If you found this article useful and wish to cite it in your work, I suggest:
 
 ```text
 Ahmad Al Badawi, SIMD Packing in BGV/BFV FHE Schemes, 2025, https://ahmadalbadawi.com/posts/2025/12/simd-packing-bgv-bfv-fhe/

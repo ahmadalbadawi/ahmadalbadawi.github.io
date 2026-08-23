@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Dr. Ahmad Al Badawi"
 title_separator          : "-"
 name                     : &name "Dr. Ahmad Al Badawi"
-description              : &description "Senior Scientist, Cryptography"
+description              : &description "Senior Cryptography Scientist"
 keywords                 : "cryptography, fully homomorphic encryption, FHE, privacy-preserving machine learning, lattice cryptography, post-quantum cryptography, secure computation, OpenFHE, PALISADE, applied cryptography"
 url: "https://ahmadalbadawi.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -66,7 +66,7 @@ facebook:
 og_image                 : "/images/og-card.jpg"
 og_image_width           : 1200
 og_image_height          : 630
-og_image_alt             : "Dr. Ahmad Al Badawi - Senior Scientist, Cryptography"
+og_image_alt             : "Dr. Ahmad Al Badawi - Senior Cryptography Scientist"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -87,7 +87,7 @@ analytics:
 author:
   name             : "Dr. Ahmad Al Badawi"
   avatar           : "profile.jpg"
-  bio              : "Sr. Scientist, Cryptography"
+  bio              : "Senior Cryptography Scientist"
   location         : "NYC Metropolitan Area, US"
   employer         :
   #pubmed           : ""
@@ -236,7 +236,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

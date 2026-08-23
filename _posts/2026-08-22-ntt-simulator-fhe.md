@@ -267,7 +267,7 @@ If you want the mathematics and the proofs behind the code, read these next to t
 
 ## Suggested Citation
 
-If you found this article useful and wish to cite it in your work, we suggest:
+If you found this article useful and wish to cite it in your work, I suggest:
 
 ```text
 Ahmad Al Badawi, A Step-by-Step Simulator for the NTT in FHE, 2026, https://ahmadalbadawi.com/posts/2026/08/ntt-simulator-fhe/

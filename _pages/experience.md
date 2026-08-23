@@ -3,7 +3,7 @@ layout: archive
 title: "Experience"
 permalink: /experience/
 author_profile: true
-description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal investigator, research scholar, and software engineer across Singapore, the UAE, Saudi Arabia, Jordan, and the United States."
+description: "Career history of Dr. Ahmad Al Badawi: senior cryptography scientist, principal investigator, research scholar, and software engineer across Singapore, the UAE, Saudi Arabia, Jordan, and the United States."
 ---
 
 <p class="intro">
@@ -14,11 +14,11 @@ description: "Career history of Dr. Ahmad Al Badawi: senior scientist, principal
   <li class="timeline__item">
     <div class="timeline__year">2022</div>
     <div class="timeline__card">
-      <p class="timeline__degree">Principal Investigator &amp; Senior Scientist, Cryptography</p>
+      <p class="timeline__degree">Principal Investigator &amp; Senior Cryptography Scientist</p>
       <a class="timeline__inst" href="https://dualitytech.com" target="_blank" rel="noopener noreferrer">Duality Technologies</a>
       <p class="timeline__thesis">
         <strong>Hoboken, NJ, USA &middot; Sep 2022 to Present</strong><br>
-        Lead researcher on privacy-preserving technologies and Technical PI for DARPA's DPRIVE program. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); core builder of OpenFHE and co-author of OpenFHE-NumPy.
+        Lead researcher on privacy-preserving technologies and Technical PI for DARPA's DPRIVE program. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); co-author and maintainer of OpenFHE and co-author of OpenFHE-NumPy.
       </p>
     </div>
   </li>

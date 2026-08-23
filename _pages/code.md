@@ -62,10 +62,10 @@ description: "Open-source projects and code contributions by Dr. Ahmad Al Badawi
   <li class="project">
     <div class="project__header">
       <h3 class="project__title">OpenFHE</h3>
-      <span class="project__role">Maintainer</span>
+      <span class="project__role">Co-author &amp; Maintainer</span>
     </div>
     <p class="project__body">
-      Long-term maintainer of OpenFHE, the leading open-source library for fully homomorphic encryption, supporting BFV, BGV, CKKS, and TFHE schemes.
+      Co-author and long-term maintainer of OpenFHE, the leading open-source library for fully homomorphic encryption, supporting BFV, BGV, CKKS, and TFHE schemes.
     </p>
     <div class="project__tags">
       <span class="badge">C++</span>

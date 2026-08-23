@@ -730,7 +730,7 @@ If you want to dive deeper into the mathematics and proofs behind these concepts
 
 ## Suggested Citation
 
-If you found this article useful and wish to cite it in your work, we suggest:
+If you found this article useful and wish to cite it in your work, I suggest:
 
 ```text
 Ahmad Al Badawi, The Math of Slot Rotation in BGV and BFV, 2025, https://ahmadalbadawi.com/posts/2025/12/slot-rotation-bgv-bfv-fhe/
