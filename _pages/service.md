@@ -59,6 +59,7 @@ redirect_from:
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6245516" target="_blank" rel="noopener noreferrer">IEEE TETC</a> [IF: 4.8]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71" target="_blank" rel="noopener noreferrer">IEEE TPDS</a> [IF: 5.9]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9424" target="_blank" rel="noopener noreferrer">IEEE TII</a> [IF: 9.8]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8856" target="_blank" rel="noopener noreferrer">IEEE T-ASE</a> [IF: 7.9]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6570655" target="_blank" rel="noopener noreferrer">IEEE TASLP</a> [IF: 5.2]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43" target="_blank" rel="noopener noreferrer">IEEE TCAD</a> [IF: 3.6]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858" target="_blank" rel="noopener noreferrer">IEEE TDSC</a> [IF: 6.8]</li>
