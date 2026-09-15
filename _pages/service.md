@@ -68,6 +68,7 @@ redirect_from:
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10167710" target="_blank" rel="noopener noreferrer">IEEE Trans. Privacy</a></li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8423754" target="_blank" rel="noopener noreferrer">IEEE TBIOM</a> [IF: 4.4]</li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639" target="_blank" rel="noopener noreferrer">IEEE Access</a> [IF: 4.2]</li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4" target="_blank" rel="noopener noreferrer">IEEE JSSC</a> [IF: 5.6]</li>
   <li><a href="https://dl.acm.org/journal/tops" target="_blank" rel="noopener noreferrer">ACM TOPS</a> [IF: 4.0]</li>
   <li><a href="https://www.jmir.org" target="_blank" rel="noopener noreferrer">JMIR</a> [IF: 8.2]</li>
   <li><a href="https://www.sciencedirect.com/journal/aeu-international-journal-of-electronics-and-communications" target="_blank" rel="noopener noreferrer">AEUE</a> [IF: 3.1]</li>
