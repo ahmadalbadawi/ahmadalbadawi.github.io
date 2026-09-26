@@ -18,7 +18,7 @@ description: "Career history of Dr. Ahmad Al Badawi: senior cryptography scienti
       <a class="timeline__inst" href="https://dualitytech.com" target="_blank" rel="noopener noreferrer">Duality Technologies</a>
       <p class="timeline__thesis">
         <strong>Hoboken, NJ, USA &middot; Sep 2022 to Present</strong><br>
-        Lead researcher on privacy-preserving technologies and Technical PI for DARPA's DPRIVE program. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); co-author and maintainer of OpenFHE and co-author of OpenFHE-NumPy.
+        Lead researcher on privacy-preserving technologies. Served as Technical PI for DARPA's DPRIVE program through its completion in 2025. Architect of encrypted ML/LLM inference pipelines (BERT, GPT-2, LLaMA-3); co-author and maintainer of OpenFHE and co-author of OpenFHE-NumPy.
       </p>
     </div>
   </li>

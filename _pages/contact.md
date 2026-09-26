@@ -38,7 +38,7 @@ description: "How to reach Dr. Ahmad Al Badawi - separate inboxes for academic c
   </h2>
   <p class="feature-card__role"><strong>Current role - product, partnerships, press</strong></p>
   <p class="feature-card__body">
-    Anything tied to Duality's privacy-preserving ML and FHE products, partnership and customer inquiries, OpenFHE work under my Duality hat, DARPA DPRIVE follow-ups, and press on Duality work.
+    Anything tied to Duality's privacy-preserving ML and FHE products, partnership and customer inquiries, OpenFHE work under my Duality hat, follow-ups on the completed DARPA DPRIVE program, and press on Duality work.
   </p>
   <p class="section-more">
     <a class="btn btn--primary" href="mailto:aalbadawi@dualitytech.com" style="max-width:100%; overflow-wrap:anywhere; line-height:1.3; text-align:left;">

@@ -13,7 +13,7 @@ Ahmad Al Badawi, Ph.D. is a Senior Cryptography Scientist working at the interse
 
 Selected expertise: fully homomorphic encryption (BFV, BGV, CKKS, TFHE schemes), privacy-preserving machine learning, lattice cryptography, hardware acceleration (GPU and ASIC), post-quantum cryptography.
 
-Affiliations: Ph.D. from the National University of Singapore (2018). Co-Principal Investigator and Technical Lead on the DARPA DPRIVE program (TREBUCHET team).
+Affiliations: Ph.D. from the National University of Singapore (2018). Former Co-Principal Investigator and Technical Lead on the DARPA DPRIVE program (TREBUCHET team), which concluded in 2025.
 
 ## Key pages
 

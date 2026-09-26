@@ -54,6 +54,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
       <h3 class="card__title">TREBUCHET / DPRIVE - 12 nm FHE ASIC design</h3>
       <div class="card__meta">
         <span>$15M DARPA</span>
+        <span>Completed 2025</span>
         <span>1 GHz, 176 mm&sup2; floorplan</span>
       </div>
       <p class="card__excerpt">Technical lead on the DPRIVE program: a custom 12 nm ASIC for homomorphic deep learning. Delivered tape-out-ready RTL with 1 GHz timing closure, custom ISA, microcode scheduler, and node-array architecture.</p>
