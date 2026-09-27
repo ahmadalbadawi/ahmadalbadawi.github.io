@@ -68,6 +68,16 @@ description: "Independent consulting by Dr. Ahmad Al Badawi: expert witness and 
   </a>
 </p>
 
+## Background
+
+<ul class="feature-card__body" style="list-style: none; padding: 0;">
+  <li style="margin-bottom: var(--s-2);">Cryptography research scientist with 20 years of professional experience. More than 10 years of this experience is in privacy-enhancing technologies.</li>
+  <li style="margin-bottom: var(--s-2);">Co-author and maintainer of <a href="https://github.com/openfheorg/openfhe-development" target="_blank" rel="noopener noreferrer">OpenFHE</a>. An independent 2026 survey ranks OpenFHE first among FHE libraries, at 51 percent adoption.</li>
+  <li style="margin-bottom: var(--s-2);">Technical Principal Investigator of the $15M DARPA DPRIVE program. The program delivered a verified 12 nm FHE accelerator design at 1 GHz.</li>
+  <li style="margin-bottom: var(--s-2);">More than 50 peer-reviewed publications and more than 2,500 citations. Named inventor on 3 patents. 2 of these patents are granted in the United States.</li>
+  <li style="margin-bottom: var(--s-2);">Ph.D. in Electrical and Computer Engineering, National University of Singapore.</li>
+</ul>
+
 ## Basis of Engagement
 
 <p class="feature-card__body">
