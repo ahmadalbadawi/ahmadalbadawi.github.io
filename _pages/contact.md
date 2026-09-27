@@ -59,7 +59,7 @@ description: "How to reach Dr. Ahmad Al Badawi - separate inboxes for academic c
   </p>
   <p class="feature-card__body" style="font-size: var(--fs-xs); margin-top: var(--s-2);">
     Engagements here are personal and do not involve Duality.
-    See the <a href="{{ base_path }}/consulting/">consulting page</a> for services and the expert CV.
+    See the <a href="/consulting/">consulting page</a> for services and the expert CV.
   </p>
   <p class="section-more">
     <a class="btn btn--primary" href="mailto:ahmad.albadawi.phd@gmail.com" style="max-width:100%; overflow-wrap:anywhere; line-height:1.3; text-align:left;">

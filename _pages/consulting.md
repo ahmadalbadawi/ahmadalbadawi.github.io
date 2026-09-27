@@ -55,7 +55,7 @@ description: "Independent consulting by Dr. Ahmad Al Badawi: expert witness and 
 </p>
 
 <p class="section-more">
-  <a class="btn btn--primary" href="{{ base_path }}/files/Ahmad-Al-Badawi-Expert-CV.pdf">
+  <a class="btn btn--primary" href="/files/Ahmad-Al-Badawi-Expert-CV.pdf">
     Expert CV (PDF)
   </a>
 </p>
@@ -81,5 +81,5 @@ description: "Independent consulting by Dr. Ahmad Al Badawi: expert witness and 
 <p class="feature-card__body">
   The address for engagement inquiries is
   <a href="mailto:ahmad.albadawi.phd@gmail.com">ahmad.albadawi.phd@gmail.com</a>.
-  For academic correspondence or for questions about Duality products, the <a href="{{ base_path }}/contact/">contact page</a> lists the correct address.
+  For academic correspondence or for questions about Duality products, the <a href="/contact/">contact page</a> lists the correct address.
 </p>
