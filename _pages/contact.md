@@ -58,7 +58,7 @@ description: "How to reach Dr. Ahmad Al Badawi - separate inboxes for academic c
     Private advisory on FHE and privacy-enhancing technologies, technical due diligence for VCs and acquirers, executive briefings and workshops, expert-witness and standards work.
   </p>
   <p class="feature-card__body" style="font-size: var(--fs-xs); margin-top: var(--s-2);">
-    Engagements here are personal and do not involve Duality.
+    Engagements here are personal and do not involve my current employer.
     See the <a href="/consulting/">consulting page</a> for services and the expert CV.
   </p>
   <p class="section-more">
