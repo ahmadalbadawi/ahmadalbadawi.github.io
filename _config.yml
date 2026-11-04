@@ -139,6 +139,8 @@ exclude:
   - node_modules
   - package.json
   - vendor
+  - audit
+  - design
 keep_files:
   - .git
   - .svn
