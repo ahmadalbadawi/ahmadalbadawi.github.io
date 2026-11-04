@@ -2,10 +2,11 @@
   One entry in an index list (writing, talks, teaching and the archive pages). The page body
   supplies the <li>; this prints the hanging date, the title and one line of description.
   The description is the item's own `description`; there is no excerpt fallback, because the
-  first paragraph of every post is the byline.
+  first paragraph of every post is the byline. An untitled item (page archive) shows its URL.
 {%- endcomment -%}
 {%- if include.post %}{% assign post = include.post %}{% endif -%}
 {%- assign post_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
+{%- if post_title == "" %}{% assign post_title = post.url %}{% endif -%}
 {%- if post.date %}
 <p class="entry__meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% if post.collection == "teaching" %}{{ post.date | date: "%Y" }}{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</time></p>
 {%- endif %}
