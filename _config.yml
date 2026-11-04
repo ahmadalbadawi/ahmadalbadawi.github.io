@@ -141,6 +141,9 @@ exclude:
   - vendor
   - audit
   - design
+  - rns-review-backup
+  - overleaf-cvs
+  - run-website.sh
 keep_files:
   - .git
   - .svn
