@@ -1,6 +1,9 @@
 <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ '/images/favicon.svg' | relative_url }}">
 <link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
+{%- if page.url == "/publications/" %}
+<noscript><style>.pub-filter { display: none; }</style></noscript>
+{%- endif %}
 
 {% if page.mathjax %}
   {%- comment -%}

@@ -13,6 +13,11 @@
 {%- unless content contains "<h2" -%}
   {%- assign body = content | replace: "<h3", "<h2" | replace: "</h3>", "</h2>" -%}
 {%- endunless -%}
+{%- if page.url == "/publications/" -%}
+  {%- comment -%} The filter goes straight after the page's opening paragraph. {%- endcomment -%}
+  {%- capture pub_filter %}</p>{% include pub-filter.html %}{% endcapture -%}
+  {%- assign body = body | replace_first: "</p>", pub_filter -%}
+{%- endif -%}
 <div class="article frame">
   <article class="article__grid">
     {%- unless page.hide_title or body_has_h1 %}

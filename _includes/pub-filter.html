@@ -1,0 +1,30 @@
+{%- comment -%}
+  Filter controls for the publications page, rendered here (not by script) so the page does
+  not shift when they appear. assets/js/publications.js wires them up; head/custom.html hides
+  them when JavaScript is off. Groups match data-group in pub-item.html.
+{%- endcomment -%}
+{%- assign groups = "journal:Journals|conference:Conferences|workshop:Workshops|preprint:Preprints|other:Other|patent:Patents" | split: "|" -%}
+{%- assign all = site.data.publications -%}
+<form class="pub-filter" role="search" aria-label="Filter publications">
+  <fieldset>
+    <legend class="label">Show</legend>
+    <label class="pub-filter__opt"><input type="radio" name="type" value="" checked><span>All <span class="n">{{ all.size }}</span></span></label>
+    {%- for g in groups -%}
+      {%- assign key = g | split: ":" | first -%}
+      {%- assign label = g | split: ":" | last -%}
+      {%- assign n = 0 -%}
+      {%- for pub in all -%}
+        {%- if pub.kind == "patent" -%}{%- assign pg = "patent" -%}{%- else -%}{%- assign pg = pub.type | downcase -%}{%- unless pg == "journal" or pg == "conference" or pg == "workshop" or pg == "preprint" -%}{%- assign pg = "other" -%}{%- endunless -%}{%- endif -%}
+        {%- if pg == key -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if n > 0 %}
+    <label class="pub-filter__opt"><input type="radio" name="type" value="{{ key }}"><span>{{ label }} <span class="n">{{ n }}</span></span></label>
+      {%- endif -%}
+    {%- endfor %}
+  </fieldset>
+  <div class="pub-filter__search">
+    <label class="label" for="pub-q">Search</label>
+    <input id="pub-q" name="q" type="search" autocomplete="off" placeholder="title, author or venue">
+  </div>
+  <p class="pub-filter__count" aria-live="polite">{{ all.size }} entries</p>
+</form>
