@@ -1,45 +1,19 @@
-{% include base_path %}
-
-{% comment %}
-  Renders a list item for posts/talks/teaching/etc. Accepts an optional
-  `post` param so layouts can pass an arbitrary item.
-{% endcomment %}
-{% if include.post %}{% assign post = include.post %}{% endif %}
-
-{% if post.id %}
-  {% assign post_title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign post_title = post.title %}
-{% endif %}
-
-<a class="card" href="{{ base_path }}{{ post.url }}" itemscope itemtype="https://schema.org/CreativeWork">
-  <h2 class="card__title" itemprop="headline">{{ post_title }}</h2>
-
-  <div class="card__meta">
-    {% if post.date %}
-      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ post.date | date: "%b %-d, %Y" }}
-      </time>
-    {% endif %}
-    {% if post.collection == 'teaching' and post.type %}
-      <span>{{ post.type }}{% if post.venue %}, {{ post.venue }}{% endif %}</span>
-    {% elsif post.collection == 'talks' and post.venue %}
-      <span>{{ post.venue }}{% if post.location %} &middot; {{ post.location }}{% endif %}</span>
-    {% elsif post.venue %}
-      <span>{{ post.venue }}</span>
-    {% endif %}
-    {% if post.read_time %}
-      <span>{% include read-time.html post=post %}</span>
-    {% endif %}
-  </div>
-
-  {% if post.excerpt %}
-    <p class="card__excerpt" itemprop="description">
-      {{ post.excerpt | markdownify | strip_html | strip_newlines | truncate: 200 }}
-    </p>
-  {% endif %}
-
-  {% if post.citation %}
-    <p class="card__excerpt"><strong>Citation:</strong> {{ post.citation | truncate: 180 }}</p>
-  {% endif %}
-</a>
+{%- comment -%}
+  One entry in an index list (writing, talks, teaching and the archive pages). The page body
+  supplies the <li>; this prints the hanging date, the title and one line of description.
+  The description is the item's own `description`; there is no excerpt fallback, because the
+  first paragraph of every post is the byline.
+{%- endcomment -%}
+{%- if include.post %}{% assign post = include.post %}{% endif -%}
+{%- assign post_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
+{%- if post.date %}
+<p class="entry__meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% if post.collection == "teaching" %}{{ post.date | date: "%Y" }}{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</time></p>
+{%- endif %}
+<h2 class="entry__title"><a href="{{ post.url | relative_url }}">{{ post_title }}</a></h2>
+{%- if post.collection == "talks" or post.collection == "teaching" %}
+  {%- if post.venue %}
+<p class="entry__where">{{ post.venue }}{% if post.location %}, {{ post.location }}{% endif %}</p>
+  {%- endif %}
+{%- elsif post.description %}
+<p class="entry__desc">{{ post.description }}</p>
+{%- endif %}

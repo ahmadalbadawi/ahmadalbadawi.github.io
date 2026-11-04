@@ -1,41 +1,8 @@
 ---
 layout: default
 ---
-{% include base_path %}
-
-<div class="wrap{% if page.author_profile %} wrap--wide{% endif %}">
-  {% if page.url != "/" and site.breadcrumbs %}
-    {% include breadcrumbs.html %}
-  {% endif %}
-
-  {% if page.author_profile %}
-    <div class="with-aside">
-      <article class="content" itemscope itemtype="https://schema.org/CreativeWork">
-        {% include single-header.html %}
-        <div class="prose" itemprop="text">
-          {{ content }}
-          {% if page.link %}
-            <p><a class="btn btn--primary" href="{{ page.link }}">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></p>
-          {% endif %}
-        </div>
-
-        {% include single-footer.html %}
-      </article>
-
-      <aside class="aside" aria-labelledby="profile-name">
-        {% include author-profile.html %}
-      </aside>
-    </div>
-  {% else %}
-    <article class="prose" itemscope itemtype="https://schema.org/CreativeWork">
-      {% include single-header.html %}
-      <div itemprop="text">
-        {{ content }}
-        {% if page.link %}
-          <p><a class="btn btn--primary" href="{{ page.link }}">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></p>
-        {% endif %}
-      </div>
-      {% include single-footer.html %}
-    </article>
-  {% endif %}
-</div>
+{%- comment -%}
+  One layout for every page and collection item; the home page and posts get their own
+  includes in the next steps.
+{%- endcomment -%}
+{% include page.html %}

@@ -1,0 +1,44 @@
+{%- comment -%}
+  Every page that is not the home page or a post: section pages (_pages), talks and teaching.
+  Same grid as a post, so the text sits on the same axis everywhere. The 404 body brings its
+  own heading, so no title is printed when the body has one.
+{%- endcomment -%}
+{%- assign body_has_h1 = false -%}
+{%- if content contains "<h1" -%}{%- assign body_has_h1 = true -%}{%- endif -%}
+{%- comment -%}
+  Some bodies (Code, About) go straight from the page title to h3 entries. With no h2 on the
+  page, those entries are promoted to h2 so the outline has no gap; their look is set by class.
+{%- endcomment -%}
+{%- assign body = content -%}
+{%- unless content contains "<h2" -%}
+  {%- assign body = content | replace: "<h3", "<h2" | replace: "</h3>", "</h2>" -%}
+{%- endunless -%}
+<div class="article frame">
+  <article class="article__grid">
+    {%- unless page.hide_title or body_has_h1 %}
+    <header class="article__head">
+      {%- if page.collection == "talks" %}
+      <p class="kicker"><a href="{{ '/talks/' | relative_url }}">Talks</a>{% if page.type %} · {{ page.type }}{% endif %}{% if page.date %} · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time>{% endif %}</p>
+      {%- elsif page.collection == "teaching" %}
+      <p class="kicker"><a href="{{ '/teaching/' | relative_url }}">Teaching</a>{% if page.type %} · {{ page.type }}{% endif %}</p>
+      {%- endif %}
+      <h1>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h1>
+      {%- if page.collection == "talks" or page.collection == "teaching" %}
+        {%- if page.venue %}
+      <p class="standfirst">{{ page.venue }}{% if page.location %}, {{ page.location }}{% endif %}</p>
+        {%- endif %}
+      {%- endif %}
+    </header>
+    {%- endunless %}
+
+    <div class="page__body prose">
+      {{ body }}
+      {%- if page.citation %}
+      <p class="kicker"><span class="label">Recommended citation</span> {{ page.citation }}{% if page.paperurl %} <a href="{{ page.paperurl }}">{{ page.paperurl }}</a>{% endif %}</p>
+      {%- endif %}
+      {%- if page.link %}
+      <p><a href="{{ page.link }}">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></p>
+      {%- endif %}
+    </div>
+  </article>
+</div>
