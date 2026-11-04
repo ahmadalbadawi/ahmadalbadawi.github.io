@@ -1,242 +1,46 @@
-// Base typography and elements.
+// Element defaults and the few utilities every template shares.
 
-// Cross-document View Transitions (Chrome 126+, Edge 126+, Safari TP).
-// Replaces the brief white canvas between page navigations with a default
-// cross-fade. Browsers without support ignore this rule. Targets the
-// Windows-Chrome navigation flash that paint-holding can't cover when
-// network latency exceeds the holding budget.
-@view-transition {
-  navigation: auto;
-}
-
-html {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  color: var(--text);
-  background: var(--bg);
-}
-
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: var(--paper); }
 body {
-  font-size: var(--fs-md);
-  line-height: var(--lh-normal);
-  font-feature-settings: "kern", "liga", "calt", "ss01", "cv11";
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 var(--step-0)/var(--leading) var(--font-text);
+  font-kerning: normal;
+  font-variant-numeric: lining-nums proportional-nums;   // figures sit level with MathJax digits
+  font-synthesis: none;                                  // never fake bold, italic or small caps
+  -webkit-font-smoothing: antialiased;
 }
+::selection { background: var(--highlight); color: var(--ink); }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: var(--lh-tight);
-  letter-spacing: -0.015em;
-  color: var(--text);
-  font-feature-settings: "kern", "liga";
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: var(--leading-title); margin: 0; text-wrap: balance; }
+p, ul, ol, dl, dd, figure, blockquote, pre { margin: 0; }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+b, strong { font-weight: 600; }
+em strong, strong em { font-weight: 400; }   // no semibold italic is shipped
+table { border-collapse: collapse; }
 
-h4, h5, h6 {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; text-decoration-color: var(--rule-strong); }
+a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a:focus-visible { text-decoration: none; }
+main:focus { outline: none; }
 
-h1 {
-  font-size: var(--fs-3xl);
-  letter-spacing: -0.025em;
-}
+// Real small caps (Regular only), always upright. One gesture for every structural label.
+.smcp, .label { font-style: normal; font-weight: 400; font-variant-caps: all-small-caps; letter-spacing: 0.03em; }
+.label { color: var(--ink-muted); }
+.muted { color: var(--ink-muted); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[role="list"] { list-style: none; padding: 0; }
+[hidden] { display: none !important; }
 
-h2 {
-  font-size: var(--fs-2xl);
-  letter-spacing: -0.02em;
-  margin-top: var(--s-8);
-  margin-bottom: var(--s-3);
+.skip-link {
+  position: absolute; z-index: 10; left: var(--gutter); top: var(--space-xs);
+  transform: translateY(-200%);
+  background: var(--paper); border: var(--rule-width) solid var(--rule-strong);
+  padding: var(--space-2xs) var(--space-xs);
 }
+.skip-link:focus { transform: none; }
 
-h3 {
-  font-size: var(--fs-xl);
-  margin-top: var(--s-6);
-  margin-bottom: var(--s-2);
-}
-
-h4 {
-  font-size: var(--fs-lg);
-  margin-top: var(--s-5);
-  margin-bottom: var(--s-2);
-}
-
-h5, h6 {
-  font-size: var(--fs-md);
-  margin-top: var(--s-4);
-  margin-bottom: var(--s-2);
-}
-
-p {
-  margin-block: 0 var(--s-4);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-  text-decoration-color: color-mix(in oklch, var(--accent), transparent 60%);
-  transition: color var(--t-fast) var(--ease),
-    text-decoration-color var(--t-fast) var(--ease);
-}
-
-a:hover {
-  color: var(--accent-hover);
-  text-decoration-color: currentColor;
-}
-
-strong, b {
-  font-weight: 600;
-  color: var(--text);
-}
-
-em, i {
-  font-style: italic;
-}
-
-small {
-  font-size: var(--fs-sm);
-  color: var(--text-muted);
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin-block: var(--s-8);
-}
-
-ul, ol {
-  padding-inline-start: 1.5rem;
-  margin-block: 0 var(--s-4);
-}
-
-li {
-  margin-block: var(--s-1);
-}
-
-li > ul,
-li > ol {
-  margin-block: var(--s-1);
-}
-
-blockquote {
-  border-inline-start: 3px solid var(--accent);
-  padding: var(--s-1) var(--s-4);
-  margin-block: var(--s-5);
-  color: var(--text-muted);
-  font-style: italic;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-code,
-kbd,
-samp {
-  font-family: var(--font-mono);
-  font-size: 0.92em;
-}
-
-:not(pre) > code {
-  background: var(--code-bg);
-  border: 1px solid var(--code-border);
-  border-radius: var(--radius-sm);
-  padding: 0.1em 0.35em;
-  white-space: nowrap;
-}
-
-pre {
-  font-family: var(--font-mono);
-  background: var(--code-bg);
-  border: 1px solid var(--code-border);
-  border-radius: var(--radius);
-  padding: var(--s-4);
-  margin-block: var(--s-5);
-  overflow-x: auto;
-  line-height: var(--lh-snug);
-  font-size: var(--fs-sm);
-}
-
-pre code {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  white-space: pre;
-}
-
-kbd {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-strong);
-  border-bottom-width: 2px;
-  border-radius: var(--radius-sm);
-  padding: 0.1em 0.4em;
-  font-size: 0.85em;
-}
-
-mark {
-  background: var(--selection-bg);
-  color: var(--selection-fg);
-  padding: 0 0.15em;
-  border-radius: 2px;
-}
-
-img {
-  border-radius: var(--radius-sm);
-}
-
-figure {
-  margin-block: var(--s-5);
-}
-
-figcaption {
-  font-size: var(--fs-sm);
-  color: var(--text-muted);
-  margin-top: var(--s-2);
-  text-align: center;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-block: var(--s-5);
-  font-size: var(--fs-sm);
-}
-
-th, td {
-  text-align: start;
-  padding: var(--s-2) var(--s-3);
-  border-bottom: 1px solid var(--border);
-}
-
-th {
-  font-weight: 600;
-  color: var(--text);
-  background: var(--bg-subtle);
-}
-
-tr:last-child td {
-  border-bottom: 0;
-}
-
-details {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: var(--s-3) var(--s-4);
-  margin-block: var(--s-4);
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-
-details[open] summary {
-  margin-bottom: var(--s-3);
-}
-
-abbr[title] {
-  text-decoration: underline dotted;
-  cursor: help;
-}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

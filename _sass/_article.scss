@@ -1,0 +1,150 @@
+// Posts and pages share one grid. Distill-style bands as grid lines: [toc] [text] [margin].
+// `text` is always the measure; `wide` (text + margin) takes code; `page` (toc to margin) takes
+// figures. Every page keeps its text on the same axis, with or without a contents column.
+
+.article { padding-top: var(--space-2xl); }
+.article__grid { display: grid; grid-template-columns: [page-start text-start] minmax(0, var(--measure)) [text-end wide-end page-end]; justify-content: center; }
+.article__grid > * { grid-column: text; min-width: 0; }
+
+.kicker { font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.kicker a { color: var(--ink-muted); }
+.kicker a:hover { color: var(--accent); }
+.article__head { padding-bottom: var(--space-l); border-bottom: var(--rule-width) solid var(--rule); margin-bottom: var(--space-l); }
+.article__head h1 { font-size: var(--step-3); font-weight: 400; line-height: var(--leading-display); letter-spacing: -0.015em; }
+.article__head .kicker + h1 { margin-top: var(--space-xs); }
+.standfirst { margin-top: var(--space-s); font-size: var(--step-lede); line-height: var(--leading-small); color: var(--ink-muted); }
+.byline { margin-top: var(--space-s); }
+
+// Contents: a disclosure above the text on narrow screens, a sticky column beside it on wide ones.
+.toc { font-size: var(--step--1); line-height: var(--leading-small); margin-bottom: var(--space-l); }
+// The heading stays in the outline on narrow screens (some posts open at h3), hidden from view
+// there because the disclosure's own label says the same.
+.toc__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; font-size: var(--step--1); font-weight: 400; font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink-muted); padding-block: var(--space-2xs); }
+.toc summary { cursor: pointer; padding-block: var(--space-2xs); font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink-muted); }
+.toc ul { list-style: none; padding: 0; margin-top: var(--space-2xs); display: grid; gap: var(--space-3xs); }
+.toc ul ul { margin: var(--space-3xs) 0 var(--space-2xs) 1em; }
+.toc a { display: inline-block; text-decoration: none; color: var(--ink-muted); }
+.toc a:hover { color: var(--accent); }
+.toc a[aria-current] { color: var(--ink); border-left: 2px solid var(--accent); padding-left: calc(0.6em - 2px); margin-left: -0.6em; }
+
+// ---------- prose ----------
+// Rhythm: everything is a multiple of the body line.
+.prose > * + * { margin-top: var(--space-s); }
+.prose > h2 { font-size: var(--step-2); }
+.prose > h3:not([class]) { font-size: var(--step-1); font-weight: 400; font-style: italic; }
+.prose > h4, .prose > h5, .prose > h6 { font-size: var(--step-0); }
+.prose > h2 { margin-top: var(--space-2xl); }
+.prose > h3 { margin-top: var(--space-l); }
+.prose > h4, .prose > h5, .prose > h6 { margin-top: var(--space-m); }
+.prose > h2 + *, .prose > h3 + *, .prose > h4 + * { margin-top: var(--space-xs); }
+.prose > :first-child, .prose > hr:first-child + * { margin-top: 0; }
+// Markdown lists only; classed lists in page bodies are laid out by _pages.scss and _lists.scss.
+.prose ul:not([class]), .prose ol:not([class]) { padding-left: 1.2em; }
+.prose ul:not([class]) > li + li, .prose ol:not([class]) > li + li, .prose li > ul, .prose li > ol { margin-top: var(--space-3xs); }
+.prose li > p + p { margin-top: var(--space-xs); }
+.prose img { margin-inline: auto; }
+.prose figure img + figcaption { text-align: left; }
+
+// A section break is marked once: a rule straight before a heading (or at the very top, where
+// the removed byline was) is dropped, so the butterfly dinkus only appears between paragraphs.
+.prose > hr:first-child, .prose > hr:has(+ h2, + h3, + h4, + hr) { display: none; }
+.prose hr:not([class]) { border: 0; height: var(--space-l); margin-block: var(--space-m); position: relative; }
+.prose hr:not([class])::after {
+  content: ""; position: absolute; inset: 0; margin: auto; width: 1.6em; height: 1.15em;
+  background: var(--rule-strong);
+  -webkit-mask: url("/assets/img/mark.svg") center / contain no-repeat; mask: url("/assets/img/mark.svg") center / contain no-repeat;
+}
+.prose blockquote { padding-left: var(--space-s); border-left: 2px solid var(--rule-strong); color: var(--ink-muted); }
+.prose blockquote > * + * { margin-top: var(--space-xs); }
+
+// The one boxed aside the posts use: the question a section answers.
+.callout { padding: var(--space-s) 0 var(--space-s) var(--space-s); border-left: 2px solid var(--rule-strong); }
+.callout > * + * { margin-top: var(--space-xs); }
+
+// Tables size to their content and scroll inside their own box when wider than the column.
+.prose table { display: block; width: max-content; max-width: 100%; overflow-x: auto; font-size: var(--step--1); line-height: var(--leading-small); font-variant-numeric: lining-nums tabular-nums; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: var(--space-3xs) var(--space-s) var(--space-3xs) 0; border-bottom: var(--rule-width) solid var(--rule); }
+.prose th { font-weight: 600; border-bottom-color: var(--rule-strong); }
+
+// Code: ink on the one tinted surface; comments faint, strings muted, nothing else coloured.
+.prose code, .prose kbd { font-family: var(--font-mono); font-size: 0.9em; font-style: normal; overflow-wrap: anywhere; }
+.prose pre {
+  font-family: var(--font-mono); font-size: var(--step--1); line-height: var(--leading-small);
+  background: var(--paper-2); overflow-x: auto; tab-size: 4;
+  margin-inline: calc(-1 * var(--gutter)); padding: var(--space-s) var(--gutter); border-radius: 0;   // phones: bleed to the edge
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.prose pre code { font-size: 1em; overflow-wrap: normal; }
+.prose div.highlighter-rouge, .prose figure.highlight { position: relative; }
+.prose div.highlighter-rouge > .highlight { margin: 0; }
+
+.copy-code {
+  position: absolute; top: 0; right: 0;
+  font: inherit; font-size: var(--step--2); font-variant-caps: all-small-caps; letter-spacing: 0.03em;
+  color: var(--ink-muted); background: var(--paper-2); border: 0; cursor: pointer;
+  min-width: 44px; min-height: 32px; padding: var(--space-3xs) var(--space-xs);
+}
+.copy-code:hover { color: var(--accent); }
+
+// Display maths stays on the text axis. Numbered equations get an inline min-width from MathJax
+// that can exceed the column, so it is lifted and the equation scrolls instead.
+.prose mjx-container[jax="CHTML"][display="true"] { margin-block: var(--space-s); max-width: 100%; min-width: 0 !important; overflow-x: auto; overflow-y: hidden; padding-block: var(--space-3xs); }
+.prose mjx-container.mjx-scroll { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-block: var(--space-3xs); }
+
+// Sidenotes: kramdown footnotes, moved beside their reference on wide screens by
+// assets/js/article.js. Narrow screens keep the ordinary end notes.
+.sn-ref { font-size: 0.72em; vertical-align: super; line-height: 0; color: var(--accent); padding-inline: 0.1em; }
+.sidenote { display: block; margin-block: var(--space-xs); font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.sidenote .n { color: var(--accent); margin-right: 0.35em; }
+.sidenote > p { display: inline; }
+sup, sub { line-height: 0; }
+.footnotes { margin-top: var(--space-xl); padding-top: var(--space-s); border-top: var(--rule-width) solid var(--rule); font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.footnotes ol { padding-left: 1.2em; }
+.footnotes li + li { margin-top: var(--space-2xs); }
+
+// The rule that closes a post is its end mark, in the accent.
+#post-body > hr:last-child::after { background: var(--accent); }
+
+
+.article__foot { margin-top: var(--space-xl); padding-top: var(--space-m); border-top: var(--rule-width) solid var(--rule); display: grid; gap: var(--space-l); }
+.article__foot .tags { font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.article__foot .tags a { color: var(--ink-muted); }
+.article__foot .tags a:hover { color: var(--accent); }
+.article__foot h2 { font-size: var(--step-0); font-weight: 400; }
+.article__foot .index { margin-top: var(--space-xs); }
+.author-note { font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+
+@media (min-width: $bp-pre-hang) {
+  .prose pre { margin-inline: calc(-1 * var(--space-s)); padding-inline: var(--space-s); border-radius: var(--radius); }
+  .copy-code { right: calc(-1 * var(--space-s)); border-radius: var(--radius); }
+}
+@media (max-width: #{$bp-pre-hang - 0.01rem}) {
+  .article { padding-top: var(--space-l); }
+  .article__head { padding-bottom: var(--space-m); margin-bottom: var(--space-m); }
+  .prose { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; }
+  .copy-code { right: calc(-1 * var(--gutter)); }
+}
+@media (min-width: $bp-margin) {
+  .article__grid { grid-template-columns: [page-start text-start] minmax(0, var(--measure)) [text-end] var(--col-gap) [margin-start] var(--margin-col) [margin-end wide-end page-end]; }
+  .prose pre, .prose .wide { width: calc(100% + var(--col-gap) + var(--margin-col) + var(--space-s)); max-width: none; margin-inline: calc(-1 * var(--space-s)) 0; }
+  .prose div.highlighter-rouge, .prose figure.highlight { width: calc(100% + var(--col-gap) + var(--margin-col)); }
+  .prose div.highlighter-rouge pre { width: calc(100% + var(--space-s)); }
+  .copy-code { right: 0; }
+  // Wide blocks never run under a note.
+  .prose pre, .prose .wide, .prose div.highlighter-rouge, .prose mjx-container[display="true"], .prose table { clear: right; }
+  .sidenote { float: right; clear: right; width: var(--margin-col); margin: 0.3em calc(-1 * (var(--margin-col) + var(--col-gap))) var(--space-xs) 0; font-size: calc(var(--step-0) * 0.82); }
+}
+@media (min-width: $bp-toc) {
+  .article__grid { grid-template-columns: [page-start toc-start] var(--toc-col) [toc-end] var(--col-gap) [text-start] minmax(0, var(--measure)) [text-end] var(--col-gap) [margin-start] var(--margin-col) [margin-end wide-end page-end]; }
+  .toc { grid-column: toc; grid-row: 2 / span 3; align-self: start; position: sticky; top: var(--space-l); max-height: calc(100vh - 2 * var(--space-l)); overflow: auto; margin: 0; }
+  // Only once article.js has opened the list; without it the disclosure stays usable.
+  .toc[data-js] .toc__h { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
+  .toc[data-js] summary { display: none; }
+  .toc ul ul { display: none; }   // beside the text: top-level sections only; the full tree is in the narrow-screen list
+}
+
+@media print {
+  .toc, .copy-code { display: none; }
+  body { background: #fff; color: #000; }
+  .prose pre { white-space: pre-wrap; }
+}

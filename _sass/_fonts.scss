@@ -1,0 +1,37 @@
+// Self-hosted subsets built by design/tools/fonts.py, with the two OFL licences beside them in
+// /assets/fonts/. Only aab-text-400 is preloaded (head.html); the preload href must match the
+// url() below byte for byte or the browser fetches the file twice.
+// 95,776 bytes for all four; a page fetches only the faces it uses.
+
+@font-face { font-family: "AAB Text"; src: url("/assets/fonts/aab-text-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "AAB Text"; src: url("/assets/fonts/aab-text-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "AAB Text"; src: url("/assets/fonts/aab-text-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "AAB Mono"; src: url("/assets/fonts/aab-mono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+// Metric-matched fallbacks: local fonts scaled to the subset's average lowercase width and
+// vertical metrics, so text keeps its line breaks when the web font swaps in. Values come from
+// the font files (English letter frequencies), not from eyeballing.
+//   Georgia (macOS, Windows):                   size-adjust 101.60%
+//   Times New Roman / Liberation Serif / Tinos: size-adjust 111.59%
+$fallback-georgia: (size: 101.60%, ascent: 101.96%, descent: 32.97%);
+$fallback-times:   (size: 111.59%, ascent: 92.84%,  descent: 30.02%);
+
+@mixin fallback-face($family, $local, $m, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: $local;
+    font-weight: $weight;
+    font-style: $style;
+    size-adjust: map-get($m, size);
+    ascent-override: map-get($m, ascent);
+    descent-override: map-get($m, descent);
+    line-gap-override: 0%;
+  }
+}
+
+@include fallback-face("AAB Text Fallback", local("Georgia"), $fallback-georgia);
+@include fallback-face("AAB Text Fallback", unquote('local("Georgia Italic"), local("Georgia-Italic")'), $fallback-georgia, 400, italic);
+@include fallback-face("AAB Text Fallback", unquote('local("Georgia Bold"), local("Georgia-Bold")'), $fallback-georgia, 600);
+@include fallback-face("AAB Text Fallback Times", unquote('local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif"), local("Tinos")'), $fallback-times);
+@include fallback-face("AAB Text Fallback Times", unquote('local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT"), local("Liberation Serif Italic"), local("Tinos Italic")'), $fallback-times, 400, italic);
+@include fallback-face("AAB Text Fallback Times", unquote('local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"), local("Liberation Serif Bold"), local("Tinos Bold")'), $fallback-times, 600);

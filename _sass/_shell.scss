@@ -1,0 +1,27 @@
+// The page frame, masthead and colophon: the same on every page.
+
+.frame { max-width: calc(var(--frame) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+
+.masthead { border-bottom: var(--rule-width) solid var(--rule); }
+.masthead .frame { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: var(--space-m); padding-block: var(--space-2xs); }
+
+.brand { display: inline-block; padding-block: var(--space-xs); font-weight: 600; text-decoration: none; }
+.brand svg { display: inline-block; width: 1.35em; height: auto; vertical-align: -0.15em; margin-right: 0.45em; color: var(--ink); }
+.brand .wire { stroke: currentColor; }
+.brand .node { fill: var(--accent); }
+
+.site-nav ul { display: flex; flex-wrap: wrap; column-gap: var(--space-s); }
+.site-nav a { display: inline-block; padding-block: var(--space-xs); text-decoration: none; color: var(--ink-muted); font-size: var(--step--1); }
+.site-nav a:hover { color: var(--accent); }
+.site-nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.3em; }
+
+.colophon { margin-top: var(--space-3xl); padding-block: var(--space-m) var(--space-xl); border-top: var(--rule-width) solid var(--rule); font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.colophon .frame { display: grid; gap: var(--space-s); }
+.colophon ul { display: flex; flex-wrap: wrap; column-gap: var(--space-s); }
+.colophon a { display: inline-block; padding-block: var(--space-2xs); color: var(--ink-muted); }
+.colophon a:hover { color: var(--accent); }
+.colophon p { max-width: var(--measure); }
+
+@media print {
+  .masthead, .colophon, .skip-link { display: none; }
+}

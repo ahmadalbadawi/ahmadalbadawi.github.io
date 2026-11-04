@@ -1,0 +1,122 @@
+// Inner pages (Research, About, Code, Service, Contact, ...). Their bodies are written in HTML
+// with the old component classes, and page bodies are out of scope for the redesign, so this
+// file restyles those classes into the new system: no cards, no pills, no shadows, no icons.
+// Each block names the page(s) that use it.
+
+.page__body > * + * { margin-top: var(--space-s); }
+.page__body > :first-child { margin-top: 0; }
+.page__body > h2 { margin-top: var(--space-2xl); }
+.page__body > h3 { margin-top: var(--space-l); }
+
+// The first paragraph of most pages: the page's standfirst.
+.intro { font-size: var(--step-lede); line-height: var(--leading-small); color: var(--ink-muted); }
+.intro--sm { font-size: var(--step-0); line-height: var(--leading); }
+.page__body > .intro + * { margin-top: var(--space-l); }
+
+.section-more { font-size: var(--step--1); }
+.section-more a { color: var(--ink-muted); }
+.section-more a:hover { color: var(--accent); }
+
+// Inline icons inside page bodies (contact headings, project links, research themes): hidden,
+// so the text carries the meaning on its own.
+.page__body svg.icon, .theme-card__icon, .btn svg { display: none; }
+
+// Links styled as buttons become plain text links.
+.btn { display: inline-block; padding-block: var(--space-2xs); }
+.btn--primary { font-weight: 600; }
+.hero__actions, .project__actions { display: flex; flex-wrap: wrap; column-gap: var(--space-m); }
+
+// Labels that were pills: small caps, separated by a middle dot.
+.badge, .tag { font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink-muted); }
+.badge--accent, .badge--funding { color: var(--ink); }
+// Separators sit at the end of each item, so a wrapped line never starts with a dot.
+.badge:not(:last-child)::after, .tag-cloud li:not(:last-child)::after, .card__meta > span:not(:last-child)::after { content: "\00a0\00b7"; color: var(--ink-muted); font-variant-caps: normal; }
+.feature-card__meta, .project__tags { display: flex; flex-wrap: wrap; column-gap: 0.35em; font-size: var(--step--1); line-height: var(--leading-small); }
+
+// research.md "Specific Interests": an inline list instead of a tag cloud.
+.tag-cloud { list-style: none; padding: 0; display: flex; flex-wrap: wrap; column-gap: 0.35em; }
+.tag-cloud .tag { font-variant-caps: normal; letter-spacing: 0; color: var(--ink); }
+
+.inline-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; column-gap: var(--space-s); }
+
+// Card grids (about hub, research, research impact): an index list of titled links.
+.card-grid, .project-grid, .theme-grid, .committee-grid, .venue-grid, .timeline {
+  list-style: none; padding: 0;
+  display: grid; gap: var(--space-m);
+}
+.card { display: grid; gap: var(--space-3xs); text-decoration: none; color: inherit; }
+.card__title { font-size: var(--step-0); font-weight: 600; line-height: var(--leading-title); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; text-decoration-color: transparent; }
+.card:hover { color: inherit; }
+.card:hover .card__title { color: var(--accent); text-decoration-color: var(--accent); }
+.card__excerpt { color: var(--ink-muted); }
+.card__meta { display: flex; flex-wrap: wrap; column-gap: 0.35em; font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+
+// research-impact, research, contact, service, consulting: feature blocks become sections
+// divided by a rule, label line first.
+.feature-card { display: grid; gap: var(--space-xs); padding-top: var(--space-s); border-top: var(--rule-width) solid var(--rule); }
+.feature-card + .feature-card { margin-top: var(--space-l); }
+.feature-card__title { font-size: var(--step-1); font-weight: 600; }
+.feature-card__role { color: var(--ink-muted); }
+.feature-card__body > * + * { margin-top: var(--space-xs); }
+
+// code.md: projects as an index list.
+.project { display: grid; gap: var(--space-2xs); }
+.project__header { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-s); }
+.project__title { font-size: var(--step-1); font-weight: 600; }
+.project__role { font-size: var(--step--1); font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink-muted); }
+.project__body { color: var(--ink); }
+
+// research.md themes.
+.theme-card { display: grid; gap: var(--space-3xs); }
+.theme-card__title { font-size: var(--step-0); font-weight: 600; }
+.theme-card__body { color: var(--ink-muted); }
+
+// Hanging lists: a short label (year, acronym, value) in the meta column, the rest beside it.
+// education/experience/honors (timeline), research (venues, DPRIVE specs), service (committees).
+.timeline__item, .venue, .committee, .specs-grid > li { display: grid; gap: var(--space-3xs) var(--space-m); align-content: start; }
+.timeline__year, .venue__acronym, .committee__acronym, .specs-grid__value {
+  font-size: var(--step--1); line-height: var(--leading-small); font-variant-numeric: lining-nums tabular-nums;
+}
+.timeline__year { color: var(--ink-muted); }
+.venue__acronym, .committee__acronym { font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink); }
+.timeline__card { display: grid; gap: var(--space-3xs); }
+.timeline__degree { font-weight: 600; line-height: var(--leading-title); }
+.timeline__inst { justify-self: start; }
+.timeline__thesis, .committee__meta { font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+.committee__name, .venue__name { line-height: var(--leading-title); }
+
+.specs-grid { list-style: none; padding: 0; display: grid; gap: var(--space-2xs); margin-top: var(--space-s); }
+.specs-grid__value { color: var(--ink); font-weight: 600; }
+.specs-grid__label { font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
+
+@media (min-width: $bp-pre-hang) {
+  .timeline__item, .venue, .committee, .specs-grid > li { grid-template-columns: var(--meta-col) minmax(0, 1fr); }
+  .timeline__year, .venue__acronym, .committee__acronym { padding-top: 0.15em; }
+  .committee__acronym { grid-row: span 2; }
+  .committee > :not(.committee__acronym) { grid-column: 2; }
+  .specs-grid > li { align-items: baseline; }
+}
+
+// 404: the page body brings its own heading, so the layout prints no title there.
+.hero { padding-block: var(--space-xl); }
+.hero__eyebrow { font-variant-caps: all-small-caps; letter-spacing: 0.03em; color: var(--ink-muted); }
+.hero__title { font-size: var(--step-4); font-weight: 400; line-height: var(--leading-display); letter-spacing: -0.02em; margin-top: var(--space-xs); }
+.hero__pitch { margin-top: var(--space-m); max-width: var(--measure); color: var(--ink-muted); }
+.hero__actions { margin-top: var(--space-m); }
+.hero[style*="center"] .hero__actions { justify-content: center; }
+
+// Wide screens: on pages the contents column is empty, so hanging labels (years, dates,
+// acronyms) move into it and the entries keep the full measure, on the same axis as the text.
+@media (min-width: $bp-toc) {
+  .page__body .card-list, .page__body .year-section, .page__body .timeline,
+  .page__body .venue-grid, .page__body .committee-grid {
+    margin-left: calc(-1 * (var(--toc-col) + var(--col-gap)));
+    max-width: none;
+  }
+  .page__body .card-list > li, .page__body .year-section, .page__body .timeline__item,
+  .page__body .venue, .page__body .committee {
+    grid-template-columns: var(--toc-col) minmax(0, var(--measure));
+    column-gap: var(--col-gap);
+  }
+  .page__body > .pub-list { margin-left: 0; }
+}

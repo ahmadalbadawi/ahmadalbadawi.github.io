@@ -1,118 +1,100 @@
-// Design tokens - exposed as CSS custom properties.
-// Dark is the site default. Light is opt-in via [data-theme="light"] set by
-// the toggle button (persisted in localStorage).
-// Color uses OKLCH (modern, perceptually uniform). Older browsers fall back via
-// the user-agent's color-space handling; we don't ship a polyfill.
+// Design tokens. One text face, one mono. Ink on paper, one accent. Light by default, dark
+// follows the OS. Rationale and measurements: design/BRIEF.md.
 
 :root {
-  color-scheme: dark;
+  // "AAB Text" / "AAB Mono" are the renamed OFL subsets of Source Serif 4 and IBM Plex Mono
+  // (the licence reserves the original names for unmodified fonts). The two fallback faces are
+  // metric-matched (see _fonts.scss) so the swap does not move the layout.
+  --font-text: "AAB Text", "AAB Text Fallback", "AAB Text Fallback Times", Georgia, serif;
+  --font-mono: "AAB Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  // Type
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji";
-  --font-serif: "Newsreader", "Iowan Old Style", "Charter", "Source Serif Pro",
-    "Lora", Cambria, Georgia, serif;
-  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+  // Fluid scale between 360 and 1280 px viewports. Keep each step's max/min under 2.5 so browser
+  // zoom still reaches 200% text (WCAG 1.4.4); do not raise the vw coefficients much further.
+  --step--2: clamp(0.80rem, 0.77rem + 0.13vw, 0.875rem);   // 12.8 -> 14
+  --step--1: clamp(0.91rem, 0.87rem + 0.20vw, 1.03rem);    // 14.6 -> 16.5   notes, meta, nav
+  --step-0:  clamp(1.06rem, 1.00rem + 0.27vw, 1.22rem);    // 17   -> 19.5   body
+  --step-1:  clamp(1.24rem, 1.15rem + 0.40vw, 1.49rem);    // 19.9 -> 23.8   h3
+  --step-2:  clamp(1.45rem, 1.31rem + 0.60vw, 1.82rem);    // 23.2 -> 29.1   h2
+  --step-3:  clamp(1.85rem, 1.50rem + 1.60vw, 2.75rem);    // 29.6 -> 44     page and post titles
+  --step-4:  clamp(2.10rem, 1.60rem + 2.40vw, 3.50rem);    // 33.6 -> 56     home statement
+  --step-lede: clamp(1.06rem, 0.98rem + 0.45vw, 1.40rem); // 17 -> 22.4   standfirsts (between steps 0 and 1)
 
-  --fs-xs: 0.8rem;
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-md: 1.0625rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.5rem;
-  --fs-2xl: 1.875rem;
-  --fs-3xl: 2.25rem;
-  --fs-4xl: 3rem;
+  // Four leadings only.
+  --leading: 1.55;
+  --leading-small: 1.45;
+  --leading-title: 1.25;
+  --leading-display: 1.08;
 
-  --lh-tight: 1.2;
-  --lh-snug: 1.4;
-  --lh-normal: 1.6;
-  --lh-relaxed: 1.75;
+  // Measure: a length tied to the BODY size, so smaller-type blocks (contents, footer) line up
+  // with the text instead of shrinking with their own em. 32 body ems measured at 64-66
+  // characters per line (median), 71-72 at the 90th percentile.
+  --measure: calc(32 * var(--step-0));
 
-  // Spacing - 0.25rem step
-  --s-1: 0.25rem;
-  --s-2: 0.5rem;
-  --s-3: 0.75rem;
-  --s-4: 1rem;
-  --s-5: 1.5rem;
-  --s-6: 2rem;
-  --s-8: 3rem;
-  --s-10: 4rem;
-  --s-12: 6rem;
-  --s-16: 8rem;
+  // Rhythm: one unit, the body line. Every vertical space is a fraction or multiple of it.
+  --line: calc(var(--step-0) * var(--leading));
+  --space-3xs: calc(var(--line) * 0.125);
+  --space-2xs: calc(var(--line) * 0.25);
+  --space-xs:  calc(var(--line) * 0.5);
+  --space-s:   calc(var(--line) * 0.75);
+  --space-m:   var(--line);
+  --space-l:   calc(var(--line) * 1.5);
+  --space-xl:  calc(var(--line) * 2);
+  --space-2xl: calc(var(--line) * 3);
+  --space-3xl: calc(var(--line) * 4);
 
-  // Layout
-  --width-prose: 68ch;
-  --width-page: 1100px;
-  --width-wide: 1280px;
-  --radius-sm: 0.375rem;
-  --radius: 0.625rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
+  // Horizontal: page gutter, column gap, and the Distill-style bands as column widths.
+  --gutter: clamp(1rem, 0.6rem + 1.8vw, 2rem);   // 16 px at 360
+  --col-gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  --margin-col: 16.5rem;                          // sidenotes: ~37 characters at 0.82 body size
+  --toc-col: 12rem;
+  --meta-col: 7.5em;                              // hanging date / venue column in lists
+  --label-col: 9rem;                              // hanging section labels on the home page
+  --frame: calc(var(--toc-col) + 2 * var(--col-gap) + var(--measure) + var(--margin-col));
 
-  // Motion
-  --ease: cubic-bezier(0.2, 0, 0, 1);
-  --t-fast: 120ms;
-  --t-base: 200ms;
-  --t-slow: 400ms;
+  --rule-width: 1px;
+  --radius: 2px;   // code blocks only
 
-  // Colors - dark theme (default)
-  --bg: oklch(15% 0.012 250);
-  --bg-subtle: oklch(19% 0.014 250);
-  --surface: oklch(20% 0.014 250);
-  --surface-elev: oklch(24% 0.016 250);
-
-  --text: oklch(94% 0.006 250);
-  --text-muted: oklch(72% 0.012 250);
-  --text-faint: oklch(58% 0.012 250);
-
-  --border: oklch(28% 0.014 250);
-  --border-strong: oklch(38% 0.016 250);
-
-  --accent: oklch(74% 0.14 255);
-  --accent-hover: oklch(82% 0.12 255);
-  --accent-fg: oklch(15% 0.02 255);
-
-  --code-bg: oklch(22% 0.014 250);
-  --code-border: oklch(28% 0.014 250);
-
-  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.5), 0 1px 1px oklch(0% 0 0 / 0.3);
-  --shadow: 0 1px 3px oklch(0% 0 0 / 0.5), 0 4px 12px oklch(0% 0 0 / 0.4);
-  --shadow-lg: 0 8px 24px oklch(0% 0 0 / 0.5), 0 2px 6px oklch(0% 0 0 / 0.3);
-
-  --selection-bg: oklch(40% 0.16 255);
-  --selection-fg: oklch(98% 0 0);
+  // Aliases for the old spacing and size tokens, which some page bodies still use in inline
+  // style attributes. Page bodies are out of scope for this redesign, so they map onto the
+  // new scale instead of being edited.
+  --s-2: var(--space-xs);
+  --s-3: var(--space-s);
+  --s-4: var(--space-m);
+  --fs-xs: var(--step--2);
 }
 
-// Light theme - applied only when the user explicitly toggles via the button.
-[data-theme="light"] {
-  color-scheme: light;
-
-  --bg: oklch(99% 0.002 250);
-  --bg-subtle: oklch(96.5% 0.005 250);
-  --surface: oklch(100% 0 0);
-  --surface-elev: oklch(100% 0 0);
-
-  --text: oklch(22% 0.015 250);
-  --text-muted: oklch(45% 0.015 250);
-  --text-faint: oklch(62% 0.015 250);
-
-  --border: oklch(91% 0.005 250);
-  --border-strong: oklch(82% 0.008 250);
-
-  --accent: oklch(55% 0.18 255);
-  --accent-hover: oklch(45% 0.2 255);
-  --accent-fg: oklch(99% 0 0);
-
-  --code-bg: oklch(96% 0.008 250);
-  --code-border: oklch(92% 0.008 250);
-
-  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.04), 0 1px 1px oklch(0% 0 0 / 0.03);
-  --shadow: 0 1px 3px oklch(0% 0 0 / 0.05), 0 4px 12px oklch(0% 0 0 / 0.06);
-  --shadow-lg: 0 8px 24px oklch(0% 0 0 / 0.08), 0 2px 6px oklch(0% 0 0 / 0.04);
-
-  --selection-bg: oklch(85% 0.12 255);
-  --selection-fg: oklch(20% 0.03 255);
+// Palette. Every text token is >= 4.5:1 on both --paper and --paper-2, in both themes.
+// light, on --paper: ink 16.5, muted 7.1, faint 5.3, accent 7.3 (lowest pair: faint on paper-2, 4.9)
+:root {
+  color-scheme: light dark;
+  --paper:       #fbf9f4;
+  --paper-2:     #f3f0e8;   // code blocks: the one tinted surface
+  --ink:         #1c1a17;
+  --ink-muted:   #5a544b;
+  --ink-faint:   #6e675d;
+  --rule:        #d8d2c6;   // decorative rules only (not UI boundaries)
+  --rule-strong: #b3ab9e;
+  --accent:      #9a2b1f;   // red-pen oxblood: link hover, mark nodes, figure cone, note numbers
+  --highlight:   #f1e3c6;   // selection
 }
+
+// dark, on --paper: ink 14.8, muted 8.3, faint 5.8, accent 6.9
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:       #16140f;
+    --paper-2:     #1f1c16;
+    --ink:         #ece6da;
+    --ink-muted:   #b5ad9f;
+    --ink-faint:   #998f81;
+    --rule:        #38332b;
+    --rule-strong: #5a5348;
+    --accent:      #e8836b;
+    --highlight:   #4a3b22;
+  }
+}
+
+// Breakpoints (Sass: media queries cannot read custom properties).
+$bp-pre-hang: 40rem;   // code panels hang into the gutter; lists get their meta column
+$bp-intro: 52rem;      // home: intro and figure side by side; hanging section labels
+$bp-margin: 72rem;     // sidenotes move into the margin column; code takes the wide band
+$bp-toc: 80rem;        // contents list moves into its own column
