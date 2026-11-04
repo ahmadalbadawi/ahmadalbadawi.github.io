@@ -1,10 +1,12 @@
-{% include base_path %}
-
-<link rel="icon" href="{{ base_path }}/images/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{{ base_path }}/images/favicon.svg">
-<link rel="manifest" href="{{ base_path }}/images/manifest.json">
+<link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/images/favicon.svg' | relative_url }}">
+<link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
 
 {% if page.mathjax %}
+  {%- comment -%}
+    MathJax stays on jsDelivr, as on the live site (owner's decision). inTabOrder: false keeps
+    every formula out of the Tab order; the menu is still reachable from the context menu.
+  {%- endcomment %}
   <script>
     window.MathJax = {
       tex: {
@@ -12,6 +14,7 @@
         processEscapes: true,
         tags: 'all'
       },
+      options: { menuOptions: { settings: { inTabOrder: false } } },
       svg: { fontCache: 'global' }
     };
   </script>

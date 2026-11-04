@@ -1,48 +1,15 @@
-{% include base_path %}
-
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% include seo.html %}
 
-<link rel="alternate" type="application/atom+xml" href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" title="{{ site.title }} Feed">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_path }}/sitemap.xml">
+<link rel="alternate" type="application/atom+xml" href="{{ site.atom_feed.path | default: '/feed.xml' | relative_url }}" title="{{ site.title }} Feed">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | relative_url }}">
 
-<meta name="theme-color" content="#10141c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
-<meta name="color-scheme" content="dark light">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbf9f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)">
 
-<link rel="preload" as="image" href="{{ base_path }}/images/profile-480.webp" type="image/webp" fetchpriority="high">
-
-<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-<link rel="preload" as="style" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap">
-<link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&family=newsreader:400,500,600,700&display=swap"></noscript>
-
-<script>!function(){try{var t=null;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'){var m=document.cookie.match(/(?:^|; )theme=([^;]+)/);t=m?decodeURIComponent(m[1]):null}if(t==='light'){document.documentElement.setAttribute('data-theme','light')}else if(t==='dark'){try{localStorage.removeItem('theme')}catch(e){}document.cookie='theme=; Max-Age=0; Path=/; SameSite=Lax'}}catch(e){}}();</script>
-
-<style>
-  /* Painted before the main stylesheet finishes parsing, so the canvas color
-     is known on first paint - prevents a white flash on dark theme between
-     page navigations. Values mirror --bg in _sass/_tokens.scss. */
-  html { background: #10141c; }
-  html[data-theme="light"] { background: #fcfcfd; }
-</style>
-
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
-
-<noscript>
-  <style>
-    /* Mobile nav defaults to JS-toggled; without JS, force it visible. */
-    @media (max-width: 767px) {
-      .site-nav__list {
-        position: static !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        transform: none !important;
-      }
-      .site-nav__toggle { display: none !important; }
-    }
-    .theme-toggle { display: none !important; }
-  </style>
-</noscript>
+{%- comment -%} Must match the url() in _sass/_fonts.scss byte for byte, or the font loads twice. {%- endcomment %}
+<link rel="preload" href="/assets/fonts/aab-text-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">

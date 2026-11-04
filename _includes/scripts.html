@@ -1,6 +1,12 @@
+{%- comment -%}
+  No script runs on most pages. Posts get the contents, sidenote and copy-code behaviour; the
+  publications page gets its filter. Both are progressive: the page works without them.
+{%- endcomment -%}
 {%- assign asset_v = site.time | date: '%s' -%}
-<script src="{{ base_path }}/assets/js/theme.js?v={{ asset_v }}" defer></script>
-<script src="{{ base_path }}/assets/js/nav.js?v={{ asset_v }}" defer></script>
-<script src="{{ base_path }}/assets/js/copy-code.js?v={{ asset_v }}" defer></script>
+{%- if page.collection == "posts" %}
+<script src="{{ '/assets/js/article.js' | relative_url }}?v={{ asset_v }}" defer></script>
+{%- elsif page.url == "/publications/" %}
+<script src="{{ '/assets/js/publications.js' | relative_url }}?v={{ asset_v }}" defer></script>
+{%- endif %}
 
 {% include analytics.html %}
