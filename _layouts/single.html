@@ -2,10 +2,13 @@
 layout: default
 ---
 {%- comment -%}
-  One layout: the home page, and every other page or collection item.
+  One layout, three page types: the home page, posts (the reading layout) and every other
+  page or collection item.
 {%- endcomment -%}
 {%- if page.url == "/" -%}
   {% include home.html %}
+{%- elsif page.collection == "posts" -%}
+  {% include article.html %}
 {%- else -%}
   {% include page.html %}
 {%- endif -%}

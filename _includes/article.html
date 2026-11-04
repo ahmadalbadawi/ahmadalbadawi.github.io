@@ -1,0 +1,109 @@
+{%- comment -%}
+  The reading layout for posts. The post body is left as written; this template only moves
+  things around it, with plain Liquid (GitHub Pages safe):
+  - the byline paragraph at the top of each post is dropped (the header carries the byline);
+  - the kramdown contents list ("Contents" + {:toc}) is lifted out of the body into the
+    contents column. kramdown indents nested lists, so the first "</ul>" at the start of a line
+    closes the outer list.
+{%- endcomment -%}
+{%- capture nl %}
+{% endcapture -%}
+{%- comment -%}
+  kramdown puts role="doc-noteref" on <sup> (not allowed there) and the deprecated
+  role="doc-endnote" on each note; the links and list already carry the meaning.
+{%- endcomment -%}
+{%- assign body = content | replace_first: '<p><strong><a href="https://ahmadalbadawi.com/">Ahmad Al Badawi</a></strong></p>', "" | replace: ' role="doc-noteref"', "" | replace: ' role="doc-endnote"', "" -%}
+{%- assign toc_html = "" -%}
+{%- if body contains '<ul id="markdown-toc">' -%}
+  {%- assign parts = body | split: '<ul id="markdown-toc">' -%}
+  {%- assign before = parts[0] | replace_first: '<p><strong>Contents</strong></p>', "" -%}
+  {%- assign closing = nl | append: "</ul>" -%}
+  {%- assign toc_inner = parts[1] | split: closing | first -%}
+  {%- assign after = parts[1] | remove_first: toc_inner | remove_first: closing -%}
+  {%- assign toc_html = toc_inner | replace: "<ul>", '<ul role="list">' -%}
+  {%- assign body = before | append: after -%}
+{%- endif -%}
+
+{%- comment -%}
+  A post whose sections start at ### (no h2) is promoted one level, so the outline runs
+  h1, h2, h3 without a gap.
+{%- endcomment -%}
+{%- unless body contains "<h2" -%}
+  {%- assign body = body | replace: "<h3", "<h2" | replace: "</h3>", "</h2>" | replace: "<h4", "<h3" | replace: "</h4>", "</h3>" | replace: "<h5", "<h4" | replace: "</h5>", "</h4>" -%}
+{%- endunless -%}
+
+{%- assign words = content | strip_html | number_of_words -%}
+{%- if words >= 1000 -%}
+  {%- assign thousands = words | divided_by: 1000 -%}
+  {%- assign units = words | modulo: 1000 | prepend: "00" | slice: -3, 3 -%}
+  {%- assign words_label = thousands | append: "," | append: units -%}
+{%- else -%}
+  {%- assign words_label = words -%}
+{%- endif -%}
+
+<div class="article frame">
+  <article class="article__grid">
+    <header class="article__head">
+      <p class="kicker"><a href="{{ '/posts/' | relative_url }}">Writing</a> · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time> · {{ words_label }} words</p>
+      <h1>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h1>
+      {%- if page.description %}
+      <p class="standfirst">{{ page.description }}</p>
+      {%- endif %}
+      <p class="kicker byline">By <a href="{{ '/about/' | relative_url }}">{{ site.author.name | remove: 'Dr. ' }}</a>, {{ site.author.bio }}</p>
+    </header>
+
+    {%- if toc_html != "" %}
+    <nav class="toc" aria-labelledby="toc-h">
+      <h2 class="toc__h" id="toc-h">Contents</h2>
+      <details>
+        <summary>Contents</summary>
+        <ul role="list">{{ toc_html }}
+</ul>
+      </details>
+    </nav>
+    {%- endif %}
+
+    <div class="prose" id="post-body">
+      {{ body }}
+    </div>
+
+    <footer class="article__foot">
+      {%- if page.tags.size > 0 %}
+      <p class="tags"><span class="label">Filed under</span>
+        {% for tag in page.tags %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      {%- endif %}
+
+      {%- comment -%} Related: other posts ranked by the number of tags they share with this one. {%- endcomment -%}
+      {%- assign related = "" | split: "" -%}
+      {%- assign max_overlap = page.tags.size -%}
+      {%- for n in (1..max_overlap) reversed -%}
+        {%- for post in site.posts -%}
+          {%- if post.url == page.url or related.size >= 3 -%}{%- continue -%}{%- endif -%}
+          {%- assign shared = 0 -%}
+          {%- for tag in post.tags -%}
+            {%- if page.tags contains tag -%}{%- assign shared = shared | plus: 1 -%}{%- endif -%}
+          {%- endfor -%}
+          {%- if shared == n -%}{%- assign related = related | push: post -%}{%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      {%- if related.size > 0 %}
+      <section aria-labelledby="related-h">
+        <h2 id="related-h" class="label">Related</h2>
+        <ol class="index" role="list">
+          {%- for post in related %}
+          <li>
+            <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %Y" }}</time></p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></h3>
+            {%- if post.description %}
+            <p class="desc">{{ post.description }}</p>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endif %}
+
+      <p class="author-note">{{ site.author.name | remove: 'Dr. ' }} works on making encrypted AI practical. <a href="{{ '/files/Ahmad-Al-Badawi-Expert-CV.pdf' | relative_url }}">CV</a> · <a href="{{ '/contact/' | relative_url }}">Contact</a></p>
+    </footer>
+  </article>
+</div>
