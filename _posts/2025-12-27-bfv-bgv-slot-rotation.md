@@ -710,19 +710,19 @@ In this article, we bridged the gap between static data packing and dynamic data
 
 If you want to dive deeper into the mathematics and proofs behind these concepts, here are the foundational papers that established the standard for SIMD and Ring-based BGV and BFV schemes:
 
-1.  **The SIMD Breakthrough (Packing):** <a id="ref-simd"></a>
+1.  **The SIMD Breakthrough (Packing):** <span id="ref-simd"></span>
     N. P. Smart and F. Vercauteren, *"Fully Homomorphic SIMD Operations"*. Designs, Codes and Cryptography, 2014.
     *   [Read on IACR ePrint (2011/133)](https://eprint.iacr.org/2011/133)
 
-2. **More on SIMD Packing and Automorphisms:** <a id="ref-simd-auto"></a>
+2. **More on SIMD Packing and Automorphisms:** <span id="ref-simd-auto"></span>
    C. Gentry, S. Halevi and N. P. Smart, *"Fully homomorphic encryption with polylog overhead"*. EUROCRYPT 2012.
    *   [Read on IACR ePrint (2011/566)](https://eprint.iacr.org/2011/566.pdf)
 
-3.  **The BGV Scheme:** <a id="ref-bgv"></a>
+3.  **The BGV Scheme:** <span id="ref-bgv"></span>
     Z. Brakerski, C. Gentry, and V. Vaikuntanathan, *"Fully Homomorphic Encryption without Bootstrapping"*. TOCT 2014.
     *   [Read on IACR ePrint (2011/277)](https://eprint.iacr.org/2011/277)
 
-4.  **The BFV Scheme:** <a id="ref-bfv"></a>
+4.  **The BFV Scheme:** <span id="ref-bfv"></span>
     J. Fan and F. Vercauteren, *"Somewhat Practical Fully Homomorphic Encryption"*. IACR ePrint 2012.
     *   [Read on IACR ePrint (2012/144)](https://eprint.iacr.org/2012/144)
 

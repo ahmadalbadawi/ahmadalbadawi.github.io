@@ -157,7 +157,7 @@ A $2N$-th root of unity exists only when $q \equiv 1 \pmod{2N}$. OpenFHE selects
 
 The constraint removes more combinations than you expect. The simulator covers 28 pairs of ring dimension and modulus size. Only 18 of them are possible:
 
-| bits | $N=4$ | $N=8$ | $N=16$ | $N=32$ |
+| bits | $N$ = 4 | $N$ = 8 | $N$ = 16 | $N$ = 32 |
 |---|---|---|---|---|
 | 4 | none | none | none | none |
 | 5 | 17 | 17 | none | none |
@@ -244,12 +244,12 @@ If you find a value that looks wrong, the data is checkable and the pipeline is 
 
 If you want the mathematics and the proofs behind the code, read these next to the simulator:
 
-1.  **The NTT algorithms that OpenFHE implements:** <a id="ref-ln"></a>
+1.  **The NTT algorithms that OpenFHE implements:** <span id="ref-ln"></span>
     P. Longa and M. Naehrig, *"Speeding up the Number Theoretic Transform for Faster Ideal Lattice-Based Cryptography"*. CANS 2016.
     *   [Read on IACR ePrint (2016/504)](https://eprint.iacr.org/2016/504)
     *   OpenFHE cites this paper in [`transformnat.h`](https://github.com/openfheorg/openfhe-development/blob/v1.5.1/src/core/include/math/hal/intnat/transformnat.h). The code that the simulator replays implements Algorithms 1 and 2 of this paper.
 
-2.  **The Shoup modular multiplication:** <a id="ref-harvey"></a>
+2.  **The Shoup modular multiplication:** <span id="ref-harvey"></span>
     D. Harvey, *"Faster arithmetic for number-theoretic transforms"*. Journal of Symbolic Computation, 2014.
     *   [Read on arXiv (1205.2926)](https://arxiv.org/abs/1205.2926)
 

@@ -33,7 +33,7 @@ This article provides a deep dive into the SIMD (Single Instruction, Multiple Da
 
 ***
 
-### Introduction
+## Introduction
 
 Broadly speaking, FHE schemes fall into two main families: those optimized for boolean operations or low-bit-width integers, and those designed for computations on long vectors of data (e.g., real numbers, complex numbers, or integers). In this article, we focus on the BGV and BFV FHE schemes, which are particularly well-suited for processing long vectors of integers.
 
@@ -43,7 +43,7 @@ If you have used these schemes before, you know that their "magic" lies in their
 
 ***
 
-### Vectors vs. Polynomials
+## Vectors vs. Polynomials
 
 To understand what is happening under the hood, let's look at the arithmetic interface these schemes provide. If you have used BGV ([BGV et al., 2011](#ref-bgv)) or BFV ([BFV et al., 2012](#ref-bfv)), you are essentially given machinery to perform operations on encrypted integer vectors.
 
@@ -195,7 +195,7 @@ Prod(x): 12*x**6 - 15*x**5 - 12*x**4 + 11*x**3 + 9*x**2 + 10*x + 5
 ### 4. Verification
 Does this algebraic manipulation actually affect the data points correctly? Let's check the result by evaluating our new polynomials at the original positions ($$\mathbf{x}=\{0, 1, 2, 3\}$$).
 
-| Index ($\mathbf{x}$) | $\mathbf{u}$ | $\mathbf{v}$ | **$\text{Sum}(x)$** | **Expected Sum** | **$\text{Prod}(x)$** | **Expected Product** |
+| Index (x) | Vector $\mathbf{u}$ | Vector $\mathbf{v}$ | **Sum(*x*)** | **Expected Sum** | **Prod(*x*)** | **Expected Product** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **0** | 1 | 5 | **6** | $1+5=6$ | **5** | $1\times5=5$ |
 | **1** | 10 | 2 | **12** | $10+2=12$ | **20** | $10\times2=20$ |
@@ -553,15 +553,15 @@ This technique is a perfect example of how abstract algebra can be translated in
 
 If you want to dive deeper into the mathematics and proofs behind these concepts, here are the foundational papers that established the standard for SIMD and Ring-based BGV and BFV schemes:
 
-1.  **The SIMD Breakthrough (Packing):** <a id="ref-simd"></a>
+1.  **The SIMD Breakthrough (Packing):** <span id="ref-simd"></span>
     N. P. Smart and F. Vercauteren, *"Fully Homomorphic SIMD Operations"*. Designs, Codes and Cryptography, 2014.
     *   [Read on IACR ePrint (2011/133)](https://eprint.iacr.org/2011/133)
 
-2.  **The BGV Scheme:** <a id="ref-bgv"></a>
+2.  **The BGV Scheme:** <span id="ref-bgv"></span>
     Z. Brakerski, C. Gentry, and V. Vaikuntanathan, *"Fully Homomorphic Encryption without Bootstrapping"*. TOCT 2014.
     *   [Read on IACR ePrint (2011/277)](https://eprint.iacr.org/2011/277)
 
-3.  **The BFV Scheme:** <a id="ref-bfv"></a>
+3.  **The BFV Scheme:** <span id="ref-bfv"></span>
     J. Fan and F. Vercauteren, *"Somewhat Practical Fully Homomorphic Encryption"*. IACR ePrint 2012.
     *   [Read on IACR ePrint (2012/144)](https://eprint.iacr.org/2012/144)
 
