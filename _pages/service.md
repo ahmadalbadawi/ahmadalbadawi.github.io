@@ -106,8 +106,8 @@ redirect_from:
   <div class="feature-card__body">
     <p>Designed and prepared FHE benchmark challenges to drive the field forward and recruit talent:</p>
     <ul>
-      <li><a href="https://fherma.io/challenges/66e8180996829cc963805ffb/overview" target="_blank" rel="noopener noreferrer">Ethereum Fraud Detection via SVM</a></li>
-      <li><a href="https://fherma.io/challenges/676035a7890eef39561cf7c9/overview" target="_blank" rel="noopener noreferrer">House Price Prediction</a></li>
+      <li><a href="https://github.com/fairmath/fherma-challenges/tree/main/ethereum-fraud-detection" target="_blank" rel="noopener noreferrer">Ethereum Fraud Detection via SVM</a></li>
+      <li><a href="https://github.com/fairmath/fherma-challenges/tree/main/house-price-prediciton" target="_blank" rel="noopener noreferrer">House Price Prediction</a></li>
     </ul>
   </div>
 </article>

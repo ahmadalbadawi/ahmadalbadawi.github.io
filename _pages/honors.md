@@ -59,7 +59,7 @@ description: "Honors, awards, scholarships, and recognitions received by Dr. Ahm
     <div class="timeline__year">2015</div>
     <div class="timeline__card">
       <p class="timeline__degree">SINGA PhD Fellowship</p>
-      <a class="timeline__inst" href="https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa" target="_blank" rel="noopener noreferrer">A*STAR (Singapore International Graduate Award)</a>
+      <a class="timeline__inst" href="https://www.a-star.edu.sg/scholarships/home/scholars-stories/international-awardees/singapore-international-graduate-award-recipients-singa" target="_blank" rel="noopener noreferrer">A*STAR (Singapore International Graduate Award)</a>
       <p class="timeline__thesis">
         Awarded the flagship competitive fellowship of the Agency for Science, Technology and Research to pursue a Ph.D. at the National University of Singapore in collaboration with the A*STAR Data Storage Institute.
       </p>
