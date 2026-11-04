@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 20" role="img" aria-label="Butterfly mark">
+  <title>Butterfly mark</title>
+  <style>.wire{stroke:currentColor;stroke-linecap:round;stroke-width:1.75;fill:none}.node{fill:currentColor}</style>
+  <line class="wire" x1="3.00" y1="3.00" x2="25.00" y2="3.00"/>
+  <line class="wire" x1="3.00" y1="17.00" x2="25.00" y2="3.00"/>
+  <line class="wire" x1="3.00" y1="17.00" x2="25.00" y2="17.00"/>
+  <line class="wire" x1="3.00" y1="3.00" x2="25.00" y2="17.00"/>
+  <circle class="node" cx="3.00" cy="3.00" r="2.4"/>
+  <circle class="node" cx="3.00" cy="17.00" r="2.4"/>
+  <circle class="node" cx="25.00" cy="3.00" r="2.4"/>
+  <circle class="node" cx="25.00" cy="17.00" r="2.4"/>
+</svg>

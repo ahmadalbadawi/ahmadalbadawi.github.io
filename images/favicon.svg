@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AA">
-  <rect width="64" height="64" rx="14" fill="#2563eb"/>
-  <text x="32" y="44" font-family="ui-sans-serif,system-ui,sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="-1">AA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="AB">
+  <title>AB</title>
+  <rect width="32" height="32" rx="6" fill="#f6f3ec"/>
+  <style>.wire{stroke:#1d1b18;stroke-width:2.4;stroke-linecap:round}.node{fill:#9a2b1f}</style>
+  <line class="wire" x1="7.00" y1="7.00" x2="25.00" y2="7.00"/>
+  <line class="wire" x1="7.00" y1="25.00" x2="25.00" y2="7.00"/>
+  <line class="wire" x1="7.00" y1="25.00" x2="25.00" y2="25.00"/>
+  <line class="wire" x1="7.00" y1="7.00" x2="25.00" y2="25.00"/>
+  <circle class="node" cx="7.00" cy="7.00" r="2.8"/>
+  <circle class="node" cx="7.00" cy="25.00" r="2.8"/>
+  <circle class="node" cx="25.00" cy="7.00" r="2.8"/>
+  <circle class="node" cx="25.00" cy="25.00" r="2.8"/>
 </svg>
