@@ -1,0 +1,8 @@
+{%- assign post = include.post -%}
+<li>
+        <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %Y" }}</time></p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></h3>
+        {%- if post.description %}
+        <p class="desc">{{ post.description }}</p>
+        {%- endif %}
+      </li>

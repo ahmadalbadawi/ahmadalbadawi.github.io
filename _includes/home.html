@@ -1,0 +1,79 @@
+{%- comment -%}
+  The home page, selected by _layouts/single.html when page.url is "/". It replaces the order
+  of the page body (_pages/about.md: hero, recent papers, writing, talks, then the biography)
+  with: intro, simulators, writing, selected papers, biography, then the pages the nav does
+  not reach. The body itself is not edited; its "At a glance" section is printed verbatim
+  from the rendered content below.
+{%- endcomment -%}
+{%- assign simulators = site.posts | where_exp: "p", "p.tags contains 'Interactive Simulator'" -%}
+{%- assign writing = "" | split: "" -%}
+{%- for p in site.posts -%}
+  {%- unless p.tags contains "Interactive Simulator" -%}{%- assign writing = writing | push: p -%}{%- endunless -%}
+{%- endfor -%}
+{%- assign glance_h = '<h2 id="at-a-glance">At a glance</h2>' -%}
+
+<div class="home frame">
+  {% include hero.html %}
+
+  {%- if simulators.size > 0 %}
+  <section class="home-section" aria-labelledby="h-sim">
+    <h2 id="h-sim">Simulators</h2>
+    <ol class="index" role="list">
+      {%- for post in simulators %}
+      {% include home-entry.html post=post %}
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endif %}
+
+  {%- if writing.size > 0 %}
+  <section class="home-section" aria-labelledby="h-writing">
+    <h2 id="h-writing"><a href="{{ '/posts/' | relative_url }}">Writing</a></h2>
+    <ol class="index" role="list">
+      {%- for post in writing %}
+      {% include home-entry.html post=post %}
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endif %}
+
+  {%- comment -%} Chosen by the owner (design/BRIEF.md, decision 2). Titles must match _data/publications.yml. {%- endcomment -%}
+  {%- assign selected = "SoK: Private LLM Inference using Approximate Homomorphic Encryption|OpenFHE: Open-Source Fully Homomorphic Encryption Library|Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs|High-Performance FV Somewhat Homomorphic Encryption on GPUs: An Implementation using CUDA" | split: "|" -%}
+  <section class="home-section" aria-labelledby="h-pubs">
+    <h2 id="h-pubs"><a href="{{ '/publications/' | relative_url }}">Selected papers</a></h2>
+    <ol class="index" role="list">
+      {%- for title in selected %}
+        {%- assign pub = site.data.publications | where: "title", title | first -%}
+        {%- if pub %}
+      <li>
+        <p class="meta"><span class="venue smcp">{{ pub.venue }}</span>{{ pub.year }}</p>
+        <h3>{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+        <p class="authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      </li>
+        {%- endif %}
+      {%- endfor %}
+    </ol>
+    <p class="more"><a href="{{ '/publications/' | relative_url }}">All publications and patents</a></p>
+  </section>
+
+  {%- if content contains glance_h %}
+  <section class="home-section about" aria-labelledby="h-about">
+    <h2 id="h-about"><a href="{{ '/about/' | relative_url }}">At a glance</a></h2>
+    <div>
+      {{ content | split: glance_h | last }}
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="home-section" aria-labelledby="h-also">
+    <h2 id="h-also">Also</h2>
+    <ul class="also" role="list">
+      <li><a href="{{ '/talks/' | relative_url }}">Talks</a></li>
+      <li><a href="{{ '/service/' | relative_url }}">Service</a></li>
+      <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+      <li><a href="{{ '/experience/' | relative_url }}">Experience</a></li>
+      <li><a href="{{ '/honors/' | relative_url }}">Honors</a></li>
+      <li><a href="{{ '/research/impact/' | relative_url }}">Research impact</a></li>
+    </ul>
+  </section>
+</div>

@@ -2,7 +2,10 @@
 layout: default
 ---
 {%- comment -%}
-  One layout for every page and collection item; the home page and posts get their own
-  includes in the next steps.
+  One layout: the home page, and every other page or collection item.
 {%- endcomment -%}
-{% include page.html %}
+{%- if page.url == "/" -%}
+  {% include home.html %}
+{%- else -%}
+  {% include page.html %}
+{%- endif -%}
