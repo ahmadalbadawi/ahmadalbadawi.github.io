@@ -1,29 +1,20 @@
 {%- comment -%}
-  Renders one publication item. Caller passes `pub` (a hash from
-  site.data.publications). Used by the publications page and the home page's
-  recent-publications section.
-
-  Emits ScholarlyArticle JSON-LD per entry for academic SEO.
+  One publication or patent, from _data/publications.yml. Used by the publications page.
+  data-group drives the filter in assets/js/publications.js. Emits ScholarlyArticle JSON-LD
+  per entry for academic search.
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
 {%- assign pub_authors_plain = pub.authors | markdownify | strip_html | strip_newlines | replace: '&amp;', '&' -%}
-<li class="pub">
-  <header class="pub__meta">
-    <span class="pub__venue">{{ pub.venue }}</span>
-    {%- if pub.type %}<span class="pub__type">{{ pub.type }}</span>{%- endif %}
-    {%- if pub.id %}<span class="pub__type">{{ pub.id }}</span>{%- endif %}
-  </header>
-  <h3 class="pub__title">{{ pub.title }}</h3>
-  <p class="pub__authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-  {%- if pub.url %}
-  <div class="pub__actions">
-    <a class="pub__link" href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      {% if pub.kind == "patent" %}Patent{% else %}Paper{% endif %}
-    </a>
-  </div>
-  {%- endif %}
-
+{%- if pub.kind == "patent" -%}
+  {%- assign group = "patent" -%}
+{%- else -%}
+  {%- assign group = pub.type | downcase -%}
+  {%- unless group == "journal" or group == "conference" or group == "workshop" or group == "preprint" -%}{%- assign group = "other" -%}{%- endunless -%}
+{%- endif %}
+<li class="pub" data-group="{{ group }}">
+  <h3 class="pub__title">{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+  <p class="pub__authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  <p class="pub__where"><span class="pub__venue smcp">{{ pub.venue }}</span>{% if pub.kind == "patent" %}{% if pub.id %} · {{ pub.id }}{% endif %} · {{ pub.year }}{% elsif pub.type %} · {{ pub.type }}{% endif %}</p>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
