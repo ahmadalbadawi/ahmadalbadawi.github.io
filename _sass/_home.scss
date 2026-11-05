@@ -9,9 +9,10 @@
 .now { margin-top: var(--space-s); max-width: var(--measure); color: var(--ink-muted); }
 .quicklinks { margin-top: var(--space-s); display: flex; flex-wrap: wrap; column-gap: var(--space-m); }
 .quicklinks a { display: inline-block; padding-block: var(--space-2xs); font-weight: 600; }
-// Square portrait, no rounding or shadow; the width and height attributes reserve its space.
-.portrait { display: block; width: 11rem; }
-.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: var(--paper-2); }
+// Portrait: a 4:5 head-and-shoulders crop, no rounding or shadow; the width and height
+// attributes reserve its space. Phones: small, above the statement. From 40rem: beside the text.
+.portrait { display: block; width: 6rem; order: -1; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: var(--paper-2); }
 
 figcaption { margin-top: var(--space-xs); font-size: var(--step--1); line-height: var(--leading-small); color: var(--ink-muted); }
 
@@ -31,9 +32,13 @@ figcaption { margin-top: var(--space-xs); font-size: var(--step--1); line-height
   .lede, .about p { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; }
 }
 
+@media (min-width: $bp-pre-hang) {
+  .home-intro { grid-template-columns: minmax(0, 1fr) var(--portrait-col); column-gap: var(--space-xl); }
+  .portrait { order: 0; grid-row: 1; grid-column: 2; justify-self: end; width: 100%; padding-top: 0.6em; }
+}
+
 @media (min-width: $bp-intro) {
-  .home-intro { grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem); column-gap: var(--space-2xl); }
-  .portrait { grid-row: 1; grid-column: 2; justify-self: end; width: 100%; max-width: 20rem; padding-top: 0.6em; }
+  .home-intro { column-gap: var(--space-2xl); }
   .home-section { grid-template-columns: var(--label-col) minmax(0, 1fr); }
   .home-section > h2 { padding-top: 0.1em; }
   .home-section .more { grid-column: 2; }

@@ -49,6 +49,7 @@
   --toc-col: 12rem;
   --meta-col: 7.5em;                              // hanging date / venue column in lists
   --label-col: 9rem;                              // hanging section labels on the home page
+  --portrait-col: clamp(9rem, 22vw, 15rem);      // home portrait beside the intro (must match sizes in hero.html)
   --frame: calc(var(--toc-col) + 2 * var(--col-gap) + var(--measure) + var(--margin-col));
 
   --rule-width: 1px;

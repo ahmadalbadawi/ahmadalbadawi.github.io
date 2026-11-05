@@ -17,7 +17,7 @@
     </ul>
   </div>
   <picture class="portrait">
-    <source type="image/webp" srcset="{{ '/images/profile-480.webp' | relative_url }} 480w, {{ '/images/profile-960.webp' | relative_url }} 960w" sizes="(min-width: 52rem) 20rem, 11rem">
-    <img src="{{ '/images/profile-480.jpg' | relative_url }}" alt="Portrait of {{ site.author.name | remove: 'Dr. ' }}" width="480" height="480" fetchpriority="high" decoding="async">
+    <source type="image/webp" srcset="{{ '/images/profile-portrait-320.webp' | relative_url }} 320w, {{ '/images/profile-portrait-640.webp' | relative_url }} 640w" sizes="(min-width: 68rem) 15rem, (min-width: 40rem) 22vw, 6rem">
+    <img src="{{ '/images/profile-portrait-320.jpg' | relative_url }}" alt="Portrait of {{ site.author.name | remove: 'Dr. ' }}" width="320" height="400" fetchpriority="high">
   </picture>
 </section>
