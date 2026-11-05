@@ -33,7 +33,7 @@ figcaption { margin-top: var(--space-xs); font-size: var(--step--1); line-height
 
 @media (min-width: $bp-intro) {
   .home-intro { grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem); column-gap: var(--space-2xl); }
-  .portrait { grid-row: 1 / span 2; grid-column: 2; justify-self: end; width: 100%; max-width: 20rem; padding-top: 0.6em; }
+  .portrait { grid-row: 1; grid-column: 2; justify-self: end; width: 100%; max-width: 20rem; padding-top: 0.6em; }
   .home-section { grid-template-columns: var(--label-col) minmax(0, 1fr); }
   .home-section > h2 { padding-top: 0.1em; }
   .home-section .more { grid-column: 2; }
