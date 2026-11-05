@@ -1,8 +1,8 @@
 {%- comment -%}
-  The home intro: the thesis, the pitch, the current role and the links each audience needs
-  first. Included by _includes/home.html. The pitch and role lines are the site's own copy,
-  unchanged from the previous hero; the stats strip, logo wall, portrait and icon row are no
-  longer rendered (listed in audit/REPORT.md).
+  The home intro: the thesis, the pitch, the current role, the links each audience needs
+  first, and the portrait. Included by _includes/home.html. The pitch and role lines are the
+  site's own copy, unchanged from the previous hero; the stats strip, logo wall and icon row are
+  no longer rendered (listed in audit/REPORT.md).
 {%- endcomment -%}
 <section class="home-intro" aria-labelledby="statement">
   <div>
@@ -16,8 +16,8 @@
       <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
     </ul>
   </div>
-  <figure>
-    {% include butterfly-16.html %}
-    <figcaption>The butterfly network of a 16-point number-theoretic transform, the core of lattice-based FHE. The highlighted lines trace every input that output&nbsp;5 depends on: all of them.</figcaption>
-  </figure>
+  <picture class="portrait">
+    <source type="image/webp" srcset="{{ '/images/profile-480.webp' | relative_url }} 480w, {{ '/images/profile-960.webp' | relative_url }} 960w" sizes="(min-width: 52rem) 20rem, 11rem">
+    <img src="{{ '/images/profile-480.jpg' | relative_url }}" alt="Portrait of {{ site.author.name | remove: 'Dr. ' }}" width="480" height="480" fetchpriority="high" decoding="async">
+  </picture>
 </section>
