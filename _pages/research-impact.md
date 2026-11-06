@@ -42,7 +42,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
     <a class="card" href="https://doi.org/10.1109/TETC.2019.2902799" target="_blank" rel="noopener noreferrer">
       <h3 class="card__title">RNS-BFV (BEHZ + HPS) - standard primitives</h3>
       <div class="card__meta">
-        <span>IEEE TETC 2019</span>
+        <span>IEEE TETC 2021</span>
         <span>Adopted by multiple FHE libraries</span>
       </div>
       <p class="card__excerpt">The BEHZ and HPS RNS variants of BFV introduced in this paper are now baseline building blocks inside modern FHE libraries (OpenFHE, SEAL, HElib), delivering roughly two orders of magnitude speedup over the original CPU baselines.</p>
@@ -97,7 +97,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
       <h3 class="card__title">Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs</h3>
       <div class="card__meta">
         <span>IEEE TETC</span>
-        <span>2020</span>
+        <span>2021</span>
       </div>
     </a>
   </li>
@@ -107,7 +107,7 @@ description: "Real-world adoption of Dr. Ahmad Al Badawi's research: OpenFHE lea
       <h3 class="card__title">Implementation and Performance Evaluation of RNS Variants of the BFV Homomorphic Encryption Scheme</h3>
       <div class="card__meta">
         <span>IEEE TETC</span>
-        <span>2019</span>
+        <span>2021</span>
       </div>
     </a>
   </li>

@@ -126,7 +126,7 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <a class="card" href="https://doi.org/10.1109/TETC.2020.3014636" target="_blank" rel="noopener noreferrer">
       <h3 class="card__title">Towards the AlexNet Moment for Homomorphic Encryption</h3>
       <div class="card__meta">
-        <span>IEEE TETC 2020</span>
+        <span>IEEE TETC 2021</span>
         <span>307 citations</span>
       </div>
       <p class="card__excerpt">HCNN: the first homomorphic convolutional neural network running on encrypted data using GPUs. Demonstrated that encrypted deep learning is practically feasible.</p>
@@ -137,7 +137,7 @@ For how my work has been used, see my <a href="/research/impact/">research impac
     <a class="card" href="https://doi.org/10.1109/TETC.2019.2902799" target="_blank" rel="noopener noreferrer">
       <h3 class="card__title">RNS Variants of the BFV Homomorphic Encryption Scheme</h3>
       <div class="card__meta">
-        <span>IEEE TETC 2019</span>
+        <span>IEEE TETC 2021</span>
         <span>185 citations</span>
       </div>
       <p class="card__excerpt">Introduced the BEHZ and HPS RNS GPU variants of BFV that achieve roughly two orders of magnitude speedup over CPU baselines. Both variants are now standard building blocks in modern FHE libraries.</p>
