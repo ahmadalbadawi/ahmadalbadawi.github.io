@@ -9,7 +9,8 @@
 #   type     - Journal / Conference / Workshop / Preprint (papers)
 #              or "2024" / "2022" etc. (patents, where venue is the patent body)
 #   url      - link to the paper or patent
-#   kind     - omit for papers; set to "patent" to render in the Patents section
+#   kind     - omit for papers; set to "patent" to render in the Patents section, or
+#              "thesis" for the PhD thesis (listed with the papers, marked up as a Thesis)
 #   id       - optional patent number or identifier
 
 - title: "SoK: Private LLM Inference using Approximate Homomorphic Encryption"
@@ -186,6 +187,14 @@
   venue: "J. Parallel Distrib. Comput."
   type: "Journal"
   url: "https://doi.org/10.1016/j.jpdc.2018.04.014"
+
+- title: "Practical Post-Quantum Cryptography & Fully Homomorphic Encryption on Graphics Processors: Design & Performance Evaluation"
+  authors: "**Al Badawi, A.**"
+  year: 2018
+  venue: "National University of Singapore"
+  type: "PhD Thesis"
+  kind: "thesis"
+  url: "https://scholarbank.nus.edu.sg/handle/10635/152822"
 
 - title: "Static Scheduling of Directed Acyclic Data Flow Graphs onto Multiprocessors Using Particle Swarm Optimization"
   authors: "**Al Badawi, A.**, & Shatnawi, A."

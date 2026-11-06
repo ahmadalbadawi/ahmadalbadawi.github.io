@@ -18,15 +18,21 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "{% if pub.kind == 'patent' %}CreativeWork{% else %}ScholarlyArticle{% endif %}",
+    "@type": "{% if pub.kind == 'patent' %}CreativeWork{% elsif pub.kind == 'thesis' %}Thesis{% else %}ScholarlyArticle{% endif %}",
     "headline": {{ pub.title | jsonify }},
     "name": {{ pub.title | jsonify }},
     "author": {{ pub_authors_plain | jsonify }},
     "datePublished": "{{ pub.year }}",
+    {%- if pub.kind == 'thesis' %}
+    "inSupportOf": {{ pub.type | jsonify }},
+    "sourceOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": {{ pub.venue | jsonify }}
+    }{% else %}
     "isPartOf": {
       "@type": "{% if pub.kind == 'patent' %}CreativeWorkSeries{% else %}Periodical{% endif %}",
       "name": {{ pub.venue | jsonify }}
-    }{% if pub.url %},
+    }{% endif %}{% if pub.url %},
     "url": {{ pub.url | jsonify }},
     "identifier": {{ pub.url | jsonify }}{% endif %}{% if pub.id %},
     "alternateName": {{ pub.id | jsonify }}{% endif %}
