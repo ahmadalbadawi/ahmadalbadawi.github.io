@@ -141,6 +141,7 @@ exclude:
   - vendor
   - audit
   - design
+  - bibverify
   - rns-review-backup
   - overleaf-cvs
   - run-website.sh
