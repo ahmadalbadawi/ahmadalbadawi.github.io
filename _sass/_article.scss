@@ -46,7 +46,7 @@
 .prose figure img + figcaption { text-align: left; }
 
 // A section break is marked once: a rule straight before a heading (or at the very top, where
-// the removed byline was) is dropped, so the butterfly dinkus only appears between paragraphs.
+// the removed byline was) is dropped, so the lattice dinkus only appears between paragraphs.
 .prose > hr:first-child, .prose > hr:has(+ h2, + h3, + h4, + hr) { display: none; }
 .prose hr:not([class]) { border: 0; height: var(--space-l); margin-block: var(--space-m); position: relative; }
 .prose hr:not([class])::after {

@@ -2,12 +2,12 @@
   <title>AB</title>
   <rect width="32" height="32" rx="6" fill="#f6f3ec"/>
   <style>.wire{stroke:#1d1b18;stroke-width:2.4;stroke-linecap:round}.node{fill:#9a2b1f}</style>
-  <line class="wire" x1="7.00" y1="7.00" x2="25.00" y2="7.00"/>
-  <line class="wire" x1="7.00" y1="25.00" x2="25.00" y2="7.00"/>
-  <line class="wire" x1="7.00" y1="25.00" x2="25.00" y2="25.00"/>
-  <line class="wire" x1="7.00" y1="7.00" x2="25.00" y2="25.00"/>
-  <circle class="node" cx="7.00" cy="7.00" r="2.8"/>
-  <circle class="node" cx="7.00" cy="25.00" r="2.8"/>
-  <circle class="node" cx="25.00" cy="7.00" r="2.8"/>
-  <circle class="node" cx="25.00" cy="25.00" r="2.8"/>
+  <line class="wire" x1="5.00" y1="22.00" x2="14.00" y2="22.00"/>
+  <line class="wire" x1="5.00" y1="22.00" x2="9.00" y2="10.00"/>
+  <circle class="node" cx="5.00" cy="22.00" r="2.8"/>
+  <circle class="node" cx="14.00" cy="22.00" r="2.8"/>
+  <circle class="node" cx="23.00" cy="22.00" r="2.8"/>
+  <circle class="node" cx="9.00" cy="10.00" r="2.8"/>
+  <circle class="node" cx="18.00" cy="10.00" r="2.8"/>
+  <circle class="node" cx="27.00" cy="10.00" r="2.8"/>
 </svg>

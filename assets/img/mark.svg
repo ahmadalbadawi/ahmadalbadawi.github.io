@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 20" role="img" aria-label="Butterfly mark">
-  <title>Butterfly mark</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 20" role="img" aria-label="Lattice mark">
+  <title>Lattice mark</title>
   <style>.wire{stroke:currentColor;stroke-linecap:round;stroke-width:1.75;fill:none}.node{fill:currentColor}</style>
-  <line class="wire" x1="3.00" y1="3.00" x2="25.00" y2="3.00"/>
-  <line class="wire" x1="3.00" y1="17.00" x2="25.00" y2="3.00"/>
-  <line class="wire" x1="3.00" y1="17.00" x2="25.00" y2="17.00"/>
-  <line class="wire" x1="3.00" y1="3.00" x2="25.00" y2="17.00"/>
-  <circle class="node" cx="3.00" cy="3.00" r="2.4"/>
-  <circle class="node" cx="3.00" cy="17.00" r="2.4"/>
-  <circle class="node" cx="25.00" cy="3.00" r="2.4"/>
-  <circle class="node" cx="25.00" cy="17.00" r="2.4"/>
+  <line class="wire" x1="3.00" y1="16.00" x2="12.00" y2="16.00"/>
+  <line class="wire" x1="3.00" y1="16.00" x2="7.00" y2="4.00"/>
+  <circle class="node" cx="3.00" cy="16.00" r="2.4"/>
+  <circle class="node" cx="12.00" cy="16.00" r="2.4"/>
+  <circle class="node" cx="21.00" cy="16.00" r="2.4"/>
+  <circle class="node" cx="7.00" cy="4.00" r="2.4"/>
+  <circle class="node" cx="16.00" cy="4.00" r="2.4"/>
+  <circle class="node" cx="25.00" cy="4.00" r="2.4"/>
 </svg>
