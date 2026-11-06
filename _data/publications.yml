@@ -25,7 +25,7 @@
   year: 2026
   venue: "IACR CiC"
   type: "Journal"
-  url: "https://eprint.iacr.org/2024/203"
+  url: "https://doi.org/10.62056/ayl83z10k"
 
 - title: "Hardware Design for Fast Gate Bootstrapping in Fully Homomorphic Encryption over the Torus"
   authors: "Vig, S., **Al Badawi, A.**, & Yusof, M."
@@ -50,7 +50,7 @@
 
 - title: "Private SVM Inference on Encrypted Data"
   authors: "**Al Badawi, A.**"
-  year: 2025
+  year: 2024
   venue: "Book Chapter"
   type: "Federated Learning: A Systematic Review"
   url: "https://www.intechopen.com/chapters/1202652"
@@ -91,7 +91,7 @@
   url: "https://www.pnas.org/doi/10.1073/pnas.2304415120"
 
 - title: "RPU: The Ring Processing Unit"
-  authors: "Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K., & Pedram, M."
+  authors: "Soni, D., Neda, N., Zhang, N., Reynwar, B., Gamil, H., Heyman, B., Nabeel, M., **Al Badawi, A.**, Polyakov, Y., Canida, K., Pedram, M., Maniatakos, M., Cousins, D. B., Franchetti, F., French, M., Schmidt, A., & Reagen, B."
   year: 2023
   venue: "ISPASS"
   type: "Conference"
@@ -139,9 +139,23 @@
   type: "Journal"
   url: "https://ieeexplore.ieee.org/abstract/document/9543673"
 
+- title: "Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs"
+  authors: "**Al Badawi, A.**, et al."
+  year: 2021
+  venue: "IEEE TETC"
+  type: "Journal"
+  url: "https://doi.org/10.1109/TETC.2020.3014636"
+
+- title: "Implementation and Performance Evaluation of RNS Variants of the BFV Homomorphic Encryption Scheme"
+  authors: "**Al Badawi, A.**, et al."
+  year: 2021
+  venue: "IEEE TETC"
+  type: "Journal"
+  url: "https://doi.org/10.1109/TETC.2019.2902799"
+
 - title: "Multi-GPU Design and Performance Evaluation of Homomorphic Encryption on GPU Clusters"
   authors: "**Al Badawi, A.**, et al."
-  year: 2020
+  year: 2021
   venue: "IEEE TPDS"
   type: "Journal"
   url: "https://doi.org/10.1109/TPDS.2020.3021238"
@@ -152,20 +166,6 @@
   venue: "IEEE Access"
   type: "Journal"
   url: "https://doi.org/10.1109/ACCESS.2020.3045465"
-
-- title: "Towards the AlexNet Moment for Homomorphic Encryption: HCNN, the First Homomorphic CNN on Encrypted Data with GPUs"
-  authors: "**Al Badawi, A.**, et al."
-  year: 2020
-  venue: "IEEE TETC"
-  type: "Journal"
-  url: "https://doi.org/10.1109/TETC.2020.3014636"
-
-- title: "Implementation and Performance Evaluation of RNS Variants of the BFV Homomorphic Encryption Scheme"
-  authors: "**Al Badawi, A.**, et al."
-  year: 2019
-  venue: "IEEE TETC"
-  type: "Journal"
-  url: "https://doi.org/10.1109/TETC.2019.2902799"
 
 - title: "CareNets: Efficient Homomorphic CNN for High-Resolution Images"
   authors: "Jin, C., **Al Badawi, A.**, Unnikrishnan, J. B., Mun, C. F., Brown, J. M., Campbell, J. P., Chiang, M., Kalpathy-Cramer, J., Chandrasekhar, V. R., & Krishnaswamy, P."
@@ -182,7 +182,7 @@
   url: "https://tches.iacr.org/index.php/TCHES/article/view/875"
 
 - title: "Accelerating Subset Sum and Lattice-Based Public-Key Cryptosystems with Multi-Core CPUs and GPUs"
-  authors: "**Al Badawi, A.**, Veeravalli, B., & Aung, K. M. M."
+  authors: "**Al Badawi, A.**, Veeravalli, B., Aung, K. M. M., & Hamadicharef, B."
   year: 2018
   venue: "J. Parallel Distrib. Comput."
   type: "Journal"
